@@ -1,22 +1,33 @@
 {
-	"name" : "Farmdale Nazarene",
-	"version" : "0.0.1",
-	"description" : "Web Site for Farmdale Church of the Nazarene		",
-	"author": "Mark Robison <robisonmark@comcast.net>",
-	"repository" : {
-		"type" : "git",
-		"url" : "https://github.com/robisonmark/DrRobison.git"
-	},
-	"devDependencies": {
-		"gulp": "^3.8.7",
-		"gulp-util": "^2.2.20",
-		"gulp-concat": "^2.3.4",
-		"gulp-browserify": "^0.5.0",
-		"jquery": "^2.1.1",
-		"gulp-compass": "^1.2.0",
-		"gulp-connect": "^2.0.6",
-		"gulp-if": "^1.2.4",
-		"gulp-uglify": "^0.3.1",
-		"gulp-minify-html": "^0.1.4"
-  }
+  "name": "farmdaleNaz",
+  "version": "1.0.0",
+  "description": "Website for Farmdale Church of the Nazarene",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-if": "^1.2.5",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/robisonmark/farmdaleNaz.git"
+  },
+  "author": "Mark Robison",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robisonmark/farmdaleNaz/issues"
+  },
+  "homepage": "https://github.com/robisonmark/farmdaleNaz"
 }
