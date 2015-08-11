@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:400,400italic,800,300);
+
+@include border-box-sizing; //uses border box sizing like the old IE
+
+//susy
+$susy: (
+	columns: 12,
+	container: 70em,
+	gutters: 1/4,
+	gutter-position: inside,
+	var container2: (width: 100%),
+	);
+
+//breakpoint
+$phone: 400px;
+$small: 650px;
+$medium: 960px;
+$wide: 1200px;
+
+//Add Color Palette
+$dark		: #121212;
+$pink		: #ff325d;
+$white		: #ffffff;
+$light		: #E4E4E4;
+$darkpink	: #B21133;
+$blue		: #B21133;
+$navbrand	: #ff325d;
+
+
+$backgroundColor	: $dark;
+$typedefault		: $light;
+$navBackground		: $blue;
+$navForeground		: $light;
+$navHover			: $darkpink;
+$mainFont			: $light;
+$headersubbg		: $dark;
+
+//font variables
+$fontfamily: 'alegreya sans', Arial, sans-serif;
+
+$thin		: 300;
+$normal		: 400;
+$bold		: 800;
+$italic		: 400 italic;
+
+$headFont : $thin 1.5em/1.5em $fontfamily;
+$mainFont : $thin 1em/1.5em $fontfamily;
+$headColor : lighten($pink, 20);

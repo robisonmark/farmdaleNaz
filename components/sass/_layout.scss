@@ -1,0 +1,126 @@
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	
+	} // body
+
+  .scene {
+	 position: relative;
+	 padding: 20px 0;
+   
+   article {
+		@include container(95%);
+   		} //article
+
+   @include breakpoint ($wide) {
+		padding: 60px 0;
+   		}//breakpoint
+   
+   @include breakpoint ($medium) {
+	   	article {
+	   		@include container;
+	 	} //article
+   	} //breakpoint
+} //scene
+
+.btn_map {
+	display: inline-block;
+	color: $dark;
+	width: 50%; 
+	max-width: 160px;
+	margin: 0 auto;
+    text-align: center; 
+    border: 1.5px solid $pink;
+	padding: .3em;
+	background: transparent;
+	font-size: 1em; 
+    font-weight: $bold; 
+    text-transform: uppercase;
+    text-decoration:none; 
+    
+    &:visited {
+		color: $dark;
+	} //visited
+
+	&:hover {
+		 background-color: $pink;
+		 color:#2a2a2a; 
+	} //hover
+} //btn_map
+
+.btn_light {
+	display: inline-block;
+	color: $white;
+	width: 50%; 
+	max-width: 160px;
+	margin: 0 auto;
+    text-align: center; 
+    border: 1.5px solid $pink;
+	padding: .3em;
+	background: transparent;
+	font-size: 1em; 
+    font-weight: $bold; 
+    text-transform: uppercase;
+    text-decoration:none; 
+ 
+	&:visited {
+		color: $white;
+	} //visited
+
+	&:hover {
+		background-color: $pink; 
+	} //hover
+
+	
+} //btn light
+
+.btn_cal {
+	display: inline-block;
+	color: $white;
+	width: 50%; 
+	max-width: 160px;
+	margin: 0 auto;
+    text-align: center; 
+    border: 1.5px solid $pink;
+	padding: .3em;
+	background: transparent;
+	font-size: 1em; 
+    font-weight: $bold; 
+    text-transform: uppercase;
+    text-decoration:none; 
+
+	&:visited {
+		color: $white;
+	} //visited
+
+	&:hover {
+		 background-color:$pink;
+		 color: $white; 
+	} //hover
+} //btn_cal
+
+.btn_dark {
+	display: inline-block;
+	color: $dark;
+	width: 50%; 
+	max-width: 160px;
+	margin: 0 auto;
+    text-align: center; 
+    border: 1.5px solid $pink;
+	padding: .3em;
+	background: transparent;
+	font-size: 1em; 
+    font-weight: $bold; 
+    text-transform: uppercase;
+    text-decoration:none; 
+	
+	&:visited {
+		color: $dark;
+	} //visited
+
+	&:hover {
+		 background-color: $pink;
+		 color:#2a2a2a; 
+	} //hover
+} //btn_dark

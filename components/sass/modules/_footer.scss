@@ -1,0 +1,60 @@
+/****************** baseline ********************
+************************************************/
+
+
+#baseline {
+	background-color: $dark;
+	text-align: center;
+	
+	#skyline_outer {
+		background-color: $pink;
+		position: relative;
+		height: 64px;
+	
+		#social {
+			background-color: transparent;
+			position: absolute;
+			left: 50px;
+			top: 8px;
+			/* add flexbox */ 
+			
+			ul {
+				list-style: none;
+				li {
+					display: inline;
+					padding: 0 auto;
+					img {
+						width:50px;
+						
+					} //img
+				} //li
+			} //ul
+		} //social 
+
+		#skyline {
+			postition: fixed;
+			float: right;
+			margin-right: 0px;
+			max-height: 107px;
+			margin-top: -25px;
+	
+			 @include breakpoint(max-width $small) {
+				 font-size: 1.2em;
+				 span {display: none;}
+			} //breakpoint	
+	
+		} //skyline
+	} //skyline outer
+} //baseline
+
+/****************** FOOTER ********************
+***********************************************/
+
+#footer {
+	background-color: $dark;
+	text-align: center;
+	line-height: 130%;
+	display:inline;
+
+
+}

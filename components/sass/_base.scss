@@ -1,0 +1,24 @@
+body{
+	font: $mainFont;
+	background: $backgroundColor;
+	color: $typedefault;
+	} 						/* Body */
+
+#{headings()} {
+	font: $mainFont;
+	font-weight: $bold;
+	font-size: 1.5em;
+	text-align: center;
+}							/* headings */
+
+strong {
+	font-weight: $bold;
+}							/* Strong */
+
+p {
+	font-weight: $normal;
+	padding-bottom: 10px;
+	text-align: center;
+	font-size: 1em;
+}							/* P */
+

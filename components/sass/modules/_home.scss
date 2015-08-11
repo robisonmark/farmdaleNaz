@@ -1,0 +1,172 @@
+/****************************
+		Intro / Header
+*****************************/
+
+header {
+	.fullheight {
+		@include backImage('../images/Farmdale-Pic-1.jpg');
+
+		@include display-flex();
+		@include align-items(center);
+		@include justify-content(center);  
+		position: relative;
+
+	.hgroup {
+		paddding: 100px 0;
+		position: absolute;
+		left: 40px;
+		right: 40px;
+		bottom: 3.2em;
+
+		 @include breakpoint (0  $small) {
+				  &::after {
+				     content: '\000a0';
+					 display: block;
+				  } //&nbsp
+
+					span {display:none;}
+					bottom: 2em;
+					width: 100%;
+					left: 0;
+				  } //breakpoint
+
+		h1 {
+			color: $light;
+			font-size: 4em;
+			font-weight: $bold;
+			line-height: .8em;
+			@include text-shadow($dark 0 0 20px);
+			text-align: center;
+
+			 @include breakpoint (0  $small) {
+		
+					span {display:none;}
+					font-size: 2.3em;
+					line-height: .3em;
+					
+					width: 100%;
+				  } //breakpoint
+		} //h1
+
+		h2 {
+			display: block;
+			color: $light;
+			width: 60%;
+			max-width: 200px;
+			min-width: 80px;
+			margin: 0 auto;
+			text-align: center;
+			border: 1px solid $light;
+			margin-top: 15px;
+			padding: 10px;
+			background: rgba($headersubbg, .5);
+			font-size: 1.3em;
+
+			 @include breakpoint (0  $small) {
+		
+					span {display:none;}
+					font-size: 1em;
+					max-height: 75px;
+					width: 100%;
+				  } //breakpoint
+		} //h2
+
+
+		p {
+			text-align: center;
+			img {
+				padding-top: 50px;
+				max-width: 350px;
+				max-height: 200px;
+				border: 1px solid $light;
+				margin-top: 15px;
+				padding: 10px;
+				background: rgba($headersubbg, .3);
+			
+				} //img
+			} //p
+		} //hgroup	  
+	} //fullheight
+} //header
+
+
+
+/****************************
+		   Welcome
+*****************************/
+
+
+#welcome {
+	background-color: $light;
+	color: $dark;	
+
+	#{headings()} {
+		color: $dark;
+	} // #{headings()}
+
+	.heading {
+	  @include pad(1,1);
+	  text-align: center;
+
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+		} //h1
+	} //heading
+
+	h2 {
+		color: darken($pink, 20);
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+	} //h2
+
+	p {
+		font-size: 1em;
+		line-height: 130%;
+		text-align: center;
+	} //p
+} //welcome
+
+
+/************************************************
+		   		   About
+************************************************/
+
+
+#about {
+	background-color: $dark;
+	color: $light;
+	text-align: center;
+
+	#{headings()} {
+		color: $light;
+	} //#{headings()}
+
+	.heading {
+		@include pad(1,1);
+		text-align: center;
+		color: $light;
+
+			h1 {
+				font-size: 1.8em;
+				font-weight: $bold;	
+			} //h1
+		}//heading
+
+	h2 {
+		color: darken($pink, 20);
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+		
+		} //h2
+
+	p {
+		@include pad(1,1);
+		font-size: 1em;
+		line-height: 130%;
+		text-align: center;
+		} //p
+		
+	} //about
