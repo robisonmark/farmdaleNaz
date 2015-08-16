@@ -37,7 +37,11 @@ body {
 	font-size: 1em; 
     font-weight: $bold; 
     text-transform: uppercase;
-    text-decoration:none; 
+    text-decoration:none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;  
     
     &:visited {
 		color: $dark;
@@ -63,6 +67,10 @@ body {
     font-weight: $bold; 
     text-transform: uppercase;
     text-decoration:none; 
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px; 
  
 	&:visited {
 		color: $white;
@@ -89,6 +97,10 @@ body {
     font-weight: $bold; 
     text-transform: uppercase;
     text-decoration:none; 
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;   
 
 	&:visited {
 		color: $white;
@@ -114,6 +126,10 @@ body {
     font-weight: $bold; 
     text-transform: uppercase;
     text-decoration:none; 
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;  
 	
 	&:visited {
 		color: $dark;

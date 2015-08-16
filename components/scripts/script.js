@@ -45,19 +45,14 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#welcome').offset().top) {
+    if (windowpos > $('#giving').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#welcome"]').addClass('active');
+      $('a[href$="#giving"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#events').offset().top) {
+    if (windowpos > $('#staff').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#events"]').addClass('active');
-    } //windowpos
-
-    if (windowpos > $('#ministries').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#ministries"]').addClass('active');
+      $('a[href$="#staff"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#about').offset().top) {
@@ -65,9 +60,19 @@ $(function() {
       $('a[href$="#about"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#staff').offset().top) {
+    if (windowpos > $('#connect').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#staff"]').addClass('active');
+      $('a[href$="#connect"]').addClass('active');
+    } //windowpos
+
+    if (windowpos > $('#events').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#events"]').addClass('active');
+    } //windowpos
+    
+    if (windowpos > $('#welcome').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#welcome"]').addClass('active');
     } //windowpos
 
   }); //window scroll
@@ -91,11 +96,8 @@ $(function() {
 
 }); //on load
 
-    //colorbox
-    $('a.btn_map, a.btn_cal').colorbox({
-        iframe: true, width:800, height:600, maxWidth:"99%", maxHeight:"95%", opacity:0.7
-        }); //btn_map, cal
-	
-	$('a.btn_light, a.btn_dark, a.pic_btn').colorbox({
-        iframe: true, width: 800, height:600, maxWidth:"99%", maxHeight:"95%", opacity:0.7
-        }); //btn_light, dark, pic
+// Hamburger Menu
+$('#toggle').click(function() {
+   $(this).toggleClass('active');
+   $('#overlay').toggleClass('open');
+  });

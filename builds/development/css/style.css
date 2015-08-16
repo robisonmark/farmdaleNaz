@@ -142,6 +142,10 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .btn_map:visited {
   color: #121212;
@@ -165,6 +169,10 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .btn_light:visited {
   color: #ffffff;
@@ -187,6 +195,10 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .btn_cal:visited {
   color: #ffffff;
@@ -210,6 +222,10 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 .btn_dark:visited {
   color: #121212;
@@ -219,238 +235,292 @@ body {
   color: #2a2a2a;
 }
 
-/*
-    Colorbox Core Style:
-    The following CSS is consistent between example themes and should not be altered.
-*/
-#colorbox, #cboxOverlay, #cboxWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  overflow: hidden;
-}
-
-#cboxWrapper {
-  max-width: none;
-}
-
-#cboxOverlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-
-#cboxMiddleLeft, #cboxBottomLeft {
-  clear: left;
-}
-
-#cboxContent {
+/****************************
+		Intro / Header
+*****************************/
+header .fullheight {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/Farmdale-Pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   position: relative;
 }
-
-#cboxLoadedContent {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-#cboxTitle {
-  margin: 0;
-}
-
-#cboxLoadingOverlay, #cboxLoadingGraphic {
+header .fullheight .hgroup {
+  paddding: 100px 0;
   position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 3.2em;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  header .fullheight .hgroup {
+    bottom: 2em;
+    width: 100%;
+    left: 0;
+  }
+  header .fullheight .hgroup::after {
+    content: '\000a0';
+    display: block;
+  }
+  header .fullheight .hgroup span {
+    display: none;
+  }
+}
+header .fullheight .hgroup h1 {
+  color: #E4E4E4;
+  font-size: 4em;
+  font-weight: 800;
+  line-height: .8em;
+  text-shadow: #121212 0 0 20px;
+  text-align: center;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  header .fullheight .hgroup h1 {
+    font-size: 2.3em;
+    line-height: .3em;
+    width: 100%;
+  }
+  header .fullheight .hgroup h1 span {
+    display: none;
+  }
+}
+header .fullheight .hgroup h2 {
+  display: block;
+  color: #E4E4E4;
+  width: 60%;
+  max-width: 200px;
+  min-width: 80px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #E4E4E4;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(18, 18, 18, 0.5);
+  font-size: 1.3em;
+}
+@media (min-width: 0) and (max-width: 650px) {
+  header .fullheight .hgroup h2 {
+    font-size: 1em;
+    max-height: 75px;
+    width: 100%;
+  }
+  header .fullheight .hgroup h2 span {
+    display: none;
+  }
+}
+header .fullheight .hgroup p {
+  text-align: center;
+}
+header .fullheight .hgroup p img {
+  padding-top: 50px;
+  max-width: 350px;
+  max-height: 200px;
+  border: 1px solid #E4E4E4;
+  margin-top: 15px;
+  padding: 10px;
+  background: rgba(18, 18, 18, 0.3);
+}
+
+/****************************
+		Hamburger Menu
+****************************/
+li a, .brand {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  overflow: hidden;
+}
+li a:after, .brand:after {
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  height: 2px;
+  width: 0%;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  transition: .35s ease;
+}
+li a:hover:after, .brand:hover:after {
+  width: 100%;
+}
+
+.button_container {
+  position: fixed;
+  top: 3%;
+  right: 5.5%;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button_container:hover {
+  opacity: .7;
+}
+.button_container.active .top {
+  transform: translateY(10px) translateX(0) rotate(45deg);
+  background: #121212;
+}
+.button_container.active .middle {
+  opacity: 0;
+  background: #ffffff;
+}
+.button_container.active .bottom {
+  transform: translateY(-10px) translateX(0) rotate(-45deg);
+  background: #ffffff;
+}
+.button_container span {
+  background: #ffffff;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+@media (min-width: 960px) {
+  .button_container span {
+    display: none;
+  }
+}
+.button_container span:nth-of-type(2) {
+  top: 10px;
+}
+.button_container span:nth-of-type(3) {
+  top: 20px;
+}
+
+.overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, width .35s;
+  z-index: 50;
 }
-
-#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
-  cursor: pointer;
-}
-
-.cboxPhoto {
-  float: left;
-  margin: auto;
-  border: 0;
-  display: block;
-  max-width: none;
-  -ms-interpolation-mode: bicubic;
-}
-
-.cboxIframe {
-  width: 100%;
+.overlay:before {
+  content: '';
+  background: #ff325d;
+  left: -55%;
+  top: 0;
+  width: 50%;
   height: 100%;
-  display: block;
-  border: 0;
+  position: absolute;
+  transition: left .35s ease;
+}
+.overlay:after {
+  content: '';
+  background: #ff325d;
+  right: -55%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  transition: all .35s ease;
+}
+.overlay.open {
+  opacity: .9;
+  visibility: visible;
+  height: 100%;
+}
+.overlay.open:before {
+  left: 0;
+}
+.overlay.open:after {
+  right: 0;
+}
+.overlay.open .overlay-menu ul li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open .overlay-menu ul li:nth-of-type(2) {
+  animation-delay: .45s;
+}
+.overlay.open .overlay-menu ul li:nth-of-type(3) {
+  animation-delay: .55s;
+}
+.overlay.open .overlay-menu ul li:nth-of-type(4) {
+  animation-delay: .65s;
+}
+.overlay .overlay-menu {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 100;
+}
+.overlay .overlay-menu ul {
+  list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
 }
-
-#colorbox, #cboxContent, #cboxLoadedContent {
-  box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
+.overlay .overlay-menu ul li {
+  display: block;
+  height: 25%;
+  height: calc(100% / 4);
+  min-height: 50px;
+  position: relative;
+  opacity: 0;
 }
-
-/* 
-    User Style:
-    Change the following styles to modify the appearance of Colorbox.  They are
-    ordered & tabbed in a way that represents the nesting of the generated HTML.
-*/
-#cboxOverlay {
-  background: #000;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-}
-
-#colorbox {
-  outline: 0;
-}
-
-#cboxTopLeft {
-  width: 25px;
-  height: 25px;
-  background: url(../images/colorbox/border1.png) no-repeat 0 0;
-}
-
-#cboxTopCenter {
-  height: 25px;
-  background: url(../images/colorbox/border1.png) repeat-x 0 -50px;
-}
-
-#cboxTopRight {
-  width: 25px;
-  height: 25px;
-  background: url(../images/colorbox/border1.png) no-repeat -25px 0;
-}
-
-#cboxBottomLeft {
-  width: 25px;
-  height: 25px;
-  background: url(../images/colorbox/border1.png) no-repeat 0 -25px;
-}
-
-#cboxBottomCenter {
-  height: 25px;
-  background: url(../images/colorbox/border1.png) repeat-x 0 -75px;
-}
-
-#cboxBottomRight {
-  width: 25px;
-  height: 25px;
-  background: url(../images/colorbox/border1.png) no-repeat -25px -25px;
-}
-
-#cboxMiddleLeft {
-  width: 25px;
-  background: url(../images/colorbox/border2.png) repeat-y 0 0;
-}
-
-#cboxMiddleRight {
-  width: 25px;
-  background: url(../images/colorbox/border2.png) repeat-y -25px 0;
-}
-
-#cboxContent {
-  background: #fff;
+.overlay .overlay-menu ul li a {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
   overflow: hidden;
 }
-
-.cboxIframe {
-  background: #fff;
-}
-
-#cboxError {
-  padding: 50px;
-  border: 1px solid #ccc;
-}
-
-#cboxLoadedContent {
-  margin-bottom: 20px;
-}
-
-#cboxTitle {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  text-align: center;
+.overlay .overlay-menu ul li a:hover:after, .overlay .overlay-menu ul li a:focus:after, .overlay .overlay-menu ul li a:active:after {
   width: 100%;
-  color: #999;
 }
-
-#cboxCurrent {
-  position: absolute;
-  bottom: 0px;
-  left: 100px;
-  color: #999;
-}
-
-#cboxLoadingOverlay {
-  background: #fff url(../images/colorbox/loading.gif) no-repeat 5px 5px;
-}
-
-/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  overflow: visible;
-  width: auto;
-  background: none;
-}
-
-/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
-#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
-  outline: 0;
-}
-
-#cboxSlideshow {
-  position: absolute;
-  bottom: 0px;
-  right: 42px;
-  color: #444;
-}
-
-#cboxPrevious {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  color: #444;
-}
-
-#cboxNext {
-  position: absolute;
-  bottom: 0px;
-  left: 63px;
-  color: #444;
-}
-
-#cboxClose {
+.overlay .overlay-menu ul li a:after {
+  content: '';
   position: absolute;
   bottom: 0;
-  right: 0;
-  display: block;
-  color: #444;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #ffffff;
+  transition: .35s;
 }
 
-/*
-  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
-  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
-  See: http://jacklmoore.com/notes/ie-transparency-problems/
-*/
-.cboxIE #cboxTopLeft,
-.cboxIE #cboxTopCenter,
-.cboxIE #cboxTopRight,
-.cboxIE #cboxBottomLeft,
-.cboxIE #cboxBottomCenter,
-.cboxIE #cboxBottomRight,
-.cboxIE #cboxMiddleLeft,
-.cboxIE #cboxMiddleRight {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
 }
-
+/****************************
+		   Nav
+*****************************/
 header #nav {
   background-color: #ff325d;
   width: 100%;
@@ -564,101 +634,6 @@ header #nav .navbar ul li a:active {
   header #nav .navbar ul li a span {
     display: none;
   }
-}
-
-/****************************
-		Intro / Header
-*****************************/
-header .fullheight {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  position: relative;
-}
-header .fullheight .hgroup {
-  paddding: 100px 0;
-  position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 3.2em;
-}
-@media (min-width: 0) and (max-width: 650px) {
-  header .fullheight .hgroup {
-    bottom: 2em;
-    width: 100%;
-    left: 0;
-  }
-  header .fullheight .hgroup::after {
-    content: '\000a0';
-    display: block;
-  }
-  header .fullheight .hgroup span {
-    display: none;
-  }
-}
-header .fullheight .hgroup h1 {
-  color: #E4E4E4;
-  font-size: 4em;
-  font-weight: 800;
-  line-height: .8em;
-  text-shadow: #121212 0 0 20px;
-  text-align: center;
-}
-@media (min-width: 0) and (max-width: 650px) {
-  header .fullheight .hgroup h1 {
-    font-size: 2.3em;
-    line-height: .3em;
-    width: 100%;
-  }
-  header .fullheight .hgroup h1 span {
-    display: none;
-  }
-}
-header .fullheight .hgroup h2 {
-  display: block;
-  color: #E4E4E4;
-  width: 60%;
-  max-width: 200px;
-  min-width: 80px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid #E4E4E4;
-  margin-top: 15px;
-  padding: 10px;
-  background: rgba(18, 18, 18, 0.5);
-  font-size: 1.3em;
-}
-@media (min-width: 0) and (max-width: 650px) {
-  header .fullheight .hgroup h2 {
-    font-size: 1em;
-    max-height: 75px;
-    width: 100%;
-  }
-  header .fullheight .hgroup h2 span {
-    display: none;
-  }
-}
-header .fullheight .hgroup p {
-  text-align: center;
-}
-header .fullheight .hgroup p img {
-  padding-top: 50px;
-  max-width: 350px;
-  max-height: 200px;
-  border: 1px solid #E4E4E4;
-  margin-top: 15px;
-  padding: 10px;
-  background: rgba(18, 18, 18, 0.3);
 }
 
 /****************************

@@ -3,6 +3,7 @@
 //Compass imports
 @import "compass";
 @import "compass/reset";
+@import "compass/css3";
 @import "compass/css3/box-shadow";
 @import "compass/css3/text-shadow";
 @import 'compass/css3/filter';
@@ -19,7 +20,6 @@
 @import "mixins";
 @import "base";
 @import "layout";
-@import "colorbox";
 
 //Import Modules
 @import "modules/home";
