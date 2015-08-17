@@ -3,7 +3,7 @@
 *****************************/
 header {
 	.fullheight {
-		@include backImage('../images/Farmdale-Pic-1.jpg');
+		@include backImage('../images/Farmdale-Pic-3.jpg');
 
 		@include display-flex();
 		@include align-items(center);
@@ -30,7 +30,7 @@ header {
       } //breakpoint 
     
   @include breakpoint ($wide) {
-      padding: 30px 0;
+      padding: 100px 0;
       position: absolute;
       left: 40px;
       right: 40px;

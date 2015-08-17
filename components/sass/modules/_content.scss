@@ -134,7 +134,7 @@
 
 } //events
 
-/****************  MINISTRIES ******************
+/****************  Ministries ******************
 ************************************************/
 
 #ministries {
@@ -143,7 +143,7 @@
 	
 	.fullheight {
 	    
-		@include backImage('../images/Fam-1.jpg');
+		@include backImage('../images/Farmdale-Pic-1.jpg');
 		@include display-flex();
 		@include justify-content(center);  
 		background-position: top;
@@ -226,16 +226,16 @@
 	} //about
 
 
-/****************** BELIEFS ********************
+/****************** Staff **********************
 ************************************************/
 
-#beliefs {
-	background-color: $dark;
-	color: $light;
+#staff {
+	background-color: $light;
+	color: $dark;
 	
 
 	#{headings()} {
-		color: $light;
+		color: $dark;
 	}
 
 	.heading {
@@ -262,7 +262,7 @@
 		text-align: center;
 	} //p
 
-} //beliefs
+} //staff
 
 #give {
 	background-color: $light;
