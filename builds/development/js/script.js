@@ -30,7 +30,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $(function() {
 
-    var topoffset = 43;
+    var topoffset = 69;
 
     var wheight =$(window).height(); //get height of window using jquery
 
