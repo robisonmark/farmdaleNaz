@@ -127,7 +127,12 @@ header {
   z-index: 100;
   transition: opacity .25s ease;
   
-  
+   @include breakpoint ($medium, $wide) {
+    display: none;
+    visibility: hidden;
+    cursor: default;
+  }
+ 
   &:hover {
     opacity: .7;
   }
@@ -149,11 +154,6 @@ header {
   }
   
   span {
-  @include breakpoint ($medium, $wide) {
-    display: none;
-    visibility: hidden;
-  }
- 
   background: $white;
   border: none;
   height: 5px;
@@ -322,13 +322,13 @@ header #nav {
 	  margin-top: .7em;
 
 	  .brand {
-		@include span(4);
-	     float: left;
-		 font-weight: $bold;
-		 font-family: $headFont;
-		 text-align: center;
-		 text-transform: uppercase;
-		 background: $navbrand;
+      @include span(4);
+      float: left;
+      font-weight: $bold;
+      font-family: $headFont;
+      text-align: center;
+      text-transform: uppercase;
+      background: $navbrand;
 
 		 a {
 		  color: $light;
@@ -339,8 +339,8 @@ header #nav {
 		  font-size: 1.5em;
 
 		  @include breakpoint(max-width $small) {
-		     font-size: 1.2em;
-			 span {display: none;}
+        font-size: 1.2em;
+        span {display: none;}
 			} //breakpoint small
 
 		  @include breakpoint(max-width $medium) {
@@ -358,9 +358,13 @@ header #nav {
 	  	 } //brand
 	 
 	 ul {
-	   	   
-	 
-	   li {
+    @include breakpoint ($small $medium) {
+      display: none;
+      visibility: hidden;
+      cursor: default;
+    } 
+    
+    li {
 			float: right;
 			margin: auto;
 
@@ -374,25 +378,23 @@ header #nav {
 			   text-decoration: none;
 
 			   &:hover{
-			     background-color: $navbrand;
-				 color: $dark;
-			   } //hover
+			    background-color: $navbrand;
+          color: $dark;
+          } //hover
 
 			   &:active {
 				  background-color: $dark;
-				  color: $white;
-				} //highlight
+				  color: $pink;
+				  } //highlight 
 
 			   @include breakpoint (0  $small) {
 			      padding: 10px 18px;
 				 
-				  &::after {
-				     
+				  &::after {  
 					 display: block;
-				  } //&nbsp
-
+				    } //&nbsp
 					span {display:none;}
-				  } //breakpoint
+				    } //breakpoint
 
 			   @include breakpoint ($small $medium) {
 			      padding-left: 10px;
@@ -401,7 +403,7 @@ header #nav {
 
 				 } //breakpoint
 							 
-		} //a
+		  } //a
 	   } //li
 	 } //ul
 	} //navbar

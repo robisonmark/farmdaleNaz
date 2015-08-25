@@ -23,13 +23,12 @@ $pink		: #ff325d;
 $white		: #ffffff;
 $light		: #E4E4E4;
 $darkpink	: #B21133;
-$blue		: #B21133;
 $navbrand	: #ff325d;
 
 
 $backgroundColor	: $dark;
 $typedefault		: $light;
-$navBackground		: $blue;
+$navBackground		: $pink;
 $navForeground		: $light;
 $navHover			: $darkpink;
 $mainFont			: $light;
@@ -45,4 +44,3 @@ $italic		: 400 italic;
 
 $headFont : $thin 1.5em/1.5em $fontfamily;
 $mainFont : $thin 1em/1.5em $fontfamily;
-$headColor : lighten($pink, 20);

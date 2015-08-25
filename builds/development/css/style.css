@@ -239,7 +239,7 @@ body {
 		Intro / Header
 *****************************/
 header .fullheight {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/Farmdale-Pic-3.jpg");
+  background: url("../images/Farmdale-Pic-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -366,6 +366,13 @@ li a:hover:after, .brand:hover:after {
   z-index: 100;
   transition: opacity .25s ease;
 }
+@media (min-width: 960px) {
+  .button_container {
+    display: none;
+    visibility: hidden;
+    cursor: default;
+  }
+}
 .button_container:hover {
   opacity: .7;
 }
@@ -391,12 +398,6 @@ li a:hover:after, .brand:hover:after {
   left: 0;
   transition: all .35s ease;
   cursor: pointer;
-}
-@media (min-width: 960px) {
-  .button_container span {
-    display: none;
-    visibility: hidden;
-  }
 }
 .button_container span:nth-of-type(2) {
   top: 10px;
@@ -596,6 +597,13 @@ header #nav .navbar .brand a {
   }
 }
 
+@media (min-width: 650px) and (max-width: 960px) {
+  header #nav .navbar ul {
+    display: none;
+    visibility: hidden;
+    cursor: default;
+  }
+}
 header #nav .navbar ul li {
   float: right;
   margin: auto;
@@ -615,7 +623,7 @@ header #nav .navbar ul li a:hover {
 }
 header #nav .navbar ul li a:active {
   background-color: #121212;
-  color: #ffffff;
+  color: #ff325d;
 }
 @media (min-width: 0) and (max-width: 650px) {
   header #nav .navbar ul li a {
@@ -842,7 +850,7 @@ header #nav .navbar ul li a:active {
   text-align: center;
 }
 #ministries .fullheight {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/Farmdale-Pic-1.jpg");
+  background: url("../images/Farmdale-Pic-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -976,7 +984,7 @@ header #nav .navbar ul li a:active {
 /****************** baseline ********************
 ************************************************/
 #baseline {
-  background-color: #121212;
+  background-color: #ff325d;
   text-align: center;
 }
 #baseline #skyline_outer {
@@ -985,7 +993,7 @@ header #nav .navbar ul li a:active {
   height: 64px;
 }
 #baseline #skyline_outer #social {
-  background-color: transparent;
+  background-color: #ff325d;
   position: absolute;
   left: 50px;
   bottom-margin: 15px;
@@ -1018,7 +1026,7 @@ header #nav .navbar ul li a:active {
 
 /****************** FOOTER ********************
 ***********************************************/
-#footer {
+footer {
   background-color: #121212;
   text-align: center;
   line-height: 130%;

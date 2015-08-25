@@ -30,9 +30,10 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $(function() {
 
-    var topoffset = 69;
+    var topoffset = 40;
 
-    var wheight =$(window).height(); //get height of window using jquery
+//window height
+    var wheight = $(window).height(); //get height of window using jquery
 
       $('.fullheight').css('height', wheight);
 
@@ -44,17 +45,6 @@ $(function() {
 
 
   var isTouch = 'ontouchstart' in document.documentElement;
-
-  //window height
-  var wheight = $(window).height(); //get height of the window
-
-  $('.fullheight').css('height', wheight);
-
-  $(window).resize(function() {
-    var wheight = $(window).height(); //get height of the window
-    $('.fullheight').css('height', wheight);
-  }) //on resize
-
 
 // Animated Scrolling
   $('a[href*=#]:not([href=#])').click(function() {
@@ -75,14 +65,19 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#giving').offset().top) {
+    if (windowpos > $('#welcome').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#giving"]').addClass('active');
+      $('a[href$="#welcome"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#staff').offset().top) {
+    if (windowpos > $('#events').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#staff"]').addClass('active');
+      $('a[href$="#events"]').addClass('active');
+    } //windowpos
+
+    if (windowpos > $('#ministries').offset().top) {
+      $('nav li a').removeClass('active');
+      $('a[href$="#ministries"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#about').offset().top) {
@@ -90,21 +85,15 @@ $(function() {
       $('a[href$="#about"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#connect').offset().top) {
+    if (windowpos > $('#staff').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#connect"]').addClass('active');
-    } //windowpos
-
-    if (windowpos > $('#events').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#events"]').addClass('active');
+      $('a[href$="#staff"]').addClass('active');
     } //windowpos
     
-    if (windowpos > $('#welcome').offset().top) {
+    if (windowpos > $('#giving').offset().top) {
       $('nav li a').removeClass('active');
-      $('a[href$="#welcome"]').addClass('active');
+      $('a[href$="#giving"]').addClass('active');
     } //windowpos
-
   }); //window scroll
 
 
@@ -120,11 +109,8 @@ $(function() {
   //pin the navigation
   var pin = new ScrollScene({
     triggerElement: '#nav',
-  }).setPin('#nav').addTo(controller);
-
-
-
-}); //on load
+    }).setPin('#nav').addTo(controller);
+  }); //on load
 
 // Hamburger Menu
 $('#toggle').click(function() {

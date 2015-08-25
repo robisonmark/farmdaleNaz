@@ -3,16 +3,16 @@
 
 
 #baseline {
-	background-color: $dark;
+	background-color: $navbrand;
 	text-align: center;
 	
 	#skyline_outer {
-		background-color: $pink;
+		background-color: $navbrand;
 		position: relative;
 		height: 64px;
 	
 		#social {
-			background-color: transparent;
+			background-color: $navbrand;
 			position: absolute;
 			left: 50px;
 			bottom-margin: 15px;
@@ -49,11 +49,9 @@
 /****************** FOOTER ********************
 ***********************************************/
 
-#footer {
+footer {
 	background-color: $dark;
 	text-align: center;
 	line-height: 130%;
 	display:inline;
-
-
 }
