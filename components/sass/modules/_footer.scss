@@ -12,10 +12,17 @@
 		height: 64px;
 	
 		#social {
-			background-color: $navbrand;
-			position: absolute;
-			left: 50px;
-			bottom-margin: 15px;
+			font:icon;	
+			padding-top: .5em;
+			
+			a {color: $light;
+			text-shadow: 1px 2px $dark;}
+			
+			@include breakpoint($small) {	
+				position: absolute;
+				left: 50px;
+				bottom-margin: 15px;
+			} //breakpoint	
 			
 			ul {
 				list-style: none;
@@ -31,7 +38,6 @@
 		} //social 
 
 		#skyline {
-			postition: fixed;
 			float: right;
 			margin-right: 0px;
 			max-height: 107px;

@@ -30,7 +30,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $(function() {
 
-    var topoffset = 40;
+    var topoffset = 50;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
@@ -114,9 +114,17 @@ $(function() {
 
 // Hamburger Menu
 $('#toggle').click(function() {
-   $(this).toggleClass('active');
+     $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
+ 
+ if ('#toggle'.hasClass('open')){
+  a.click(function() {
+   $(this).removeClass('active');
+   $('#overlay').removeClass('open');
+  });
+}
+  
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"jquery":2}],2:[function(require,module,exports){
 /*!

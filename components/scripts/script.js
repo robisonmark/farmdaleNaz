@@ -1,6 +1,6 @@
 $(function() {
 
-    var topoffset = 40;
+    var topoffset = 50;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
@@ -84,6 +84,14 @@ $(function() {
 
 // Hamburger Menu
 $('#toggle').click(function() {
-   $(this).toggleClass('active');
+     $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
+ 
+ if ('#toggle'.hasClass('open')){
+  a.click(function() {
+   $(this).removeClass('active');
+   $('#overlay').removeClass('open');
+  });
+}
+  

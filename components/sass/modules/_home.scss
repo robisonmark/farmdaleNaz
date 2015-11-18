@@ -19,29 +19,30 @@ header {
 
   @include breakpoint (0  $medium) {
       &::after {
-          content: '\000a0';
+        content: '\000a0';
         display: block;
       } //&nbsp
 
       span {display:none;}
-      bottom: 2em;
-      width: 100%;
-      left: 0;
+        bottom: 2em;
+        width: 100%;
+        left: 0;
       } //breakpoint 
     
-  @include breakpoint ($wide) {
-      padding: 100px 0;
-      position: absolute;
-      left: 40px;
-      right: 40px;
-      bottom: 3.2em;
-    }  
+      @include breakpoint ($wide) {
+        padding: 100px 0;
+        position: absolute;
+        left: 40px;
+        right: 40px;
+        bottom: 3.2em;
+      }  
 
 		h1 {
 			color: $light;
 			font-size: 4em;
 			font-weight: $bold;
 			line-height: .1em;
+    
 			
       @include text-shadow($dark 0 0 20px);
 			   text-align: center;
@@ -63,17 +64,16 @@ header {
 			margin: 0 auto;
 			text-align: center;
 			border: 1px solid $light;
-			margin-top: 15px;
+			margin-top: 25px;
 			padding: 10px;
 			background: rgba($headersubbg, .5);
 			font-size: 1.3em;
+ 		} //h2
 
-		} //h2
-
-
-		p {
-			text-align: center;
-			img {
+  	p {
+	   	text-align: center;
+		
+    	img {
 				padding-top: 50px;
 				max-width: 350px;
 				max-height: 200px;
@@ -91,10 +91,10 @@ header {
 /****************************
 		Hamburger Menu
 ****************************/
-  li a, .brand {
+  li a {
     display: inline-block;
     position: relative;
-    text-align: center;
+    text-align: right;
     color: $white;
     text-decoration: none;
     font-size: 20px;
@@ -116,10 +116,10 @@ header {
       width: 100%;
     }
   } 
-
+@include breakpoint (max-width $medium) {
 .button_container {
   position: fixed;
-  top: 3%;
+  top: 31px;
   right: 5.5%;
   height: 27px;
   width: 35px;
@@ -127,11 +127,11 @@ header {
   z-index: 100;
   transition: opacity .25s ease;
   
-   @include breakpoint ($medium, $wide) {
+   @include breakpoint (min-width $medium) {
     display: none;
     visibility: hidden;
     cursor: default;
-  }
+  } 
  
   &:hover {
     opacity: .7;
@@ -154,15 +154,15 @@ header {
   }
   
   span {
-  background: $white;
-  border: none;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0;
-  transition:  all .35s ease;
-  cursor: pointer;
+    background: $white;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    transition:  all .35s ease;
+    cursor: pointer;
     
     &:nth-of-type(2) {
       top: 10px;
@@ -172,8 +172,7 @@ header {
       top: 20px;
       }
     }
-  
-}
+  }
 
 .overlay {
   position: fixed;
@@ -185,6 +184,7 @@ header {
   visibility: hidden;
   transition: opacity .35s, visibility .35s, width .35s;
   z-index: 50;
+  
   
   &:before {
     content: '';
@@ -244,7 +244,6 @@ header {
     top: 50%;
     transform: translateY(-50%);
     font-size: 50px;
-   // font-family: 'Vollkorn', serif;
     font-weight: 400;
     text-align: center;
     z-index: 100;
@@ -257,7 +256,7 @@ header {
     display: inline-block;
     position: relative;
     height: 100%; 
-    
+       
     li {
       display: block;
       height: 25%;
@@ -304,7 +303,10 @@ header {
     opacity: 1;
     left: 0;
   }
-}
+} //fadeInRight
+
+} // breakpoint 0 to medium
+
 
 /****************************
 		   Nav
@@ -313,7 +315,7 @@ header #nav {
 	@include clearfix;
 	background-color: $navbrand;
 	width: 100%;
-	height: 70px;
+	height: 90px;
 	z-index: 100;
   border-bottom: solid 4px $dark;
 	  
@@ -323,50 +325,71 @@ header #nav {
 
 	  .brand {
       @include span(4);
-      float: left;
-      font-weight: $bold;
-      font-family: $headFont;
-      text-align: center;
-      text-transform: uppercase;
-      background: $navbrand;
+      
+      a {
+        color: $light;
+        text-decoration: none;
+        text-align: center;
+        font-size: 1.5em;
+        margin-left: 3.5em;
+        
+         #logo {
+          width: 125px;
+          height: 125px;
+          margin-top: -.73em;
+          margin: -.73em auto;
+          float: left;
+          }
+        
+  
+          @include breakpoint(max-width $small) {
+            font-size: 1.2em;
+            span {display: none;}
+          } //breakpoint small
+    
+          @include breakpoint(max-width $medium) {
+            font-size: 1.2em;
+    
+          @include breakpoint ($small $medium) {
+              @include span(5);
+             /* white-space: nowrap;*/
+              padding-left: 10px;
+              
+          } //breakpoint
+          } //breakpoint medium
+        } //a
+       
+     .script {
+        width: 233px;
+        float: right;
+       /* margin-top: -5em;
+        margin-right: -5.2em;*/
+        
+        
+       @include breakpoint(max-width $small) {
+            display: none;
+            float: right;
+          } //breakpoint small
+        
 
-		 a {
-		  color: $light;
-		  text-decoration: none;
-		  text-align: center;
-		  display: inline-block;
-		  padding: 8px;
-		  font-size: 1.5em;
-
-		  @include breakpoint(max-width $small) {
-        font-size: 1.2em;
-        span {display: none;}
-			} //breakpoint small
-
-		  @include breakpoint(max-width $medium) {
-		     font-size: 1.2em;
-
-		  @include breakpoint ($small $medium) {
-		    	@include span(5);
-		    	white-space: nowrap;
-		    	padding-left: 10px;
-			     
-		   } //breakpoint
-			 
-		   } //breakpoint medium
-		 } //a
-	  	 } //brand
+      } //script class
+      
+	   } //brand
 	 
 	 ul {
-    @include breakpoint ($small $medium) {
-      display: none;
-      visibility: hidden;
-      cursor: default;
-    } 
+    
+    @include breakpoint ($medium) {
+      float: right;
+			margin: auto;
+      }
     
     li {
-			float: right;
+			text-align: left;
+      
+      @include breakpoint ($medium) {
+      float: right;
 			margin: auto;
+      }
 
 			a {
 			   color: $navForeground;
@@ -398,11 +421,12 @@ header #nav {
 
 			   @include breakpoint ($small $medium) {
 			      padding-left: 10px;
-
 			      span {display:none;}
-
 				 } //breakpoint
-							 
+
+				&.active {
+          color: $dark; 
+        }
 		  } //a
 	   } //li
 	 } //ul

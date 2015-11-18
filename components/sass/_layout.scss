@@ -1,12 +1,11 @@
 body {
-	position: absolute;
 	width: 100%;
 	height: 100%;
 	} // body
 
   .scene {
-	 position: relative;
-	 padding: 20px 0;
+	 
+	padding: 20px 0;
    
    article {
 	@include container(95%);
@@ -81,35 +80,6 @@ body {
 
 	
 } //btn light
-
-.btn_cal {
-	display: inline-block;
-	color: $white;
-	width: 50%; 
-	max-width: 160px;
-	margin: 0 auto;
-    text-align: center; 
-    border: 1.5px solid $pink;
-	padding: .3em;
-	background: transparent;
-	font-size: 1em; 
-    font-weight: $bold; 
-    text-transform: uppercase;
-    text-decoration:none; 
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px;   
-
-	&:visited {
-		color: $white;
-	} //visited
-
-	&:hover {
-		 background-color:$pink;
-		 color: $white; 
-	} //hover
-} //btn_cal
 
 .btn_dark {
 	display: inline-block;
