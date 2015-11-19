@@ -321,66 +321,52 @@ header #nav {
 	  
 	.navbar {
 	  @include container;
-	  margin-top: .7em;
+	  
 
 	  .brand {
-      @include span(4);
+       margin-top: .7em;
+       margin-left: 1.2em;
+       float: left;
       
       a {
         color: $light;
         text-decoration: none;
         text-align: center;
-        font-size: 1.5em;
-        margin-left: 3.5em;
         
          #logo {
           width: 125px;
           height: 125px;
-          margin-top: -.73em;
-          margin: -.73em auto;
+          margin: -1.1em auto;
           float: left;
           }
-        
   
           @include breakpoint(max-width $small) {
-            font-size: 1.2em;
             span {display: none;}
           } //breakpoint small
     
-          @include breakpoint(max-width $medium) {
-            font-size: 1.2em;
-    
           @include breakpoint ($small $medium) {
-              @include span(5);
-             /* white-space: nowrap;*/
-              padding-left: 10px;
-              
-          } //breakpoint
+            width: 600px;
+            padding-left: 18%;            
           } //breakpoint medium
         } //a
        
      .script {
         width: 233px;
-        float: right;
-       /* margin-top: -5em;
-        margin-right: -5.2em;*/
+        margin-top: -.6em;
+       
         
         
        @include breakpoint(max-width $small) {
             display: none;
-            float: right;
           } //breakpoint small
-        
-
       } //script class
-      
-	   } //brand
+ 	   } //brand
 	 
 	 ul {
     
     @include breakpoint ($medium) {
       float: right;
-			margin: auto;
+			margin: 1.2em auto;
       }
     
     li {

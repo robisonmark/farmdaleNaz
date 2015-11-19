@@ -564,7 +564,6 @@ header #nav .navbar {
   max-width: 70em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: .7em;
 }
 header #nav .navbar:after {
   content: " ";
@@ -572,71 +571,45 @@ header #nav .navbar:after {
   clear: both;
 }
 header #nav .navbar .brand {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 33.33333%;
+  margin-top: .7em;
+  margin-left: 1.2em;
   float: left;
-  padding-left: 0.83333%;
-  padding-right: 0.83333%;
 }
 header #nav .navbar .brand a {
   color: #E4E4E4;
   text-decoration: none;
   text-align: center;
-  font-size: 1.5em;
-  margin-left: 3.5em;
 }
 header #nav .navbar .brand a #logo {
   width: 125px;
   height: 125px;
-  margin-top: -.73em;
-  margin: -.73em auto;
+  margin: -1.1em auto;
   float: left;
 }
 @media (max-width: 650px) {
-  header #nav .navbar .brand a {
-    font-size: 1.2em;
-  }
   header #nav .navbar .brand a span {
     display: none;
   }
 }
-@media (max-width: 960px) {
+@media (min-width: 650px) and (max-width: 960px) {
   header #nav .navbar .brand a {
-    font-size: 1.2em;
+    width: 600px;
+    padding-left: 18%;
   }
 }
-@media (max-width: 960px) and (min-width: 650px) and (max-width: 960px) {
-  header #nav .navbar .brand a {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 41.66667%;
-    float: left;
-    padding-left: 0.83333%;
-    padding-right: 0.83333%;
-    /* white-space: nowrap;*/
-    padding-left: 10px;
-  }
-}
-
 header #nav .navbar .brand .script {
   width: 233px;
-  float: right;
-  /* margin-top: -5em;
-   margin-right: -5.2em;*/
+  margin-top: -.6em;
 }
 @media (max-width: 650px) {
   header #nav .navbar .brand .script {
     display: none;
-    float: right;
   }
 }
 @media (min-width: 960px) {
   header #nav .navbar ul {
     float: right;
-    margin: auto;
+    margin: 1.2em auto;
   }
 }
 header #nav .navbar ul li {
