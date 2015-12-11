@@ -366,7 +366,7 @@ header #nav {
     
     @include breakpoint ($medium) {
       float: right;
-			margin: 1.2em auto;
+			margin: 1.4em auto;
       }
     
     li {
@@ -475,9 +475,20 @@ header #nav {
 
 
 #about {
-	background-color: $dark;
 	color: $light;
 	text-align: center;
+  text-shadow: 2px 2px #121212;
+  
+  .fullheight {
+	    
+		@include backImage('../images/Farmdale-Pic-1.jpg');
+		@include display-flex();
+		@include justify-content(center);  
+		background-position: top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover; 
+		} //fullheight
 
 	#{headings()} {
 		color: $light;
@@ -503,7 +514,6 @@ header #nav {
 		} //h2
 
 	p {
-		@include pad(1,1);
 		font-size: 1em;
 		line-height: 130%;
 		text-align: center;

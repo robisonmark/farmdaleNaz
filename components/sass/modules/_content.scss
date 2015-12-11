@@ -46,20 +46,10 @@
 ************************************************/
 
 #ministries {
+	background-color: $dark;
 	color: $light;
 	text-align: center;
-		text-shadow: 2px 2px #121212;
-	
-	.fullheight {
-	    
-		@include backImage('../images/Farmdale-Pic-1.jpg');
-		@include display-flex();
-		@include justify-content(center);  
-		background-position: top;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover; 
-		} //fullheight
+		
 	
 
 	#{headings()} {
@@ -94,46 +84,7 @@
 } //ministries
 
 
-/*****************  ABOUT US *******************
-************************************************/
 
-
-#about {
-	background-color: $dark;
-	color: $light;
-	text-align: center;
-
-	#{headings()} {
-		color: $light;
-	} //#{headings()}
-
-	.heading {
-		@include pad(1,1);
-		text-align: center;
-		color: $light;
-
-			h1 {
-				font-size: 1.8em;
-				font-weight: $bold;	
-			} //h1
-		}//heading
-
-	h2 {
-		color: darken($pink, 20);
-		font-size: 1.3em;
-		line-height: 110%;
-		padding: 10px 0;
-		
-		} //h2
-
-	p {
-		@include pad(1,1);
-		font-size: 1em;
-		line-height: 130%;
-		text-align: center;
-		} //p
-		
-	} //about
 
 
 /****************** Staff **********************
@@ -142,6 +93,7 @@
 #staff {
 	background-color: $light;
 	color: $dark;
+	@include clearfix;
 	
 
 	#{headings()} {
@@ -165,42 +117,114 @@
 		padding: 10px 0;
 		
 	} //h2
-
-	p {
-		font-size: 1em;
-		line-height: 130%;
-		text-align: center;
-	} //p
+	.line1 {
+		#leadPastor {
+			img {
+				height: 25%;
+				width: 25%;
+				margin: 10px 38% 10px 38%;	
+			};
+			
+			@include breakpoint (min-width $medium) {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				
+					img {
+						height: 60%;
+						width: 60%;
+					};
+				h4 {
+					width: 100%;
+					margin: auto;
+				}
+			} //breakpoint
+		} //leader pastor
+		
+		#youthPastor {
+			img {
+				height: 25%;
+				width: 25%;
+				margin: 10px 38% 10px 38%;	
+			};
+			
+			@include breakpoint (min-width $medium) {
+				float: right;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				
+					img {
+						height: 60%;
+						width: 60%;
+					};
+				h4 {
+					
+					margin: auto;
+				}
+			} //breakpoint
+		} //youth pastor
+	} //line1
+	#worshipPastor {
+		img {
+			height: 25%;
+			width: 25%;
+			margin: 10px 38% 10px 38%;	
+		};
+		
+		@include breakpoint (min-width $medium) {}
+	} //worship pastor
+	
+	#childrenLeader {
+		img {
+			height: 25%;
+			width: 25%;
+			margin: 10px 38% 10px 38%;	
+		};
+		
+		 @include breakpoint (min-width $medium) {}
+	} //childrens pastor
+	
+	/* @include breakpoint (min-width $medium) {
+			
+		.line1 {
+			height: 250px;
+		
+		#leadPastor {
+			float: left;
+			width: 47%;
+			height: 250px;
+				img {
+				};
+		} //leader pastor
+		
+		#youthPastor {
+			float: right;
+			width: 47%;
+			height: 250px;
+				img {
+				};
+		} //youth pastor
+	 }//line1
+	 .line2 {
+		#worshipPastor {
+			float: left;
+			img {
+				height: 15%;
+				width: 15%;
+			//	margin: 10px 38% 10px 38%;	
+			};
+		} //worship pastor
+	
+		#childrenLeader {
+			float: right;
+			img {
+				height: 15%;
+				width: 15%;
+				//margin: 10px 38% 10px 38%;	
+			};
+		} //childrens pastor 
+	 } //line 2
+	 } */
+	 
 
 } //staff
-
-#give {
-	background-color: $light;
-	color: $dark;
-	
-
-	.heading {
-	  @include pad(1,1);
-	  text-align: center;
-
-		h1 {
-			font-size: 1.8em;
-			font-weight: $bold;	
-		} //h1
-	} //heading
-
-	h2 {
-		color: darken($pink, 20);
-		font-size: 1.3em;
-		line-height: 110%;
-		padding: 10px 0;
-		
-		} //h2
-
-	p {
-		font-size: 1em;
-		line-height: 130%;
-		text-align: center;
-		} //p
-
-} //give

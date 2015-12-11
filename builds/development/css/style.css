@@ -609,7 +609,7 @@ header #nav .navbar .brand .script {
 @media (min-width: 960px) {
   header #nav .navbar ul {
     float: right;
-    margin: 1.2em auto;
+    margin: 1.4em auto;
   }
 }
 header #nav .navbar ul li {
@@ -706,9 +706,26 @@ header #nav .navbar ul li a.active {
 		   		   About
 ************************************************/
 #about {
-  background-color: #121212;
   color: #E4E4E4;
   text-align: center;
+  text-shadow: 2px 2px #121212;
+}
+#about .fullheight {
+  background: url("../images/Farmdale-Pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 #about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
   color: #E4E4E4;
@@ -730,8 +747,6 @@ header #nav .navbar ul li a.active {
   padding: 10px 0;
 }
 #about p {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
   font-size: 1em;
   line-height: 130%;
   text-align: center;
@@ -776,26 +791,9 @@ header #nav .navbar ul li a.active {
 /****************  Ministries ******************
 ************************************************/
 #ministries {
+  background-color: #121212;
   color: #E4E4E4;
   text-align: center;
-  text-shadow: 2px 2px #121212;
-}
-#ministries .fullheight {
-  background: url("../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 #ministries h1, #ministries h2, #ministries h3, #ministries h4, #ministries h5, #ministries h6 {
   color: #E4E4E4;
@@ -823,45 +821,59 @@ header #nav .navbar ul li a.active {
   font-weight: 800;
 }
 
-/*****************  ABOUT US *******************
-************************************************/
-#about {
-  background-color: #121212;
-  color: #E4E4E4;
-  text-align: center;
-}
-#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
-  color: #E4E4E4;
-}
-#about .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-  color: #E4E4E4;
-}
-#about .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#about h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#about p {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
-}
-
 /****************** Staff **********************
 ************************************************/
 #staff {
   background-color: #E4E4E4;
   color: #121212;
+  /* @include breakpoint (min-width $medium) {
+  		
+  	.line1 {
+  		height: 250px;
+  	
+  	#leadPastor {
+  		float: left;
+  		width: 47%;
+  		height: 250px;
+  			img {
+  			};
+  	} //leader pastor
+  	
+  	#youthPastor {
+  		float: right;
+  		width: 47%;
+  		height: 250px;
+  			img {
+  			};
+  	} //youth pastor
+   }//line1
+   .line2 {
+  	#worshipPastor {
+  		float: left;
+  		img {
+  			height: 15%;
+  			width: 15%;
+  		//	margin: 10px 38% 10px 38%;	
+  		};
+  	} //worship pastor
+  
+  	#childrenLeader {
+  		float: right;
+  		img {
+  			height: 15%;
+  			width: 15%;
+  			//margin: 10px 38% 10px 38%;	
+  		};
+  	} //childrens pastor 
+   } //line 2
+   } */
+}
+#staff:before, #staff:after {
+  content: '';
+  display: table;
+}
+#staff:after {
+  clear: both;
 }
 #staff h1, #staff h2, #staff h3, #staff h4, #staff h5, #staff h6 {
   color: #121212;
@@ -881,35 +893,54 @@ header #nav .navbar ul li a.active {
   line-height: 110%;
   padding: 10px 0;
 }
-#staff p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
+#staff .line1 #leadPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
 }
-
-#give {
-  background-color: #E4E4E4;
-  color: #121212;
+@media (min-width: 960px) {
+  #staff .line1 #leadPastor {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  #staff .line1 #leadPastor img {
+    height: 60%;
+    width: 60%;
+  }
+  #staff .line1 #leadPastor h4 {
+    width: 100%;
+    margin: auto;
+  }
 }
-#give .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
+#staff .line1 #youthPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
 }
-#give .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
+@media (min-width: 960px) {
+  #staff .line1 #youthPastor {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  #staff .line1 #youthPastor img {
+    height: 60%;
+    width: 60%;
+  }
+  #staff .line1 #youthPastor h4 {
+    margin: auto;
+  }
 }
-#give h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
+#staff #worshipPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
 }
-#give p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
+#staff #childrenLeader img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
 }
 
 /****************** baseline ********************
