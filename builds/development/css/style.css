@@ -787,6 +787,52 @@ header #nav .navbar ul li a.active {
   margin-left: 23%;
   padding-top: 20px;
 }
+#events .calendar-container {
+  width: 80%;
+  padding: 25px;
+  margin: auto;
+}
+#events .cal-head {
+  background-color: #ff325d;
+  width: 100%;
+  height: 80px;
+  display: table;
+  color: #E4E4E4;
+  font-size: 2em;
+  padding-top: 25px;
+}
+#events .cal-head .previous {
+  float: left;
+  margin-right: 20px;
+  width: 25%;
+}
+#events .cal-head .month {
+  float: left;
+  margin-right: 20px;
+  width: 40%;
+}
+#events .cal-head .next {
+  float: left;
+  margin-right: 20px;
+  width: 25%;
+}
+#events .cal-head .search {
+  float: right;
+  width: 10%;
+}
+#events .calendar {
+  background-color: #ffffff;
+  width: 100%;
+  color: #121212;
+}
+#events .calendar th {
+  width: 14.29%;
+  border: -1px solid #E4E4E4;
+}
+#events .calendar td {
+  width: 14.29%;
+  border: 1px solid #121212;
+}
 
 /****************  Ministries ******************
 ************************************************/

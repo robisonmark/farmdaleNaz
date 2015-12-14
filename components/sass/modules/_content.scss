@@ -40,6 +40,64 @@
 		padding-top: 20px;
 		
 		} //googleCal
+		
+	.calendar-container {
+		width: 80%;
+		padding: 25px;
+		margin: auto;
+		
+	}
+	
+	.cal-head {
+		background-color: $pink;
+		width: 100%;
+		height: 80px;
+		display: table;
+		color: $light;
+		font-size: 2em;
+		padding-top: 25px;
+		
+			
+		.previous{
+			float: left;
+			margin-right: 20px;
+			width: 25%;
+		} //previous
+		
+		.month{
+			float: left;
+			margin-right: 20px;
+			width: 40%;
+		} //month
+		
+		.next{
+			float: left;
+			margin-right: 20px;
+			width: 25%;
+		} //next
+		
+		.search{
+			float: right;
+			width: 10%;
+		} //search
+	} //cal-head
+	
+	.calendar{
+		background-color: $white;
+		width: 100%;
+		color: $dark;
+		
+		th{
+			width: 14.29%;
+			border: -1px solid $light;
+		}
+		
+		td {
+			width: 14.29%;
+			border: 1px solid $dark;
+		}
+	}
+	
 } //events
 
 /****************  Ministries ******************
