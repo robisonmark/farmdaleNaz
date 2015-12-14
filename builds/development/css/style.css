@@ -826,47 +826,14 @@ header #nav .navbar ul li a.active {
 #staff {
   background-color: #E4E4E4;
   color: #121212;
-  /* @include breakpoint (min-width $medium) {
+  /*
+  	h2 {
+  		color: darken($pink, 20);
+  		font-size: 1.3em;
+  		line-height: 110%;
+  		padding: 10px 0;
   		
-  	.line1 {
-  		height: 250px;
-  	
-  	#leadPastor {
-  		float: left;
-  		width: 47%;
-  		height: 250px;
-  			img {
-  			};
-  	} //leader pastor
-  	
-  	#youthPastor {
-  		float: right;
-  		width: 47%;
-  		height: 250px;
-  			img {
-  			};
-  	} //youth pastor
-   }//line1
-   .line2 {
-  	#worshipPastor {
-  		float: left;
-  		img {
-  			height: 15%;
-  			width: 15%;
-  		//	margin: 10px 38% 10px 38%;	
-  		};
-  	} //worship pastor
-  
-  	#childrenLeader {
-  		float: right;
-  		img {
-  			height: 15%;
-  			width: 15%;
-  			//margin: 10px 38% 10px 38%;	
-  		};
-  	} //childrens pastor 
-   } //line 2
-   } */
+  	} //h2*/
 }
 #staff:before, #staff:after {
   content: '';
@@ -887,11 +854,10 @@ header #nav .navbar ul li a.active {
   font-size: 1.8em;
   font-weight: 800;
 }
-#staff h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
+@media (min-width: 960px) {
+  #staff .line1 {
+    height: 460px;
+  }
 }
 #staff .line1 #leadPastor img {
   height: 25%;
@@ -903,13 +869,14 @@ header #nav .navbar ul li a.active {
     float: left;
     margin-top: 10px;
     margin-bottom: 15px;
+    width: 50%;
   }
   #staff .line1 #leadPastor img {
-    height: 60%;
-    width: 60%;
+    height: 40%;
+    width: 40%;
+    margin: 10px 38% 10px 30%;
   }
   #staff .line1 #leadPastor h4 {
-    width: 100%;
     margin: auto;
   }
 }
@@ -920,27 +887,66 @@ header #nav .navbar ul li a.active {
 }
 @media (min-width: 960px) {
   #staff .line1 #youthPastor {
-    float: right;
+    float: left;
     margin-top: 10px;
     margin-bottom: 15px;
+    width: 50%;
   }
   #staff .line1 #youthPastor img {
-    height: 60%;
-    width: 60%;
+    height: 41.5%;
+    width: 41.5%;
+    margin: 10px 38% 10px 30%;
   }
   #staff .line1 #youthPastor h4 {
     margin: auto;
   }
 }
-#staff #worshipPastor img {
+@media (min-width: 960px) {
+  #staff .line2 {
+    height: 460px;
+  }
+}
+#staff .line2 #worshipPastor img {
   height: 25%;
   width: 25%;
   margin: 10px 38% 10px 38%;
 }
-#staff #childrenLeader img {
+@media (min-width: 960px) {
+  #staff .line2 #worshipPastor {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line2 #worshipPastor img {
+    height: 40%;
+    width: 40%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line2 #worshipPastor h4 {
+    margin: auto;
+  }
+}
+#staff .line2 #childrenLeader img {
   height: 25%;
   width: 25%;
   margin: 10px 38% 10px 38%;
+}
+@media (min-width: 960px) {
+  #staff .line2 #childrenLeader {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line2 #childrenLeader img {
+    height: 41.5%;
+    width: 41.5%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line2 #childrenLeader h4 {
+    margin: auto;
+  }
 }
 
 /****************** baseline ********************
