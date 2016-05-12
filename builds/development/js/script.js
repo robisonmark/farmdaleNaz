@@ -30,7 +30,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $(function() {
 
-    var topoffset = 50;
+    var topoffset = 89;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
@@ -65,38 +65,43 @@ $(function() {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#welcome').offset().top) {
+    if (windowpos > $('#welcome').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#welcome"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#events').offset().top) {
+    if (windowpos > $('#events').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#events"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#ministries').offset().top) {
+    if (windowpos > $('#ministries').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#ministries"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#about').offset().top) {
+    if (windowpos > $('#about').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#about"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#staff').offset().top) {
+    if (windowpos > $('#staff').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#staff"]').addClass('active');
     } //windowpos
     
-    if (windowpos > $('#giving').offset().top) {
-      $('nav li a').removeClass('active');
-      $('a[href$="#giving"]').addClass('active');
-    } //windowpos
+    // if (windowpos > $('#giving').offset().top-1) {
+    //   $('nav li a').removeClass('active');
+    //   $('a[href$="#giving"]').addClass('active');
+    // } //windowpos
   }); //window scroll
 
 
+  //remove scroll down
+  $(window).scroll(function() {
+    var windowpos = $(window).scrollTop() + topoffset;
+     $(".arrow").fadeOut(400)
+   });
 
 
   //set up ScrollMagic
