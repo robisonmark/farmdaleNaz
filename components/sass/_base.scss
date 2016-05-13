@@ -2,6 +2,7 @@ body{
 	font: $mainFont;
 	background: $backgroundColor;
 	color: $typedefault;
+	overflow-x: hidden;
 	} 						/* Body */
 
 #{headings()} {
