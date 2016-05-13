@@ -846,13 +846,6 @@ header #nav .navbar ul li a.active {
 
 /********************  EVENTS *******************
 ************************************************/
-#events {
-  background-color: #121212;
-  color: #E4E4E4;
-}
-#events h1, #events h2, #events h3, #events h4, #events h5, #events h6 {
-  color: #E4E4E4;
-}
 #events .heading {
   padding-left: 9.16667%;
   padding-right: 9.16667%;
@@ -863,7 +856,6 @@ header #nav .navbar ul li a.active {
   font-weight: 800;
 }
 #events h2 {
-  color: #cb002b;
   font-size: 1.3em;
   line-height: 110%;
   padding: 10px 0;

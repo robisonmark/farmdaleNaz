@@ -2,11 +2,10 @@
 ************************************************/
 
 #events {
-	background-color: $dark;
-	color: $light;
+	
 
 	#{headings()} {
-		color: $light;
+		
 	}
 
 	.heading {
@@ -20,7 +19,7 @@
 	}//heading
 
 	h2 {
-		color: darken($pink, 20);
+		
 		font-size: 1.3em;
 		line-height: 110%;
 		padding: 10px 0;
