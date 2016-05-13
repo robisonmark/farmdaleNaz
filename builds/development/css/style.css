@@ -115,6 +115,7 @@ body {
   font: 300 1em/1.5em "alegreya sans", Arial, sans-serif;
   background: #121212;
   color: #E4E4E4;
+  overflow-x: hidden;
 }
 
 /* Body */
@@ -711,7 +712,7 @@ header #nav .navbar ul li a.active {
   text-shadow: 2px 2px #121212;
 }
 #about .fullheight {
-  background: url("../images/Farmdale-Pic-1.jpg");
+  background: url("/../images/Farmdale-Pic-1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -804,17 +805,20 @@ header #nav .navbar ul li a.active {
 #events .cal-head .previous {
   float: left;
   margin-right: 20px;
-  width: 25%;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
 }
 #events .cal-head .month {
   float: left;
   margin-right: 20px;
-  width: 40%;
+  width: 42%;
+  border-right: 1px solid #E4E4E4;
 }
 #events .cal-head .next {
   float: left;
   margin-right: 20px;
-  width: 25%;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
 }
 #events .cal-head .search {
   float: right;
@@ -837,12 +841,12 @@ header #nav .navbar ul li a.active {
 /****************  Ministries ******************
 ************************************************/
 #ministries {
-  background-color: #121212;
-  color: #E4E4E4;
+  background-color: #E4E4E4;
+  color: #121212;
   text-align: center;
 }
 #ministries h1, #ministries h2, #ministries h3, #ministries h4, #ministries h5, #ministries h6 {
-  color: #E4E4E4;
+  color: #121212;
 }
 #ministries .heading {
   padding-left: 9.16667%;

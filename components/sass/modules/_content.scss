@@ -61,19 +61,22 @@
 		.previous{
 			float: left;
 			margin-right: 20px;
-			width: 25%;
+			width: 20%;
+			border-right: 1px solid $light;
 		} //previous
 		
 		.month{
 			float: left;
 			margin-right: 20px;
-			width: 40%;
+			width: 42%;
+			border-right: 1px solid $light;
 		} //month
 		
 		.next{
 			float: left;
 			margin-right: 20px;
-			width: 25%;
+			width: 20%;
+			border-right: 1px solid $light;
 		} //next
 		
 		.search{
@@ -104,14 +107,14 @@
 ************************************************/
 
 #ministries {
-	background-color: $dark;
-	color: $light;
+	background-color: $light;
+	color: $dark;
 	text-align: center;
 		
 	
 
 	#{headings()} {
-		color: $light;
+		color: $dark;
 		} // #{headings()}
 
 	.heading {
