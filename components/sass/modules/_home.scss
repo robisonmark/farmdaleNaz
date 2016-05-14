@@ -7,10 +7,10 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-  // 	@include display-flex();
-		// @include align-items(center);
-		// @include justify-content(center);  
+    
 		position: relative;
+    top: 0; 
+    left: 0;
 
 	.hgroup {
 		padding: 60px 0;
@@ -74,16 +74,7 @@ header {
   	p {
 	   	text-align: center;
 		
-    	img {
-				padding-top: 50px;
-				max-width: 350px;
-				max-height: 200px;
-				border: 1px solid $light;
-				margin-top: 15px;
-				padding: 10px;
-				background: rgba($headersubbg, .3);
-			
-				} //img
+
 			} //p
 		} //hgroup	 
     .scroll-down{
@@ -227,6 +218,7 @@ header {
     height: 100%;
     position: absolute;
     transition: left .35s ease;
+    overflow-x: hidden;
   }
   
   &:after {
@@ -238,6 +230,7 @@ header {
     height: 100%;
     position: absolute;
     transition: all .35s ease;
+    overflow-x: hidden;
   }
   
   &.open {
@@ -405,7 +398,7 @@ header #nav {
 			text-align: left;
       
       @include breakpoint ($medium) {
-      float: right;
+      float: left;
 			margin: auto;
       }
 

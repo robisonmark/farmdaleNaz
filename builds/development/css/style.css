@@ -330,6 +330,8 @@ header .fullheight {
   background-position: center center;
   background-size: cover;
   position: relative;
+  top: 0;
+  left: 0;
 }
 header .fullheight .hgroup {
   padding: 60px 0;
@@ -395,15 +397,6 @@ header .fullheight .hgroup h2 {
 }
 header .fullheight .hgroup p {
   text-align: center;
-}
-header .fullheight .hgroup p img {
-  padding-top: 50px;
-  max-width: 350px;
-  max-height: 200px;
-  border: 1px solid #E4E4E4;
-  margin-top: 15px;
-  padding: 10px;
-  background: rgba(18, 18, 18, 0.3);
 }
 header .fullheight .scroll-down {
   position: absolute;
@@ -541,6 +534,7 @@ li a:hover:after {
     height: 100%;
     position: absolute;
     transition: left .35s ease;
+    overflow-x: hidden;
   }
   .overlay:after {
     content: '';
@@ -551,6 +545,7 @@ li a:hover:after {
     height: 100%;
     position: absolute;
     transition: all .35s ease;
+    overflow-x: hidden;
   }
   .overlay.open {
     opacity: .9;
@@ -709,7 +704,7 @@ header #nav .navbar ul li {
 }
 @media (min-width: 960px) {
   header #nav .navbar ul li {
-    float: right;
+    float: left;
     margin: auto;
   }
 }
@@ -846,6 +841,56 @@ header #nav .navbar ul li a.active {
 
 /********************  EVENTS *******************
 ************************************************/
+.pictures {
+  margin-bottom: -10px;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.pictures:before {
+  content: '';
+  display: table;
+}
+.pictures .left {
+  display: inline-block;
+  left: 0;
+}
+.pictures .tall {
+  height: 500px;
+}
+.pictures .top {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.pictures .three-quarters {
+  width: 500px;
+}
+.pictures .bottom {
+  display: inline-block;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.pictures .small {
+  height: 170px;
+}
+.pictures .right {
+  display: inline-block;
+  right: 0;
+}
+.pictures .wide {
+  width: 500px;
+}
+.pictures .work-info-bg {
+  background-color: #282b30;
+  opacity: 0.45;
+  will-change: opacity;
+}
+
 #events .heading {
   padding-left: 9.16667%;
   padding-right: 9.16667%;
@@ -952,6 +997,9 @@ header #nav .navbar ul li a.active {
   line-height: 130%;
   text-align: center;
   font-weight: 800;
+}
+#ministries img {
+  vertical-align: middle;
 }
 
 /****************** Staff **********************
@@ -1140,4 +1188,5 @@ footer {
   text-align: center;
   line-height: 130%;
   display: inline;
+  width: 100%;
 }

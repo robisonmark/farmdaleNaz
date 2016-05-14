@@ -1,5 +1,115 @@
 /********************  EVENTS *******************
 ************************************************/
+.pictures {
+    // margin-top: -40px;
+    margin-bottom: -10px;
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    	&:before{
+    		content: '';
+			display:table;
+    	}
+    	.left{
+    		display: inline-block;
+    		left:0;
+    	}
+    	.tall{
+    		height: 500px;
+    	}
+    	.top{
+    		position: absolute;
+    		top: 0;
+    		padding: 0;
+    		margin: 0;
+    		display: inline-block;
+    	}
+    	.three-quarters{
+    		width: 500px;
+    	}
+    	.bottom{
+    		display: inline-block;
+    		bottom: 0;
+    		padding: 0;
+    		margin: 0;
+    	}
+    	.small{
+    		height: 170px;
+    	}
+    	.right{
+    		display: inline-block;
+    		right: 0;
+    	}
+    	.wide {
+    		width:500px;
+    	}
+
+    	    	.work-info-bg {
+		    background-color: #282b30;
+		    opacity: 0.45;
+		    will-change: opacity;
+		}
+
+// .portfolio-items .work-item.style-3 .work-info, .portfolio-items .col .work-item.style-3-alt h3, .portfolio-items .work-item.style-3-alt .work-info {
+//     opacity: 1!important;
+//     -ms-filter: "alpha(opacity=100)"!important;
+// }
+// .portfolio-items .work-info {
+//     opacity: 0;
+//     filter: alpha(opacity=0);
+//     position: absolute;
+//     z-index: 10;
+//     padding: 0px 20px;
+//     height: 100%;
+//     width: 100%;
+//     top: 0px;
+//     left: 0px;
+//     color: #fff;
+// }
+
+
+// 		.portfolio-items .col .work-info .vert-center {
+//     text-align: center;
+//     margin-top: -15px;
+//     position: relative;
+//     z-index: 10;
+//     top: 50%;
+//     width: 100%;
+//     transform: translateY(-50%);
+//     -webkit-transform: translateY(-50%);
+// }
+
+// .portfolio-items .work-item.style-3 .vert-center, .portfolio-items .work-item.style-3-alt .vert-center, .portfolio-items .work-item.style-2[data-custom-content="on"] .vert-center {
+//     top: 50%!important;
+//     left: 40%;
+//     padding-top: 15px!important;
+//     position: relative;
+//     z-index: 20;
+//     width: auto!important;
+//     display: inline-block;
+//     margin-top: 0!important;
+//     padding-top: 0!important;
+//     transform: translateY(-50%) translateX(-50%)!important;
+//     -webkit-transform: translateY(-50%) translateX(-50%)!important;
+// }
+
+// .carousel-wrap[data-full-width="true"] .portfolio-items .col .work-item.style-2 .work-info > a, .portfolio-items .col .work-item.style-2 .work-info > a, .portfolio-items .col .work-item.style-3 .work-info > a, .portfolio-items .col .work-item.style-4 .work-info > a, .portfolio-items .col .work-item.style-3-alt .work-info > a, .portfolio-items .col .work-item.style-1 .work-info > a {
+//     display: block!important;
+//     margin: 0px!important;
+//     background-color: transparent!important;
+//     position: absolute!important;
+//     top: 0px;
+//     left: 0px;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 40;
+// }
+// .portfolio-items .col .work-item.style-3 a, .portfolio-items .col .work-item.style-3-alt a {
+//     background: transparent url('img/transparent.png') repeat 0 0;
+// }
+}
 
 #events {
 	
@@ -141,6 +251,10 @@
 		font-weight: $bold;
 	
 		} //p
+
+	img {
+		vertical-align: middle;
+		}
 } //ministries
 
 
