@@ -3,6 +3,7 @@ body{
 	background: $backgroundColor;
 	color: $typedefault;
  overflow-x:hidden;
+ letter-spacing: 0.03em;
 	} 						/* Body */
 
 #{headings()} {
@@ -61,4 +62,13 @@ p {
 
 .bounce {
   @include animation(bounce 2s infinite);
+}
+
+.full-width{
+  width: 100%;
+
+}
+
+.medium{
+  background-color: #d6d6d6;
 }

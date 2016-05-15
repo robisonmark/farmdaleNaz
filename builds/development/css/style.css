@@ -116,6 +116,7 @@ body {
   background: #121212;
   color: #E4E4E4;
   overflow-x: hidden;
+  letter-spacing: 0.03em;
 }
 
 /* Body */
@@ -203,6 +204,14 @@ p {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.medium {
+  background-color: #d6d6d6;
 }
 
 body {
@@ -971,7 +980,6 @@ header #nav .navbar ul li a.active {
 #ministries {
   background-color: #E4E4E4;
   color: #121212;
-  text-align: center;
 }
 #ministries h1, #ministries h2, #ministries h3, #ministries h4, #ministries h5, #ministries h6 {
   color: #121212;
@@ -987,7 +995,6 @@ header #nav .navbar ul li a.active {
   font-weight: 800;
 }
 #ministries h2 {
-  color: #cb002b;
   font-size: 1.3em;
   line-height: 110%;
   padding: 10px 0;
@@ -996,10 +1003,35 @@ header #nav .navbar ul li a.active {
   font-size: 1em;
   line-height: 130%;
   text-align: center;
-  font-weight: 800;
 }
 #ministries img {
   vertical-align: middle;
+}
+#ministries .with-padding {
+  padding: 25px 15% 25px 15%;
+}
+#ministries .with-padding:before, #ministries .with-padding:after {
+  content: '';
+  display: table;
+}
+#ministries .with-padding:after {
+  clear: both;
+}
+#ministries .min-content-con {
+  text-align: left;
+  display: inline-block;
+  width: 66.6666667%;
+  float: left;
+}
+#ministries .min-content-con h2 {
+  text-align: left !important;
+}
+#ministries .min-content-con p {
+  text-align: left;
+}
+#ministries .img-con {
+  width: 33.3333333%;
+  float: left;
 }
 
 /****************** Staff **********************
@@ -1128,6 +1160,14 @@ header #nav .navbar ul li a.active {
   #staff .line2 #childrenLeader h4 {
     margin: auto;
   }
+}
+
+/**************************
+	Map
+**************************/
+#map {
+  width: 100%;
+  height: 400px;
 }
 
 /****************** baseline ********************

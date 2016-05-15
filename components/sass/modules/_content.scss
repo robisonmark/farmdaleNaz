@@ -218,8 +218,6 @@
 #ministries {
 	background-color: $light;
 	color: $dark;
-	text-align: center;
-		
 	
 
 	#{headings()} {
@@ -238,7 +236,6 @@
 		} //heading
 
 	h2 {
-		color: darken($pink, 20);
 		font-size: 1.3em;
 		line-height: 110%;
 		padding: 10px 0;
@@ -248,13 +245,38 @@
 		font-size: 1em;
 		line-height: 130%;
 		text-align: center;
-		font-weight: $bold;
 	
 		} //p
 
 	img {
 		vertical-align: middle;
 		}
+
+	.with-padding{
+		padding: 25px 15% 25px 15%;
+		  @include clearfix;
+  	} 
+
+	  .min-content-con{
+	    text-align: left;
+	    display: inline-block;
+	    width: 66.6666667%;
+	    float: left;
+
+	    h2{
+	    	text-align: left !important;
+	    }
+
+	    p{
+	    	text-align: left;
+	    }
+	  }
+
+	  .img-con{
+	  	width: 33.3333333%;
+	  	float: left;
+	  }
+
 } //ministries
 
 
@@ -405,3 +427,11 @@
 	} //childrens pastor
 	}
 } //staff
+
+/**************************
+	Map
+**************************/
+#map {
+        width: 100%;
+        height: 400px;
+      }
