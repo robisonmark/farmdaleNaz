@@ -270,7 +270,9 @@
                 <p>We are a group of individuals with one mission; that is making Christlike disciples in the nations by connecting with God, with each other, and with our community. We start here at home, won’t you join us?</P>
                 <p>Farmdale Church of the Nazarene is a christian church that traces its history to Holiness Movement of the early 1900's.  Nazarene's orginally came to Louisville in the 1920's known at that time as Camp Taylor.Farmdale has been at its present location for more than 40 years. </p>
             </article> <!-- End About Us Body -->
-
+            <section style="background-image: url('../images/Flower.jpg')">
+               
+            </section>
             <!-- include beliefs menu like  http://www.oasisla.org/about/ found in beliefs.php -->
         </div> <!-- About Us -->
     <!-- Being Staff Work on Content -->
@@ -353,9 +355,21 @@
             var mapDiv = document.getElementById('map');
             var map = new google.maps.Map(mapDiv, {
               center: {lat: 38.1358216, lng: -85.6394093},
-              zoom: 15,
+              zoom: 16,
+              disableDefaultUI: true,
+              zoomControl: true,
+              scaleControl: false,
+              draggable: true,
+              scrollwheel: false,
             });
-          }
+            
+             var image = '../images/marker-dark.png';
+             var marker = new google.maps.Marker({map: map, position: {lat: 38.1358216, lng: -85.6394093},
+             icon: image});
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+           }
         </script>
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
             async defer></script>
