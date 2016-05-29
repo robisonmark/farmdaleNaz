@@ -126,6 +126,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   text-align: center;
 }
+h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
+  content: '/';
+}
+h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+  content: '/';
+}
 
 /* headings */
 strong {
@@ -725,6 +731,7 @@ header #nav .navbar ul li a {
   display: inline-block;
   padding: 8px 8px 8px 8px;
   text-decoration: none;
+  outline: none;
 }
 header #nav .navbar ul li a:hover {
   background-color: #ff325d;

@@ -410,6 +410,7 @@ header #nav {
 			   display: inline-block;
 			   padding: 8px 8px 8px 8px;
 			   text-decoration: none;
+         outline: none;
 
 			   &:hover{
 			    background-color: $navbrand;
