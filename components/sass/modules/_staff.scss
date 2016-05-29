@@ -1,0 +1,146 @@
+/****************** Staff **********************
+************************************************/
+
+#staff {
+	background-color: $light;
+	color: $dark;
+	@include clearfix;
+	
+
+	#{headings()} {
+		color: $dark;
+	}
+
+	.heading {
+	  @include pad(1,1);
+	  text-align: center;
+
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+		} //h1
+	}//heading
+/*
+	h2 {
+		color: darken($pink, 20);
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+		
+	} //h2*/
+	.line1 {
+		@include breakpoint (min-width $medium) {
+			height: 460px;
+		 } // line 1 breakpoint
+		 
+		#leadPastor {
+			
+			img {
+				height: 25%;
+				width: 25%;
+				margin: 10px 38% 10px 38%;	
+			};
+			
+			@include breakpoint (min-width $medium) {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				width: 50%;
+				
+					img {
+						height: 40%;
+						width: 40%;
+						margin: 10px 38% 10px 30%;
+					};
+				h4 {
+					
+					margin: auto;
+				}
+			} //breakpoint
+		} //leader pastor
+		
+		#youthPastor {
+			
+			img {
+				height: 25%;
+				width: 25%;
+				margin: 10px 38% 10px 38%;	
+			};
+			
+			@include breakpoint (min-width $medium) {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				width: 50%;
+				
+					img {
+						height: 41.5%;
+						width: 41.5%;
+						margin: 10px 38% 10px 30%;
+					};
+				h4 {
+					
+					margin: auto;
+				}
+			} //breakpoint
+		} //youth pastor
+	} //line1
+	
+	.line2{
+	 	@include breakpoint (min-width $medium) {
+			height: 460px;
+		 } // line 2 breakpoint
+		 
+	#worshipPastor {
+		img {
+			height: 25%;
+			width: 25%;
+			margin: 10px 38% 10px 38%;	
+		};
+		
+		@include breakpoint (min-width $medium) {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				width: 50%;
+				
+					img {
+						height: 40%;
+						width: 40%;
+						margin: 10px 38% 10px 30%;
+					};
+				h4 {
+					
+					margin: auto;
+				}
+			} //breakpoint
+	} //worship pastor
+	
+	#childrenLeader {
+		img {
+			height: 25%;
+			width: 25%;
+			margin: 10px 38% 10px 38%;	
+		};
+		
+		 @include breakpoint (min-width $medium) {
+				float: left;
+				margin-top: 10px;
+				margin-bottom: 15px;
+				width: 50%;
+				
+					img {
+						height: 41.5%;
+						width: 41.5%;
+						margin: 10px 38% 10px 30%;	
+					};
+				h4 {
+					
+					margin: auto;
+				}
+			} //breakpoint
+	} //childrens pastor
+	}
+} //staff
+
+

@@ -11,13 +11,6 @@ body{
 	font-weight: $bold;
 	font-size: 1.5em;
 	text-align: center;
-
-  &:before{
-    content: '/';
-  }
-  &:after{
-    content: '/';
-  }
 }							/* headings */
 
 strong {

@@ -126,12 +126,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.5em;
   text-align: center;
 }
-h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
-  content: '/';
-}
-h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
-  content: '/';
-}
 
 /* headings */
 strong {
@@ -764,99 +758,55 @@ header #nav .navbar ul li a.active {
   color: #121212;
 }
 
-/****************************
-		   Welcome
-*****************************/
-#welcome {
-  background-color: #E4E4E4;
-  color: #121212;
-}
-#welcome h1, #welcome h2, #welcome h3, #welcome h4, #welcome h5, #welcome h6 {
-  color: #121212;
-}
-#welcome .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-}
-#welcome .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#welcome h2 {
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#welcome p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
-}
-#welcome .left {
-  float: left;
-  width: 50%;
-  padding-right: 30px;
-  border-right: 1px solid #121212;
-}
-#welcome .right {
-  float: right;
-  width: 50%;
-  padding-left: 29px;
-}
-
-/************************************************
-		   		   About
-************************************************/
-#about {
-  color: #E4E4E4;
-  text-align: center;
-  text-shadow: 2px 2px #121212;
-}
-#about .fullheight {
-  background: url("/../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
-  color: #E4E4E4;
-}
-#about .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-  color: #E4E4E4;
-}
-#about .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#about h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#about p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
-}
-
 /********************  EVENTS *******************
 ************************************************/
+.N-and-E-Con:before, .N-and-E-Con:after {
+  content: '';
+  display: table;
+}
+.N-and-E-Con:after {
+  clear: both;
+}
+
+.update-columns {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.update-column {
+  display: inline-block;
+  width: 20vw;
+  margin: 0 1vw;
+}
+
+.news-column .update-header {
+  background: #902052;
+}
+
+.update-header {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.update-column-content {
+  height: 28.5vw;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+}
+
 .pictures {
   margin-bottom: -10px;
   width: 100%;
@@ -1236,4 +1186,405 @@ footer {
   line-height: 130%;
   display: inline;
   width: 100%;
+}
+
+/************************************************
+		   		   About
+************************************************/
+#about {
+  color: #E4E4E4;
+  text-align: center;
+  text-shadow: 2px 2px #121212;
+}
+#about .fullheight {
+  background: url("/../images/Farmdale-Pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
+  color: #E4E4E4;
+}
+#about .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+  color: #E4E4E4;
+}
+#about .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#about h2 {
+  color: #cb002b;
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#about p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+
+/********************  EVENTS *******************
+************************************************/
+.N-and-E-Con:before, .N-and-E-Con:after {
+  content: '';
+  display: table;
+}
+.N-and-E-Con:after {
+  clear: both;
+}
+
+.update-columns {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.update-column {
+  display: inline-block;
+  width: 20vw;
+  margin: 0 1vw;
+}
+
+.news-column .update-header {
+  background: #902052;
+}
+
+.update-header {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.update-column-content {
+  height: 28.5vw;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+}
+
+#events .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#events .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#events h2 {
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#events p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#events #Cal {
+  margin-right: 23%;
+  margin-left: 23%;
+  padding-top: 20px;
+}
+#events .calendar-container {
+  width: 80%;
+  padding: 25px;
+  margin: auto;
+}
+#events .cal-head {
+  background-color: #ff325d;
+  width: 100%;
+  height: 80px;
+  display: table;
+  color: #E4E4E4;
+  font-size: 2em;
+  padding-top: 25px;
+}
+#events .cal-head .previous {
+  float: left;
+  margin-right: 20px;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .month {
+  float: left;
+  margin-right: 20px;
+  width: 42%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .next {
+  float: left;
+  margin-right: 20px;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .search {
+  float: right;
+  width: 10%;
+}
+#events .calendar {
+  background-color: #ffffff;
+  width: 100%;
+  color: #121212;
+}
+#events .calendar th {
+  width: 14.29%;
+  border: -1px solid #E4E4E4;
+}
+#events .calendar td {
+  width: 14.29%;
+  border: 1px solid #121212;
+}
+
+/**************************
+	Map
+**************************/
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.pictures {
+  margin-bottom: -10px;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.pictures:before {
+  content: '';
+  display: table;
+}
+.pictures .left {
+  display: inline-block;
+  left: 0;
+}
+.pictures .tall {
+  height: 500px;
+}
+.pictures .top {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.pictures .three-quarters {
+  width: 500px;
+}
+.pictures .bottom {
+  display: inline-block;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.pictures .small {
+  height: 170px;
+}
+.pictures .right {
+  display: inline-block;
+  right: 0;
+}
+.pictures .wide {
+  width: 500px;
+}
+.pictures .work-info-bg {
+  background-color: #282b30;
+  opacity: 0.45;
+  will-change: opacity;
+}
+
+/****************** Staff **********************
+************************************************/
+#staff {
+  background-color: #E4E4E4;
+  color: #121212;
+  /*
+  	h2 {
+  		color: darken($pink, 20);
+  		font-size: 1.3em;
+  		line-height: 110%;
+  		padding: 10px 0;
+  		
+  	} //h2*/
+}
+#staff:before, #staff:after {
+  content: '';
+  display: table;
+}
+#staff:after {
+  clear: both;
+}
+#staff h1, #staff h2, #staff h3, #staff h4, #staff h5, #staff h6 {
+  color: #121212;
+}
+#staff .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#staff .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+@media (min-width: 960px) {
+  #staff .line1 {
+    height: 460px;
+  }
+}
+#staff .line1 #leadPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
+}
+@media (min-width: 960px) {
+  #staff .line1 #leadPastor {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line1 #leadPastor img {
+    height: 40%;
+    width: 40%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line1 #leadPastor h4 {
+    margin: auto;
+  }
+}
+#staff .line1 #youthPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
+}
+@media (min-width: 960px) {
+  #staff .line1 #youthPastor {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line1 #youthPastor img {
+    height: 41.5%;
+    width: 41.5%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line1 #youthPastor h4 {
+    margin: auto;
+  }
+}
+@media (min-width: 960px) {
+  #staff .line2 {
+    height: 460px;
+  }
+}
+#staff .line2 #worshipPastor img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
+}
+@media (min-width: 960px) {
+  #staff .line2 #worshipPastor {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line2 #worshipPastor img {
+    height: 40%;
+    width: 40%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line2 #worshipPastor h4 {
+    margin: auto;
+  }
+}
+#staff .line2 #childrenLeader img {
+  height: 25%;
+  width: 25%;
+  margin: 10px 38% 10px 38%;
+}
+@media (min-width: 960px) {
+  #staff .line2 #childrenLeader {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 50%;
+  }
+  #staff .line2 #childrenLeader img {
+    height: 41.5%;
+    width: 41.5%;
+    margin: 10px 38% 10px 30%;
+  }
+  #staff .line2 #childrenLeader h4 {
+    margin: auto;
+  }
+}
+
+/****************************
+		   Welcome
+*****************************/
+#welcome {
+  background-color: #E4E4E4;
+  color: #121212;
+}
+#welcome h1, #welcome h2, #welcome h3, #welcome h4, #welcome h5, #welcome h6 {
+  color: #121212;
+}
+#welcome .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#welcome .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#welcome h2 {
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#welcome p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+#welcome .left {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  border-right: 1px solid #121212;
+}
+#welcome .right {
+  float: right;
+  width: 50%;
+  padding-left: 29px;
 }

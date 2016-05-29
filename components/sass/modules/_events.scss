@@ -1,0 +1,145 @@
+/********************  EVENTS *******************
+************************************************/
+.N-and-E-Con {
+	@include clearfix;
+}
+.update-columns {
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.update-column {
+    display: inline-block;
+    width: 20vw;
+    margin: 0 1vw;
+}
+
+.news-column .update-header {
+    background: #902052;
+}
+.update-header {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+
+.update-column-content {
+    height: 28.5vw;
+    background: rgba(255,255,255,.8);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: left;
+    padding: 30px;
+    position: relative;
+}
+
+
+#events {
+    
+
+    #{headings()} {
+        
+    }
+
+    .heading {
+      @include pad(1,1);
+      text-align: center;
+
+        h1 {
+            font-size: 1.8em;
+            font-weight: $bold; 
+        } //h1
+    }//heading
+
+    h2 {
+        
+        font-size: 1.3em;
+        line-height: 110%;
+        padding: 10px 0;
+        
+    } //h2
+
+    p {
+        font-size: 1em;
+        line-height: 130%;
+        text-align: center;
+        padding-bottom: 10px;
+    } //p
+
+    #Cal {  
+        margin-right: 23%;
+        margin-left: 23%;
+        padding-top: 20px;
+        
+        } //googleCal
+        
+    .calendar-container {
+        width: 80%;
+        padding: 25px;
+        margin: auto;
+        
+    }
+    
+    .cal-head {
+        background-color: $pink;
+        width: 100%;
+        height: 80px;
+        display: table;
+        color: $light;
+        font-size: 2em;
+        padding-top: 25px;
+        
+            
+        .previous{
+            float: left;
+            margin-right: 20px;
+            width: 20%;
+            border-right: 1px solid $light;
+        } //previous
+        
+        .month{
+            float: left;
+            margin-right: 20px;
+            width: 42%;
+            border-right: 1px solid $light;
+        } //month
+        
+        .next{
+            float: left;
+            margin-right: 20px;
+            width: 20%;
+            border-right: 1px solid $light;
+        } //next
+        
+        .search{
+            float: right;
+            width: 10%;
+        } //search
+    } //cal-head
+    
+    .calendar{
+        background-color: $white;
+        width: 100%;
+        color: $dark;
+        
+        th{
+            width: 14.29%;
+            border: -1px solid $light;
+        }
+        
+        td {
+            width: 14.29%;
+            border: 1px solid $dark;
+        }
+    }
+    
+} //events
