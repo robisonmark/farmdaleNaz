@@ -115,7 +115,6 @@ body {
   font: 300 1em/1.5em "alegreya sans", Arial, sans-serif;
   background: #121212;
   color: #E4E4E4;
-  overflow-x: hidden;
   letter-spacing: 0.03em;
 }
 
@@ -1236,6 +1235,46 @@ footer {
   font-size: 1em;
   line-height: 130%;
   text-align: center;
+}
+#about .timeline {
+  width: 100%;
+  background-color: #E4E4E4;
+  display: inline-block;
+}
+#about .beliefs-side-bar {
+  text-align: left;
+  padding: 30px;
+  font-size: 21px;
+  max-width: 175px;
+  background-color: #ff325d;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+#about .beliefs-side-bar li {
+  padding: 5px 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+#about .beliefs-content > div {
+  display: none;
+  padding: 20px 25px 5px;
+}
+#about .beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1,
+#about .beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2,
+#about .beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3,
+#about .beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4,
+#about .beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5,
+#about .beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 {
+  display: inline-block;
+}
+#about .beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1 p,
+#about .beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2 p,
+#about .beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3 p,
+#about .beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4 p,
+#about .beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5 p,
+#about .beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 p {
+  text-align: left;
 }
 
 /********************  EVENTS *******************

@@ -99,4 +99,11 @@ $('#toggle').click(function() {
    $('#overlay').removeClass('open');
   });
 }
-  
+ 
+//  Vertical Tabs
+$(function () {
+    var belief = $('.beliefs-side-bar ul li')
+      belief.on('click', function(
+          removeClass('.active')
+        ))
+        });

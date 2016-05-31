@@ -48,4 +48,66 @@
 		text-align: center;
 		} //p
 		
+		.timeline{
+			width: 100%;
+			background-color: #E4E4E4;
+			display: inline-block;
+		}
+		.beliefs-side-bar{
+			text-align: left;
+			padding: 30px;
+			font-size: 21px;
+			max-width: 175px;
+			background-color: #ff325d;
+			display: inline-block;
+			position: absolute;
+			left:0;
+
+			li{
+				padding: 5px 0;
+				font-weight: 500;
+				cursor: pointer;
+
+				 // input {
+				 // 	display: none;
+				 // }
+			}
+		}
+
+		// .beliefs-content {
+		// 	// display: inline-block;
+		// 	// text-align: left;
+		// 	// width: 40%;
+		// 	// position: absolute;
+		// 	// left: 175px;
+		// 	// padding: 30px;
+
+		// 	.belief-slide{
+		// 		//display: none;
+				
+		// 	// &.active{
+		// 	// 	display: inline-block;
+		// 	// 	vertical-align: middle;
+		// 	// 	}
+		// 	}
+		// }
+
+
+
+
+ //  .content {background: #fff; color: #373737;}
+   
+		.beliefs-content > div {display: none; padding: 20px 25px 5px;}
+			.beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1,
+			.beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2,
+			.beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3,
+			.beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4,
+			.beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5,
+			.beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 {
+			display: inline-block;
+
+			p{
+					text-align: left;
+				}
+			}
 	} //about
