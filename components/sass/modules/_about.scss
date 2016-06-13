@@ -1,15 +1,13 @@
 /************************************************
-		   		   About
+					About
 ************************************************/
 
 
 #about {
 	color: $light;
 	text-align: center;
-  text-shadow: 2px 2px #121212;
-  
-  .fullheight {
-	    
+
+	.fullheight {
 		@include backImage('/../images/Farmdale-Pic-1.jpg');
 		@include display-flex();
 		@include justify-content(center);  
@@ -17,7 +15,7 @@
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-size: cover; 
-		} //fullheight
+	} //fullheight
 
 	#{headings()} {
 		color: $light;
@@ -28,86 +26,90 @@
 		text-align: center;
 		color: $light;
 
-			h1 {
-				font-size: 1.8em;
-				font-weight: $bold;	
-			} //h1
-		}//heading
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+		} //h1
+	}//heading
 
-	h2 {
-		color: darken($pink, 20);
-		font-size: 1.3em;
-		line-height: 110%;
-		padding: 10px 0;
-		
+		h2 {
+			color: darken($pink, 20);
+			font-size: 1.3em;
+			line-height: 110%;
+			padding: 10px 0;
 		} //h2
 
-	p {
-		font-size: 1em;
-		line-height: 130%;
-		text-align: center;
+		p {
+			font-size: 1em;
+			line-height: 130%;
+			text-align: center;
 		} //p
-		
+
 		.timeline{
 			width: 100%;
 			background-color: #E4E4E4;
 			display: inline-block;
-		}
-		.beliefs-side-bar{
-			text-align: left;
-			padding: 30px;
-			font-size: 21px;
-			max-width: 175px;
-			background-color: #ff325d;
-			display: inline-block;
-			position: absolute;
-			left:0;
+			color: #121212;
+			padding: 0 15px;
+			.years{
+				ul {
+					li {
+						display: inline-block;
+						margin: 20px;
+					} //li
+				} //ul
+			} //year
+		} //timeline
 
-			li{
-				padding: 5px 0;
-				font-weight: 500;
-				cursor: pointer;
+		#beliefs{ 
+			height: 40vh;
+			.beliefs-side-bar{
+				text-align: left;
+				padding: 30px;
+				font-size: 21px;
+				max-width: 175px;
+				background-color: #ff325d;
+				display: inline-block;
+				float:left;
 
-				 // input {
-				 // 	display: none;
-				 // }
-			}
-		}
+				li{
+					padding: 5px 0;
+					font-weight: 500;
+					cursor: pointer;
 
-		// .beliefs-content {
-		// 	// display: inline-block;
-		// 	// text-align: left;
-		// 	// width: 40%;
-		// 	// position: absolute;
-		// 	// left: 175px;
-		// 	// padding: 30px;
-
-		// 	.belief-slide{
-		// 		//display: none;
-				
-		// 	// &.active{
-		// 	// 	display: inline-block;
-		// 	// 	vertical-align: middle;
-		// 	// 	}
-		// 	}
-		// }
-
-
-
-
- //  .content {background: #fff; color: #373737;}
-   
-		.beliefs-content > div {display: none; padding: 20px 25px 5px;}
-			.beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1,
-			.beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2,
-			.beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3,
-			.beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4,
-			.beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5,
-			.beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 {
-			display: inline-block;
-
-			p{
-					text-align: left;
+					a{
+						width: 80px;
+						outline: 0;
+						-o-outline: 0;
+						-moz-outline: 0;
+						-webkit-outline: 0;
+					} //a
+				} //li
+			} //beliefs side bar
+			
+			.beliefs-content{
+				float:left;
+				width: 50%; 
+				@include clearfix;
+				.tabcontent {
+					display: none;
+					padding: 6px 12px;
+					border-top: none;
 				}
+					.background-img{
+						background-image: url('../images/Farmdale-Pic-2.jpg');
+						background-position: center;
+						background-size: cover;
+						float: left;
+						width: 40%;
+						height: 100%;
+					}
+					.is-active {
+				 	display: inline-block;
+				 }
 			}
-	} //about
+
+
+
+	} //beliefs
+} //about

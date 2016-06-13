@@ -129,7 +129,32 @@ $('#toggle').click(function() {
    $('#overlay').removeClass('open');
   });
 }
-  
+ 
+//  Vertical Tabs
+
+
+
+
+//close menu
+
+  // function closeSubMenu(){
+  //   $('.menu-item').removeClass('submenu-is-visible');
+  // }
+
+  // // Close menu on escape
+  // $('body').on('click keyup', function(event) {
+  //  if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+  //    if ($('body').hasClass('menu-open')) {
+  //      $(this).removeClass('menu-open');
+  //      $('#main-nav .menu-item-has-children').removeClass('submenu-is-visible');
+  //      $('.menu-con').removeClass('submenu-is-visible');
+  //    } else {
+  //      $('body').addClass('menu-open');
+  //    }
+  //  }
+  // });
+
+  //Mutiple hero pictures not stories
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"jquery":2}],2:[function(require,module,exports){
 /*!

@@ -4,7 +4,7 @@ body{
 	color: $typedefault;
   //overflow-x:hidden;
   letter-spacing: 0.03em;
-  //font-size: 20px;
+  font-size: 18px;
 	} 						/* Body */
 
 #{headings()} {
@@ -72,4 +72,28 @@ p {
 
 .medium{
   background-color: #d6d6d6;
+}
+
+a {
+  display: inline-block;
+    position: relative;
+    color: $white;
+    text-decoration: none;
+    outline: 0;
+    -o-outline: 0;
+    -moz-outline: 0;
+    -webkit-outline: 0;
+}
+.is-active:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent; 
+
+  border-right:10px solid #121212; 
+  right: -30px;
+  top: 3px;
 }

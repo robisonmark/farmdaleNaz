@@ -19,6 +19,7 @@ header {
 		right: 40px;
 		bottom: 14em;
 
+
   @include breakpoint (0  $medium) {
       &::after {
         content: '\000a0';
@@ -114,7 +115,7 @@ header {
 /****************************
 		Hamburger Menu
 ****************************/
-  li a {
+nav li a {
     display: inline-block;
     position: relative;
     text-align: right;
@@ -122,6 +123,7 @@ header {
     text-decoration: none;
     font-size: 20px;
     overflow: hidden;
+    outline: none;
     
     
     &:after {
@@ -357,6 +359,7 @@ header #nav {
         color: $light;
         text-decoration: none;
         text-align: center;
+        display: inline;
         
          #logo {
           width: 125px;

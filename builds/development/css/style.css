@@ -90,6 +90,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\e602";
 }
 
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-twitter2:before {
+  content: "\e901";
+}
+
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -116,6 +132,7 @@ body {
   background: #121212;
   color: #E4E4E4;
   letter-spacing: 0.03em;
+  font-size: 18px;
 }
 
 /* Body */
@@ -211,6 +228,29 @@ p {
 
 .medium {
   background-color: #d6d6d6;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+
+.is-active:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #121212;
+  right: -30px;
+  top: 3px;
 }
 
 body {
@@ -445,7 +485,7 @@ header .fullheight .scroll-down h4 {
 /****************************
 		Hamburger Menu
 ****************************/
-li a {
+nav li a {
   display: inline-block;
   position: relative;
   text-align: right;
@@ -453,8 +493,9 @@ li a {
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
+  outline: none;
 }
-li a:after {
+nav li a:after {
   content: '';
   position: absolute;
   background: #ffffff;
@@ -465,7 +506,7 @@ li a:after {
   bottom: 0;
   transition: .35s ease;
 }
-li a:hover:after {
+nav li a:hover:after {
   width: 100%;
 }
 
@@ -674,6 +715,7 @@ header #nav .navbar .brand a {
   color: #E4E4E4;
   text-decoration: none;
   text-align: center;
+  display: inline;
 }
 header #nav .navbar .brand a #logo {
   width: 125px;
@@ -755,6 +797,47 @@ header #nav .navbar ul li a:active {
 }
 header #nav .navbar ul li a.active {
   color: #121212;
+}
+
+/****************************
+		   Welcome
+*****************************/
+#welcome {
+  background-color: #E4E4E4;
+  color: #121212;
+}
+#welcome h1, #welcome h2, #welcome h3, #welcome h4, #welcome h5, #welcome h6 {
+  color: #121212;
+}
+#welcome .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#welcome .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#welcome h2 {
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#welcome p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+#welcome .left {
+  float: left;
+  width: 50%;
+  padding-right: 30px;
+  border-right: 1px solid #121212;
+}
+#welcome .right {
+  float: right;
+  width: 50%;
+  padding-left: 29px;
 }
 
 /********************  EVENTS *******************
@@ -1126,74 +1209,12 @@ header #nav .navbar ul li a.active {
   height: 400px;
 }
 
-/****************** baseline ********************
-************************************************/
-#baseline {
-  background-color: #ff325d;
-  text-align: center;
-}
-#baseline #skyline_outer {
-  background-color: #ff325d;
-  position: relative;
-  height: 64px;
-}
-#baseline #skyline_outer #social {
-  font: icon;
-  padding-top: .5em;
-}
-#baseline #skyline_outer #social a {
-  color: #E4E4E4;
-  text-shadow: 1px 2px #121212;
-}
-@media (min-width: 650px) {
-  #baseline #skyline_outer #social {
-    position: absolute;
-    left: 50px;
-    bottom-margin: 15px;
-  }
-}
-#baseline #skyline_outer #social ul {
-  list-style: none;
-}
-#baseline #skyline_outer #social ul li {
-  display: inline;
-  padding: 0 auto;
-}
-#baseline #skyline_outer #social ul li img {
-  width: 50px;
-}
-#baseline #skyline_outer #skyline {
-  float: right;
-  margin-right: 0px;
-  max-height: 107px;
-  margin-top: -25px;
-}
-@media (max-width: 650px) {
-  #baseline #skyline_outer #skyline {
-    font-size: 1.2em;
-  }
-  #baseline #skyline_outer #skyline span {
-    display: none;
-  }
-}
-
-/****************** FOOTER ********************
-***********************************************/
-footer {
-  background-color: #121212;
-  text-align: center;
-  line-height: 130%;
-  display: inline;
-  width: 100%;
-}
-
 /************************************************
-		   		   About
+					About
 ************************************************/
 #about {
   color: #E4E4E4;
   text-align: center;
-  text-shadow: 2px 2px #121212;
 }
 #about .fullheight {
   background: url("/../images/Farmdale-Pic-1.jpg");
@@ -1240,41 +1261,63 @@ footer {
   width: 100%;
   background-color: #E4E4E4;
   display: inline-block;
+  color: #121212;
+  padding: 0 15px;
 }
-#about .beliefs-side-bar {
+#about .timeline .years ul li {
+  display: inline-block;
+  margin: 20px;
+}
+#about #beliefs {
+  height: 40vh;
+}
+#about #beliefs .beliefs-side-bar {
   text-align: left;
   padding: 30px;
   font-size: 21px;
   max-width: 175px;
   background-color: #ff325d;
   display: inline-block;
-  position: absolute;
-  left: 0;
+  float: left;
 }
-#about .beliefs-side-bar li {
+#about #beliefs .beliefs-side-bar li {
   padding: 5px 0;
   font-weight: 500;
   cursor: pointer;
 }
-#about .beliefs-content > div {
+#about #beliefs .beliefs-side-bar li a {
+  width: 80px;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+#about #beliefs .beliefs-content {
+  float: left;
+  width: 50%;
+}
+#about #beliefs .beliefs-content:before, #about #beliefs .beliefs-content:after {
+  content: '';
+  display: table;
+}
+#about #beliefs .beliefs-content:after {
+  clear: both;
+}
+#about #beliefs .beliefs-content .tabcontent {
   display: none;
-  padding: 20px 25px 5px;
+  padding: 6px 12px;
+  border-top: none;
 }
-#about .beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1,
-#about .beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2,
-#about .beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3,
-#about .beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4,
-#about .beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5,
-#about .beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 {
+#about #beliefs .beliefs-content .background-img {
+  background-image: url("../images/Farmdale-Pic-2.jpg");
+  background-position: center;
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+#about #beliefs .beliefs-content .is-active {
   display: inline-block;
-}
-#about .beliefs-side-bar ul li #belief-1:checked + .beliefs-content #content-1 p,
-#about .beliefs-side-bar ul li #belief-2:checked + .beliefs-content #content-2 p,
-#about .beliefs-side-bar ul li #belief-3:checked + .beliefs-content #content-3 p,
-#about .beliefs-side-bar ul li #belief-4:checked + .beliefs-content #content-4 p,
-#about .beliefs-side-bar ul li #belief-5:checked + .beliefs-content #content-5 p,
-#about .beliefs-side-bar ul li #belief-6:checked + .beliefs-content #content-6 p {
-  text-align: left;
 }
 
 /********************  EVENTS *******************
@@ -1492,138 +1535,131 @@ footer {
   font-size: 1.8em;
   font-weight: 800;
 }
-@media (min-width: 960px) {
-  #staff .line1 {
-    height: 460px;
+#staff .heading h1 a {
+  color: #121212;
+}
+#staff .content {
+  margin: 0 auto;
+  width: auto;
+  max-width: 1200px;
+}
+#staff .content:before, #staff .content:after {
+  content: '';
+  display: table;
+}
+#staff .content:after {
+  clear: both;
+}
+#staff .content .line1 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+#staff .content .line1:before, #staff .content .line1:after {
+  content: '';
+  display: table;
+}
+#staff .content .line1:after {
+  clear: both;
+}
+#staff .content .line1 .staff {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+#staff .content .line1 .staff .staff-person {
+  padding: 15px;
+  perspective: 1000px;
+}
+#staff .content .line1 .staff .staff-person .card-flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front img {
+  width: 250px;
+  height: 350px;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .back {
+  height: 550px;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#staff .content .line1 .staff:hover .card-flipper, #staff .content .line1 .staff.hover .card-flipper {
+  transform: rotateY(180deg);
+}
+
+/****************** baseline ********************
+************************************************/
+#baseline {
+  background-color: #ff325d;
+  text-align: center;
+}
+#baseline #skyline_outer {
+  background-color: #ff325d;
+  position: relative;
+  height: 64px;
+}
+#baseline #skyline_outer #social {
+  font: icon;
+  padding-top: .5em;
+}
+#baseline #skyline_outer #social a {
+  color: #E4E4E4;
+  text-shadow: 1px 2px #121212;
+}
+@media (min-width: 650px) {
+  #baseline #skyline_outer #social {
+    position: absolute;
+    left: 50px;
+    bottom-margin: 15px;
   }
 }
-#staff .line1 #leadPastor img {
-  height: 25%;
-  width: 25%;
-  margin: 10px 38% 10px 38%;
+#baseline #skyline_outer #social ul {
+  list-style: none;
 }
-@media (min-width: 960px) {
-  #staff .line1 #leadPastor {
-    float: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    width: 50%;
-  }
-  #staff .line1 #leadPastor img {
-    height: 40%;
-    width: 40%;
-    margin: 10px 38% 10px 30%;
-  }
-  #staff .line1 #leadPastor h4 {
-    margin: auto;
-  }
+#baseline #skyline_outer #social ul li {
+  display: inline;
+  padding: 0 auto;
 }
-#staff .line1 #youthPastor img {
-  height: 25%;
-  width: 25%;
-  margin: 10px 38% 10px 38%;
+#baseline #skyline_outer #social ul li img {
+  width: 50px;
 }
-@media (min-width: 960px) {
-  #staff .line1 #youthPastor {
-    float: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    width: 50%;
-  }
-  #staff .line1 #youthPastor img {
-    height: 41.5%;
-    width: 41.5%;
-    margin: 10px 38% 10px 30%;
-  }
-  #staff .line1 #youthPastor h4 {
-    margin: auto;
-  }
+#baseline #skyline_outer #skyline {
+  float: right;
+  margin-right: 0px;
+  max-height: 107px;
+  margin-top: -25px;
 }
-@media (min-width: 960px) {
-  #staff .line2 {
-    height: 460px;
+@media (max-width: 650px) {
+  #baseline #skyline_outer #skyline {
+    font-size: 1.2em;
   }
-}
-#staff .line2 #worshipPastor img {
-  height: 25%;
-  width: 25%;
-  margin: 10px 38% 10px 38%;
-}
-@media (min-width: 960px) {
-  #staff .line2 #worshipPastor {
-    float: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    width: 50%;
-  }
-  #staff .line2 #worshipPastor img {
-    height: 40%;
-    width: 40%;
-    margin: 10px 38% 10px 30%;
-  }
-  #staff .line2 #worshipPastor h4 {
-    margin: auto;
-  }
-}
-#staff .line2 #childrenLeader img {
-  height: 25%;
-  width: 25%;
-  margin: 10px 38% 10px 38%;
-}
-@media (min-width: 960px) {
-  #staff .line2 #childrenLeader {
-    float: left;
-    margin-top: 10px;
-    margin-bottom: 15px;
-    width: 50%;
-  }
-  #staff .line2 #childrenLeader img {
-    height: 41.5%;
-    width: 41.5%;
-    margin: 10px 38% 10px 30%;
-  }
-  #staff .line2 #childrenLeader h4 {
-    margin: auto;
+  #baseline #skyline_outer #skyline span {
+    display: none;
   }
 }
 
-/****************************
-		   Welcome
-*****************************/
-#welcome {
-  background-color: #E4E4E4;
-  color: #121212;
-}
-#welcome h1, #welcome h2, #welcome h3, #welcome h4, #welcome h5, #welcome h6 {
-  color: #121212;
-}
-#welcome .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
+/****************** FOOTER ********************
+***********************************************/
+footer {
+  background-color: #121212;
   text-align: center;
-}
-#welcome .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#welcome h2 {
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#welcome p {
-  font-size: 1em;
   line-height: 130%;
-  text-align: center;
-}
-#welcome .left {
-  float: left;
-  width: 50%;
-  padding-right: 30px;
-  border-right: 1px solid #121212;
-}
-#welcome .right {
-  float: right;
-  width: 50%;
-  padding-left: 29px;
+  display: inline;
+  width: 100%;
 }
