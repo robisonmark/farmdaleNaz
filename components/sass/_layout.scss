@@ -24,7 +24,7 @@ body {
 
 .btn_map {
 	display: inline-block;
-	color: $dark;
+	color: $light;
 	width: 50%; 
 	max-width: 160px;
 	margin: 0 auto;
@@ -47,7 +47,7 @@ body {
 
 	&:hover {
 		 background-color: $pink;
-		 color:#2a2a2a; 
+		 color: $dark; 
 	} //hover
 } //btn_map
 

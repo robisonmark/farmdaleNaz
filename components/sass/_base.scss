@@ -72,3 +72,15 @@ p {
 .medium{
   background-color: #d6d6d6;
 }
+.backtotop{
+  position: fixed;
+  bottom: 20em;
+  right: 0;
+  background-color: $light;
+  opacity: .45;
+  padding: .5em;
+  color: $navbrand;
+}
+.hidden-top{
+  visibility: hidden;
+}
