@@ -374,7 +374,7 @@
 				float: left;
 				margin-top: 10px;
 				margin-bottom: 15px;
-				width: 50%;
+				width: 33%;
 				
 					img {
 						height: 40%;
@@ -400,7 +400,7 @@
 				float: left;
 				margin-top: 10px;
 				margin-bottom: 15px;
-				width: 50%;
+				width: 33%;
 				
 					img {
 						height: 41.5%;
@@ -413,12 +413,12 @@
 				}
 			} //breakpoint
 		} //youth pastor
-	} //line1
+	// } //line1
 	
-	.line2{
-	 	@include breakpoint (min-width $medium) {
-			height: 460px;
-		 } // line 2 breakpoint
+	// .line2{
+	//  	@include breakpoint (min-width $medium) {
+	// 		height: 460px;
+	// 	 } // line 2 breakpoint
 		 
 	#worshipPastor {
 		img {
@@ -431,7 +431,7 @@
 				float: left;
 				margin-top: 10px;
 				margin-bottom: 15px;
-				width: 50%;
+				width: 33%;
 				
 					img {
 						height: 40%;
@@ -456,7 +456,7 @@
 				float: left;
 				margin-top: 10px;
 				margin-bottom: 15px;
-				width: 50%;
+				width: 33%;
 				
 					img {
 						height: 41.5%;

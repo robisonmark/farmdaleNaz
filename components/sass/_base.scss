@@ -96,4 +96,17 @@ a {
   border-right:10px solid #121212; 
   right: -30px;
   top: 3px;
+
+.backtotop{
+  position: fixed;
+  bottom: 20em;
+  right: 0;
+  background-color: $light;
+  opacity: .45;
+  padding: .5em;
+  color: $navbrand;
+}
+.hidden-top{
+  visibility: hidden;
+
 }

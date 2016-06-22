@@ -251,6 +251,20 @@ a {
   border-right: 10px solid #121212;
   right: -30px;
   top: 3px;
+
+.backtotop {
+  position: fixed;
+  bottom: 20em;
+  right: 0;
+  background-color: #E4E4E4;
+  opacity: .45;
+  padding: .5em;
+  color: #ff325d;
+}
+
+.hidden-top {
+  visibility: hidden;
+
 }
 
 body {
@@ -291,7 +305,7 @@ body {
 
 .btn_map {
   display: inline-block;
-  color: #121212;
+  color: #E4E4E4;
   width: 50%;
   max-width: 160px;
   margin: 0 auto;
@@ -313,7 +327,7 @@ body {
 }
 .btn_map:hover {
   background-color: #ff325d;
-  color: #2a2a2a;
+  color: #121212;
 }
 
 .btn_light {
@@ -1121,7 +1135,7 @@ header #nav .navbar ul li a.active {
     float: left;
     margin-top: 10px;
     margin-bottom: 15px;
-    width: 50%;
+    width: 33%;
   }
   #staff .line1 #leadPastor img {
     height: 40%;
@@ -1142,7 +1156,7 @@ header #nav .navbar ul li a.active {
     float: left;
     margin-top: 10px;
     margin-bottom: 15px;
-    width: 50%;
+    width: 33%;
   }
   #staff .line1 #youthPastor img {
     height: 41.5%;
@@ -1153,50 +1167,45 @@ header #nav .navbar ul li a.active {
     margin: auto;
   }
 }
-@media (min-width: 960px) {
-  #staff .line2 {
-    height: 460px;
-  }
-}
-#staff .line2 #worshipPastor img {
+#staff .line1 #worshipPastor img {
   height: 25%;
   width: 25%;
   margin: 10px 38% 10px 38%;
 }
 @media (min-width: 960px) {
-  #staff .line2 #worshipPastor {
+  #staff .line1 #worshipPastor {
     float: left;
     margin-top: 10px;
     margin-bottom: 15px;
-    width: 50%;
+    width: 33%;
   }
-  #staff .line2 #worshipPastor img {
+  #staff .line1 #worshipPastor img {
     height: 40%;
     width: 40%;
     margin: 10px 38% 10px 30%;
   }
-  #staff .line2 #worshipPastor h4 {
+  #staff .line1 #worshipPastor h4 {
     margin: auto;
   }
 }
-#staff .line2 #childrenLeader img {
+#staff .line1 #childrenLeader img {
   height: 25%;
   width: 25%;
   margin: 10px 38% 10px 38%;
 }
 @media (min-width: 960px) {
-  #staff .line2 #childrenLeader {
+  #staff .line1 #childrenLeader {
     float: left;
     margin-top: 10px;
     margin-bottom: 15px;
-    width: 50%;
+    width: 33%;
   }
-  #staff .line2 #childrenLeader img {
+  #staff .line1 #childrenLeader img {
     height: 41.5%;
     width: 41.5%;
     margin: 10px 38% 10px 30%;
   }
-  #staff .line2 #childrenLeader h4 {
+  #staff .line1 #childrenLeader h4 {
     margin: auto;
   }
 }
