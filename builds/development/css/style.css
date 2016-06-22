@@ -90,6 +90,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\e602";
 }
 
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-twitter2:before {
+  content: "\e901";
+}
+
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -115,8 +131,8 @@ body {
   font: 300 1em/1.5em "alegreya sans", Arial, sans-serif;
   background: #121212;
   color: #E4E4E4;
-  overflow-x: hidden;
   letter-spacing: 0.03em;
+  font-size: 18px;
 }
 
 /* Body */
@@ -214,6 +230,28 @@ p {
   background-color: #d6d6d6;
 }
 
+a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+
+.is-active:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #121212;
+  right: -30px;
+  top: 3px;
+
 .backtotop {
   position: fixed;
   bottom: 20em;
@@ -226,6 +264,7 @@ p {
 
 .hidden-top {
   visibility: hidden;
+
 }
 
 body {
@@ -460,7 +499,7 @@ header .fullheight .scroll-down h4 {
 /****************************
 		Hamburger Menu
 ****************************/
-li a {
+nav li a {
   display: inline-block;
   position: relative;
   text-align: right;
@@ -468,8 +507,9 @@ li a {
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
+  outline: none;
 }
-li a:after {
+nav li a:after {
   content: '';
   position: absolute;
   background: #ffffff;
@@ -480,7 +520,7 @@ li a:after {
   bottom: 0;
   transition: .35s ease;
 }
-li a:hover:after {
+nav li a:hover:after {
   width: 100%;
 }
 
@@ -689,6 +729,7 @@ header #nav .navbar .brand a {
   color: #E4E4E4;
   text-decoration: none;
   text-align: center;
+  display: inline;
 }
 header #nav .navbar .brand a #logo {
   width: 125px;
@@ -739,6 +780,7 @@ header #nav .navbar ul li a {
   display: inline-block;
   padding: 8px 8px 8px 8px;
   text-decoration: none;
+  outline: none;
 }
 header #nav .navbar ul li a:hover {
   background-color: #ff325d;
@@ -812,58 +854,55 @@ header #nav .navbar ul li a.active {
   padding-left: 29px;
 }
 
-/************************************************
-		   		   About
+/********************  EVENTS *******************
 ************************************************/
-#about {
-  color: #E4E4E4;
-  text-align: center;
-  text-shadow: 2px 2px #121212;
+.N-and-E-Con:before, .N-and-E-Con:after {
+  content: '';
+  display: table;
 }
-#about .fullheight {
-  background: url("/../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+.N-and-E-Con:after {
+  clear: both;
 }
-#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
-  color: #E4E4E4;
-}
-#about .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-  color: #E4E4E4;
-}
-#about .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#about h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#about p {
-  font-size: 1em;
-  line-height: 130%;
+
+.update-columns {
+  width: 100%;
+  float: left;
+  position: relative;
   text-align: center;
 }
 
-/********************  EVENTS *******************
-************************************************/
+.update-column {
+  display: inline-block;
+  width: 20vw;
+  margin: 0 1vw;
+}
+
+.news-column .update-header {
+  background: #902052;
+}
+
+.update-header {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.update-column-content {
+  height: 28.5vw;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+}
+
 .pictures {
   margin-bottom: -10px;
   width: 100%;
@@ -1177,6 +1216,400 @@ header #nav .navbar ul li a.active {
 #map {
   width: 100%;
   height: 400px;
+}
+
+/************************************************
+					About
+************************************************/
+#about {
+  color: #E4E4E4;
+  text-align: center;
+}
+#about .fullheight {
+  background: url("/../images/Farmdale-Pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
+  color: #E4E4E4;
+}
+#about .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+  color: #E4E4E4;
+}
+#about .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#about h2 {
+  color: #cb002b;
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#about p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+#about .timeline {
+  width: 100%;
+  background-color: #E4E4E4;
+  display: inline-block;
+  color: #121212;
+  padding: 0 15px;
+}
+#about .timeline .years ul li {
+  display: inline-block;
+  margin: 20px;
+}
+#about #beliefs {
+  height: 40vh;
+}
+#about #beliefs .beliefs-side-bar {
+  text-align: left;
+  padding: 30px;
+  font-size: 21px;
+  max-width: 175px;
+  background-color: #ff325d;
+  display: inline-block;
+  float: left;
+}
+#about #beliefs .beliefs-side-bar li {
+  padding: 5px 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+#about #beliefs .beliefs-side-bar li a {
+  width: 80px;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+#about #beliefs .beliefs-content {
+  float: left;
+  width: 50%;
+}
+#about #beliefs .beliefs-content:before, #about #beliefs .beliefs-content:after {
+  content: '';
+  display: table;
+}
+#about #beliefs .beliefs-content:after {
+  clear: both;
+}
+#about #beliefs .beliefs-content .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+#about #beliefs .beliefs-content .background-img {
+  background-image: url("../images/Farmdale-Pic-2.jpg");
+  background-position: center;
+  background-size: cover;
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+#about #beliefs .beliefs-content .is-active {
+  display: inline-block;
+}
+
+/********************  EVENTS *******************
+************************************************/
+.N-and-E-Con:before, .N-and-E-Con:after {
+  content: '';
+  display: table;
+}
+.N-and-E-Con:after {
+  clear: both;
+}
+
+.update-columns {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+.update-column {
+  display: inline-block;
+  width: 20vw;
+  margin: 0 1vw;
+}
+
+.news-column .update-header {
+  background: #902052;
+}
+
+.update-header {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.update-column-content {
+  height: 28.5vw;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+}
+
+#events .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#events .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#events h2 {
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#events p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+#events #Cal {
+  margin-right: 23%;
+  margin-left: 23%;
+  padding-top: 20px;
+}
+#events .calendar-container {
+  width: 80%;
+  padding: 25px;
+  margin: auto;
+}
+#events .cal-head {
+  background-color: #ff325d;
+  width: 100%;
+  height: 80px;
+  display: table;
+  color: #E4E4E4;
+  font-size: 2em;
+  padding-top: 25px;
+}
+#events .cal-head .previous {
+  float: left;
+  margin-right: 20px;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .month {
+  float: left;
+  margin-right: 20px;
+  width: 42%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .next {
+  float: left;
+  margin-right: 20px;
+  width: 20%;
+  border-right: 1px solid #E4E4E4;
+}
+#events .cal-head .search {
+  float: right;
+  width: 10%;
+}
+#events .calendar {
+  background-color: #ffffff;
+  width: 100%;
+  color: #121212;
+}
+#events .calendar th {
+  width: 14.29%;
+  border: -1px solid #E4E4E4;
+}
+#events .calendar td {
+  width: 14.29%;
+  border: 1px solid #121212;
+}
+
+/**************************
+	Map
+**************************/
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.pictures {
+  margin-bottom: -10px;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.pictures:before {
+  content: '';
+  display: table;
+}
+.pictures .left {
+  display: inline-block;
+  left: 0;
+}
+.pictures .tall {
+  height: 500px;
+}
+.pictures .top {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.pictures .three-quarters {
+  width: 500px;
+}
+.pictures .bottom {
+  display: inline-block;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.pictures .small {
+  height: 170px;
+}
+.pictures .right {
+  display: inline-block;
+  right: 0;
+}
+.pictures .wide {
+  width: 500px;
+}
+.pictures .work-info-bg {
+  background-color: #282b30;
+  opacity: 0.45;
+  will-change: opacity;
+}
+
+/****************** Staff **********************
+************************************************/
+#staff {
+  background-color: #E4E4E4;
+  color: #121212;
+  /*
+  	h2 {
+  		color: darken($pink, 20);
+  		font-size: 1.3em;
+  		line-height: 110%;
+  		padding: 10px 0;
+  		
+  	} //h2*/
+}
+#staff:before, #staff:after {
+  content: '';
+  display: table;
+}
+#staff:after {
+  clear: both;
+}
+#staff h1, #staff h2, #staff h3, #staff h4, #staff h5, #staff h6 {
+  color: #121212;
+}
+#staff .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#staff .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#staff .heading h1 a {
+  color: #121212;
+}
+#staff .content {
+  margin: 0 auto;
+  width: auto;
+  max-width: 1200px;
+}
+#staff .content:before, #staff .content:after {
+  content: '';
+  display: table;
+}
+#staff .content:after {
+  clear: both;
+}
+#staff .content .line1 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+#staff .content .line1:before, #staff .content .line1:after {
+  content: '';
+  display: table;
+}
+#staff .content .line1:after {
+  clear: both;
+}
+#staff .content .line1 .staff {
+  width: 33%;
+  float: left;
+  text-align: center;
+}
+#staff .content .line1 .staff .staff-person {
+  padding: 15px;
+  perspective: 1000px;
+}
+#staff .content .line1 .staff .staff-person .card-flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front img {
+  width: 250px;
+  height: 350px;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .back {
+  height: 550px;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#staff .content .line1 .staff:hover .card-flipper, #staff .content .line1 .staff.hover .card-flipper {
+  transform: rotateY(180deg);
 }
 
 /****************** baseline ********************

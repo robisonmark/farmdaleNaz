@@ -1,0 +1,100 @@
+/****************** Staff **********************
+************************************************/
+
+#staff {
+	background-color: $light;
+	color: $dark;
+	@include clearfix;
+	
+
+	#{headings()} {
+		color: $dark;
+	}
+
+	.heading {
+	  @include pad(1,1);
+	  text-align: center;
+
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+
+			a{
+				color: #121212;
+			}
+		} //h1
+	}//heading
+/*
+	h2 {
+		color: darken($pink, 20);
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+		
+	} //h2*/
+	.content{
+		@include clearfix;
+		margin: 0 auto;
+		width: auto;
+		max-width: 1200px;
+		.line1 {
+			@include clearfix;
+			margin-left: -10px;
+			margin-right: -10px;
+			.staff{
+				width: 33%;
+				float: left;
+				text-align: center;
+
+				.staff-person{
+					padding: 15px;
+					perspective: 1000px;
+
+					.card-flipper{
+						transition: 0.6s;
+						transform-style: preserve-3d;
+
+						position: relative;
+
+						.front {
+							z-index: 2;
+							/* for firefox 31 */
+							transform: rotateY(0deg);
+							backface-visibility: hidden;
+							position: relative;
+							top: 0;
+							left: 0;
+
+							img{
+								width: 250px;
+								height: 350px;
+							//	padding: 0 25px;
+							} //img
+
+
+
+						} //front
+						.back {
+							height: 550px;
+							width: 100%;
+							padding: 15px;
+							background-color: #fff;
+							transform: rotateY(180deg);
+							backface-visibility: hidden;
+
+							position: absolute;
+							top: 0;
+							left: 0;
+						} //back
+					} //card-flipper
+				} //staff-person
+			} //staff
+
+			.staff:hover .card-flipper, .staff.hover .card-flipper {
+				transform: rotateY(180deg);
+			}
+		} //line 1
+	} //content
+} //staff
+
+
