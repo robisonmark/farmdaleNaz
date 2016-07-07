@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
 		<meta name="dcterms.created" content="Thu, 23 October 2014 02:33:32 GMT">
@@ -8,13 +8,16 @@
 		<meta name="author" content="Robros">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-		  <title>
+		<title>
         	Farmdale Nazarene - Louisville, Kentucky - Connecting
-      </title>
-		
+        </title>
+		<script src="js/angular.min.js"></script>
+        <script src="https://use.fontawesome.com/72047c876c.js"></script>
+
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://use.fontawesome.com/72047c876c.js"></script>
+        
+
         
 	</head>
 <!-- END HEAD -->
@@ -407,7 +410,23 @@
         </div> <!-- End events -->
         <div class="scene" id="about">
     <!-- Heading for About Us -->
-            <section class="heading">
+     
+                <div class="content">
+                    <div class="year-info">
+                        <p> 
+                            We call ourselves first and foremost Christians.  But we also call ourselves Nazarenes. People can recognize the way Christians love others and it’s no different for us; this love different than what is experienced in the world. As a church, we are continuously striving for relationships that build a strong community and help us grow in our love for Jesus.
+                        </p>
+                        <p>
+                            We are a group of individuals with one mission; that is making Christlike disciples in the nations by connecting with God, with each other, and with our community. We start here at home, won’t you join us?
+                        </p>
+                        <p>
+                            Farmdale Church of the Nazarene is a christian church that traces its history to Holiness Movement of the early 1900's.  Nazarene's orginally came to Louisville in the 1920's known at that time as Camp Taylor.Farmdale has been at its present location for more than 40 years. 
+                        </p>
+                    </div>
+                </div>
+
+                <section id="history">
+               <section class="heading">
                 <h1>
                     <a name="history">History</a> 
                 </h1>
@@ -448,21 +467,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="content">
-                    <div class="year-info">
-                        <p> 
-                            We call ourselves first and foremost Christians.  But we also call ourselves Nazarenes. People can recognize the way Christians love others and it’s no different for us; this love different than what is experienced in the world. As a church, we are continuously striving for relationships that build a strong community and help us grow in our love for Jesus.
-                        </p>
-                        <p>
-                            We are a group of individuals with one mission; that is making Christlike disciples in the nations by connecting with God, with each other, and with our community. We start here at home, won’t you join us?
-                        </p>
-                        <p>
-                            Farmdale Church of the Nazarene is a christian church that traces its history to Holiness Movement of the early 1900's.  Nazarene's orginally came to Louisville in the 1920's known at that time as Camp Taylor.Farmdale has been at its present location for more than 40 years. 
-                        </p>
-                    </div>
-                </div> 
             </div>
-            <section id="beliefs">
+        </section>
+        </div>
+        <div class="scene" id="beliefs" ng-controller="BeliefController"> 
+            <!-- <section id="beliefs"> -->
                 <div class="heading">
                     <h1>
                         <a name="beliefs">Beliefs</a> 
@@ -498,37 +507,32 @@
                             <h4>God</h4>
                             <p>God is the creator of all things and the sustainer of all life</p>
                         </div>
-                        <div class="background-img"></div>
                     </div>
                     <div class="tabcontent" id="content-2">
                         <h4>Man</h4>
                         <p>Man is God's creation</p>
-                        <div class="background-img"></div>
                     </div>
                     <div class="tabcontent" id="content-3">
                         <h4>Jesus</h4>
                         <p>Jesus is son of God. He came to earth to be the savior of all.</p>
-                        <div class="background-img"></div>
                     </div>
                     <div class="tabcontent" id="content-4">
                         <h4>Spirit</h4>
                         <p>The spirit is the third part of the trinity</p>
-                        <div class="background-img"></div>
                     </div>
                     <div class="tabcontent" id="content-5">
                         <h4>Bible</h4>
                         <p>The Bible is the written world of God.  He inspired the writings by its many different authors</p>
-                        <div class="background-img"></div>
                     </div>
                     <div class="tabcontent" id="content-6">
                         <h4>More</h4>
                         <p>More of whatever we determine to be important</p>
-                        <div class="background-img"></div>
                     </div>
                 </div>
-            </div>
+                <div class="background-img"></div>
                 
-        </section>
+        </div>
+        
     <!-- Being Staff Work on Content -->
         <div class="scene" id="staff">
             <section class="heading">
