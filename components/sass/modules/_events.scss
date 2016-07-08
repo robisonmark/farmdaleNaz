@@ -1,8 +1,19 @@
 /********************  EVENTS *******************
 ************************************************/
-.N-and-E-Con {
-	@include clearfix;
+#events {
+    background-color: rgba(240,240,240,.4);
+    padding-bottom: 60px 0;
+    background-image: url('../images/Photo-Banner/faith-and-elizabeth.jpg');
+    padding: 60px 0;
+    .heading{
+        padding: 60px 0;
+    }
+    .News-Events-Con {
+        @include clearfix;
+    }
 }
+
+
 .update-columns {
     width: 100%;
     float: left;
@@ -12,12 +23,12 @@
 
 .update-column {
     display: inline-block;
-    width: 20vw;
+    width: 80vw;
     margin: 0 1vw;
 }
 
 .news-column .update-header {
-    background: #902052;
+    background: $pink;
 }
 .update-header {
     color: #fff;
@@ -30,16 +41,25 @@
 
 
 .update-column-content {
-    height: 28.5vw;
+    height: 250px;
     background: rgba(255,255,255,.8);
     display: block;
     width: 100%;
     box-sizing: border-box;
-    overflow-y: scroll;
+    //overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
     text-align: left;
     padding: 30px;
     position: relative;
+    color: $dark;
+
+    a{
+        color: $pink;
+        span, p {
+            color: $dark;
+        }
+    }
 }
 
 
