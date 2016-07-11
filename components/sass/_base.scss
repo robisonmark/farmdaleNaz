@@ -15,9 +15,25 @@ body{
 }							/* headings */
 
 h1{
+    padding-bottom: 20px;
+
     &:after{
     content: '';
     display: block;
+    width: 100px;
+    height: 5px;
+    background-color: $pink;
+    margin: auto;
+    // border-right: #ff325d 4px solid;
+    // border-bottom: #ff325d 4px solid;
+    transform: skew(-27deg);
+    -webkit-transform: skew(-27deg);
+  }
+}
+header .fullheight .hgroup h1{
+    &:after{
+    content: '';
+    display: none;
     width: 100px;
     height: 5px;
     background-color: $pink;
@@ -109,7 +125,7 @@ a {
   border-bottom: 10px solid transparent; 
 
   border-right:10px solid #121212; 
-  right: -30px;
+  //right: -30px;
   top: 3px;
 
 .backtotop{
