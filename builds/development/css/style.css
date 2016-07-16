@@ -325,6 +325,10 @@ body {
   }
 }
 
+.right {
+  float: right;
+}
+
 .btn_map {
   display: inline-block;
   color: #E4E4E4;
@@ -403,6 +407,18 @@ body {
 .btn_dark:hover {
   background-color: #ff325d;
   color: #2a2a2a;
+}
+
+.btn-white {
+  font-size: 18px;
+  border: 1.5px solid #ffffff;
+  padding: 0 15px;
+  border-radius: 5px;
+  transition: .8s;
+}
+.btn-white:hover {
+  color: #121212;
+  background-color: #ffffff;
 }
 
 /****************************
