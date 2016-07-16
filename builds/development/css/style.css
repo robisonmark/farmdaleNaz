@@ -723,7 +723,7 @@ header #nav {
   width: 100%;
   height: 90px;
   z-index: 100;
-  border-bottom: solid 4px #121212;
+  box-shadow: 2px 2px 10px #121212;
 }
 header #nav:before, header #nav:after {
   content: '';
@@ -1088,6 +1088,7 @@ header #nav .navbar ul li a.active {
 #ministries .img-con {
   width: 350px;
   float: left;
+  margin-right: 15px;
 }
 
 /****************** Staff **********************
@@ -1357,25 +1358,18 @@ header #nav .navbar ul li a.active {
 #events .News-Events-Con:after {
   clear: both;
 }
-
-.update-columns {
+#events .News-Events-Con .update-columns {
   width: 100%;
   float: left;
   position: relative;
   text-align: center;
 }
-
-.update-column {
+#events .News-Events-Con .update-columns .update-column {
   display: inline-block;
   width: 80vw;
   margin: 0 1vw;
 }
-
-.news-column .update-header {
-  background: #ff325d;
-}
-
-.update-header {
+#events .News-Events-Con .update-columns .update-column .update-header {
   color: #fff;
   text-transform: uppercase;
   padding: 15px;
@@ -1383,8 +1377,7 @@ header #nav .navbar ul li a.active {
   font-weight: bold;
   text-align: left;
 }
-
-.update-column-content {
+#events .News-Events-Con .update-columns .update-column .update-column-content {
   height: 250px;
   background: rgba(255, 255, 255, 0.8);
   display: block;
@@ -1397,86 +1390,35 @@ header #nav .navbar ul li a.active {
   position: relative;
   color: #121212;
 }
-.update-column-content a {
+#events .News-Events-Con .update-columns .news-column .update-header {
+  background-color: #00B21D;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .news-column .update-column-content a {
+  color: #00B21D;
+}
+#events .News-Events-Con .update-columns .news-column .update-column-content a span, #events .News-Events-Con .update-columns .news-column .update-column-content a p {
+  color: #121212;
+}
+#events .News-Events-Con .update-columns .events-column .update-header {
+  background-color: #1A88B2;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .events-column .update-column-content a {
+  color: #1A88B2;
+}
+#events .News-Events-Con .update-columns .events-column .update-column-content a span, #events .News-Events-Con .update-columns .events-column .update-column-content a p {
+  color: #121212;
+}
+#events .News-Events-Con .update-columns .social-column .update-header {
+  background-color: #ff325d;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .social-column .update-column-content a {
   color: #ff325d;
 }
-.update-column-content a span, .update-column-content a p {
+#events .News-Events-Con .update-columns .social-column .update-column-content a span, #events .News-Events-Con .update-columns .social-column .update-column-content a p {
   color: #121212;
-}
-
-#events .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-}
-#events .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#events h2 {
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
-}
-#events p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
-  padding-bottom: 10px;
-}
-#events #Cal {
-  margin-right: 23%;
-  margin-left: 23%;
-  padding-top: 20px;
-}
-#events .calendar-container {
-  width: 80%;
-  padding: 25px;
-  margin: auto;
-}
-#events .cal-head {
-  background-color: #ff325d;
-  width: 100%;
-  height: 80px;
-  display: table;
-  color: #E4E4E4;
-  font-size: 2em;
-  padding-top: 25px;
-}
-#events .cal-head .previous {
-  float: left;
-  margin-right: 20px;
-  width: 20%;
-  border-right: 1px solid #E4E4E4;
-}
-#events .cal-head .month {
-  float: left;
-  margin-right: 20px;
-  width: 42%;
-  border-right: 1px solid #E4E4E4;
-}
-#events .cal-head .next {
-  float: left;
-  margin-right: 20px;
-  width: 20%;
-  border-right: 1px solid #E4E4E4;
-}
-#events .cal-head .search {
-  float: right;
-  width: 10%;
-}
-#events .calendar {
-  background-color: #ffffff;
-  width: 100%;
-  color: #121212;
-}
-#events .calendar th {
-  width: 14.29%;
-  border: -1px solid #E4E4E4;
-}
-#events .calendar td {
-  width: 14.29%;
-  border: 1px solid #121212;
 }
 
 /**************************

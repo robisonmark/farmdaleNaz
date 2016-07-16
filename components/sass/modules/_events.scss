@@ -10,151 +10,181 @@
     }
     .News-Events-Con {
         @include clearfix;
-    }
-}
+    
+        .update-columns {
+            width: 100%;
+            float: left;
+            position: relative;
+            text-align: center;
+          
+            .update-column {
+                display: inline-block;
+                width: 80vw;
+                margin: 0 1vw;
+                .update-header {
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 15px;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: left;
+                }
+                .update-column-content {
+                    height: 250px;
+                    background: rgba(255,255,255,.8);
+                    display: block;
+                    width: 100%;
+                    box-sizing: border-box;
+                    //overflow-y: scroll;
+                    overflow-y: hidden;
+                    overflow-x: hidden;
+                    text-align: left;
+                    padding: 30px;
+                    position: relative;
+                    color: $dark;
+                }
+            }
+            .news-column{
+                .update-header {
+                    background-color: #00B21D;
+                    opacity: 0.8;
+                }
+                .update-column-content {
+                    a{
+                        color: #00B21D;
+                        span, p {
+                            color: $dark;
+                        }
+                    }
+                }
+            }
 
+            .events-column{
+                .update-header{
+                    background-color: #1A88B2;
+                    opacity: 0.8;
+                }
+                .update-column-content {
+                    a{
+                        color: #1A88B2;
+                        span, p {
+                            color: $dark;
+                        }
+                    }
+                }
+            }
 
-.update-columns {
-    width: 100%;
-    float: left;
-    position: relative;
-    text-align: center;
-}
-
-.update-column {
-    display: inline-block;
-    width: 80vw;
-    margin: 0 1vw;
-}
-
-.news-column .update-header {
-    background: $pink;
-}
-.update-header {
-    color: #fff;
-    text-transform: uppercase;
-    padding: 15px;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: left;
-}
-
-
-.update-column-content {
-    height: 250px;
-    background: rgba(255,255,255,.8);
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    //overflow-y: scroll;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    text-align: left;
-    padding: 30px;
-    position: relative;
-    color: $dark;
-
-    a{
-        color: $pink;
-        span, p {
-            color: $dark;
+            .social-column{
+                .update-header{
+                    background-color: $pink;
+                    opacity: 0.8;
+                }
+                .update-column-content {
+                    a{
+                        color: $pink;
+                        span, p {
+                            color: $dark;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 
-#events {
+// #events {
 
-    .heading {
-      @include pad(1,1);
-      text-align: center;
+//     .heading {
+//       @include pad(1,1);
+//       text-align: center;
 
-        h1 {
-            font-size: 1.8em;
-            font-weight: $bold; 
-        } //h1
-    }//heading
+//         h1 {
+//             font-size: 1.8em;
+//             font-weight: $bold; 
+//         } //h1
+//     }//heading
 
-    h2 {
+//     h2 {
         
-        font-size: 1.3em;
-        line-height: 110%;
-        padding: 10px 0;
+//         font-size: 1.3em;
+//         line-height: 110%;
+//         padding: 10px 0;
         
-    } //h2
+//     } //h2
 
-    p {
-        font-size: 1em;
-        line-height: 130%;
-        text-align: center;
-        padding-bottom: 10px;
-    } //p
+//     p {
+//         font-size: 1em;
+//         line-height: 130%;
+//         text-align: center;
+//         padding-bottom: 10px;
+//     } //p
 
-    #Cal {  
-        margin-right: 23%;
-        margin-left: 23%;
-        padding-top: 20px;
+//     #Cal {  
+//         margin-right: 23%;
+//         margin-left: 23%;
+//         padding-top: 20px;
         
-        } //googleCal
+//         } //googleCal
         
-    .calendar-container {
-        width: 80%;
-        padding: 25px;
-        margin: auto;
+//     .calendar-container {
+//         width: 80%;
+//         padding: 25px;
+//         margin: auto;
         
-    }
+//     }
     
-    .cal-head {
-        background-color: $pink;
-        width: 100%;
-        height: 80px;
-        display: table;
-        color: $light;
-        font-size: 2em;
-        padding-top: 25px;
+//     .cal-head {
+//         background-color: $pink;
+//         width: 100%;
+//         height: 80px;
+//         display: table;
+//         color: $light;
+//         font-size: 2em;
+//         padding-top: 25px;
         
             
-        .previous{
-            float: left;
-            margin-right: 20px;
-            width: 20%;
-            border-right: 1px solid $light;
-        } //previous
+//         .previous{
+//             float: left;
+//             margin-right: 20px;
+//             width: 20%;
+//             border-right: 1px solid $light;
+//         } //previous
         
-        .month{
-            float: left;
-            margin-right: 20px;
-            width: 42%;
-            border-right: 1px solid $light;
-        } //month
+//         .month{
+//             float: left;
+//             margin-right: 20px;
+//             width: 42%;
+//             border-right: 1px solid $light;
+//         } //month
         
-        .next{
-            float: left;
-            margin-right: 20px;
-            width: 20%;
-            border-right: 1px solid $light;
-        } //next
+//         .next{
+//             float: left;
+//             margin-right: 20px;
+//             width: 20%;
+//             border-right: 1px solid $light;
+//         } //next
         
-        .search{
-            float: right;
-            width: 10%;
-        } //search
-    } //cal-head
+//         .search{
+//             float: right;
+//             width: 10%;
+//         } //search
+//     } //cal-head
     
-    .calendar{
-        background-color: $white;
-        width: 100%;
-        color: $dark;
+//     .calendar{
+//         background-color: $white;
+//         width: 100%;
+//         color: $dark;
         
-        th{
-            width: 14.29%;
-            border: -1px solid $light;
-        }
+//         th{
+//             width: 14.29%;
+//             border: -1px solid $light;
+//         }
         
-        td {
-            width: 14.29%;
-            border: 1px solid $dark;
-        }
-    }
+//         td {
+//             width: 14.29%;
+//             border: 1px solid $dark;
+//         }
+//     }
     
-} //events
+// } //events
