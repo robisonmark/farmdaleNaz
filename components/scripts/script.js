@@ -1,4 +1,14 @@
 $(function() {
+  // Accordion tabs
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
 
     var topoffset = 89;
 
@@ -103,7 +113,16 @@ $('#toggle').click(function() {
 //  Vertical Tabs
 
 
+// Accordion tabs
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    }
+}
 
 //close menu
 

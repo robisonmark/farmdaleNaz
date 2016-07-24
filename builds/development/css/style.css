@@ -421,24 +421,59 @@ body {
   background-color: #ffffff;
 }
 
+.overlay:after {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
 /****************************
 		Intro / Header
 *****************************/
+header {
+  height: 100vh;
+}
 header .fullheight {
   background-image: url("../images/Farmdale-Pic-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
   top: 0;
   left: 0;
 }
 header .fullheight .hgroup {
   padding: 60px 0;
   position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 14em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+header .fullheight .hgroup:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  transform: scale(1) translateY(20px);
+}
+header .fullheight .hgroup h1, header .fullheight .hgroup h2, header .fullheight .hgroup h4, header .fullheight .hgroup p, header .fullheight .hgroup ul li {
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 @media (min-width: 0) and (max-width: 960px) {
   header .fullheight .hgroup {
@@ -452,15 +487,6 @@ header .fullheight .hgroup {
   }
   header .fullheight .hgroup span {
     display: none;
-  }
-}
-@media (min-width: 1200px) {
-  header .fullheight .hgroup {
-    padding: 100px 0;
-    position: absolute;
-    left: 40px;
-    right: 40px;
-    bottom: 14em;
   }
 }
 header .fullheight .hgroup h1 {
@@ -897,18 +923,53 @@ header #nav .navbar ul li a.active {
   background-size: cover;
   background-position: center;
   height: 100vh;
+  background-attachment: fixed;
 }
 #new .new {
   max-width: 45vw;
   margin-left: 25px;
   background-color: rgba(12, 12, 12, 0.5);
-  padding: 15px;
   position: relative;
   top: 150px;
   border-radius: 5px;
+  background-attachment: fixed;
+  position: relative;
+  left: 25px;
+  top: 25px;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
-#new .new p {
+#new .new h2, #new .new p, #new .new ul li {
+  position: relative;
   text-align: left;
+  padding: 15px;
+}
+#new .new button.accordion {
+  background-color: rgba(12, 12, 12, 0);
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+#new .new button.accordion.active, #new .new button.accordion:hover {
+  background-color: rgba(42, 42, 42, 0.4);
+}
+#new .new div.panel {
+  padding: 0 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+  color: #121212;
+}
+#new .new div.panel.show {
+  opacity: 1;
+  max-height: 500px;
+  /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
 .pictures {
