@@ -60,5 +60,20 @@ footer {
 	text-align: center;
 	line-height: 130%;
 	display:inline;
-	width:100%;
+	width: 95%;
+	padding: 10px;
+	.legal {
+		.servicetimes{
+			float: left;
+			width: 40vw;
+			text-align: left !important;
+
+			.weekly{
+				text-align: left !important;
+			}
+		}
+		.address {
+			float:left;
+		}
+	}
 }

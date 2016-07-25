@@ -14,7 +14,6 @@
 		
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
-        <script src="https://use.fontawesome.com/72047c876c.js"></script>
         
 	</head>
 <!-- END HEAD -->
@@ -54,7 +53,7 @@
       <!-- End Nav Bar -->
         <div class="fullheight">
             <div class="hgroup"> 
-                <h1>Farmdale <span>Church of the </span> Nazarene</h1>
+                <h1>Farmdale <span>Church of the </span> Nazarene</h1><br>
                 <h2>Louisville, Kentucky</h2>
             </div>
             <div class="scroll-down">
@@ -271,7 +270,9 @@
                 <p>We are a group of individuals with one mission; that is making Christlike disciples in the nations by connecting with God, with each other, and with our community. We start here at home, won’t you join us?</P>
                 <p>Farmdale Church of the Nazarene is a christian church that traces its history to Holiness Movement of the early 1900's.  Nazarene's orginally came to Louisville in the 1920's known at that time as Camp Taylor.Farmdale has been at its present location for more than 40 years. </p>
             </article> <!-- End About Us Body -->
-
+            <section style="background-image: url('../images/Flower.jpg')">
+               
+            </section>
             <!-- include beliefs menu like  http://www.oasisla.org/about/ found in beliefs.php -->
         </div> <!-- About Us -->
     <!-- Being Staff Work on Content -->
@@ -310,52 +311,46 @@
                 <article id="social">
                     <ul class="group">
                         <li>
-                            <a href="https://twitter.com"><!-- data-icon="&#xe601;"-->
-                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                            <a href="https://twitter.com" data-icon="&#xe601;">
+                            
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.facebook.com"><!-- data-icon="&#xe600;"-->
-                            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                            <a href="http://www.facebook.com" data-icon="&#xe600;">
                            
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.youtube.com"> <!-- data-icon="&#xf16a;"-->
-                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-
+                            <a href="http://www.youtube.com" data-icon="&#xe602;">
+                            
                             </a>
                         </li>
                     </ul>
                 </article><!--social -->
                 <article id="skyline">  
                     <span> 	
-                        <img src="images/skyline.png" /> 
+                        <img src="images/skyline_gray_shadow.png" /> 
                     </span> 
                 </article>  <!-- skyline -->
          </div><!-- skyline outer --> 
         </div><!-- baseline -->
-
     </main><!-- Body -->
     <footer><!-- Footer -->
-        <article class="legal">
-            <div class="servicetimes">
+	<div class="container">
+		<div class="row">
+			<!--<div class="span3">
 				<h4 class="title">Service Times</h4>
 				
 				<div class="weekly">
-				<p>Sunday Morning: Small Groups 9:30am <br />
-                Worship Service 10:30am<br />
-                ----------------------<br />
-                Evening: 1st - Sabbath<br />
-                2nd - Prayer 6:30pm<br />
-                3rd - Application<br />
-                4th - ?<br />
-                5th - Special<br />
+				<p>Sunday Morning: Small Groups 9:30am </p><p>Worship Service 10:30am</p><p>----------------------</p><p>Evening: 1st - Sabbath</p><p>2nd - Prayer 6:30pm</p><p>3rd - Application</p><p>4th - ?</p><p>5th - Special</p>
 				
 				
 				</div>
-                </div>
-            <div class="address">
+				 
+				
+				</p>
+			</div> -->
+			<div class="span3">
 			<br>
 				  <h4 class="title">Farmdale Church of the Nazarene</h4>
 				  <address>
@@ -364,15 +359,17 @@
 				  <abbr title="Phone">P:</abbr> (502) 969-3214
 				  </address>
 			</div>
+		</div>
+	</div>
+        <article class="legal">
             <section> 
                 <br />
-                <!--<div id="legal">
-                    Copyright &copy; 2014 Farmdale Church of the Nazarene
-                </div><!-- Legal --
-                <div id="foot_add">
+                <div id="legal">
+                    Copyright &copy; 2016 Farmdale Church of the Nazarene
+                </div><!-- Legal -->
+                <!--<div id="foot_add">
                     6501 Vandre Avenue, Louisville, Kentucky 40218
                 </div><!-- Address -->
-                
             </section>
         </article> <!-- Legal -->
     </footer><!-- Footer -->
@@ -381,13 +378,27 @@
         <script>
           function initMap() {
             var mapDiv = document.getElementById('map');
+			var myLatLng = {lat: 38.1358216, lng: -85.6394093};
             var map = new google.maps.Map(mapDiv, {
-              center: {lat: 38.1358216, lng: -85.6394093},
-              zoom: 15,
+              center: myLatLng,
+              zoom: 14,
+              disableDefaultUI: true,
+              zoomControl: true,
+              scaleControl: false,
+              draggable: true,
+              scrollwheel: false,
             });
-          }
+			 var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+			 var image = 'images/Farmdale_Map_Marker.png'
+             var marker = new google.maps.Marker({map: map, position: myLatLng,
+             icon: image});
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+           }
         </script>
-        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
-            async defer></script>
+        <script async defer
+		src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+            ></script>
     </body>
  </html>
