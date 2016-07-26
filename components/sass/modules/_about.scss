@@ -8,7 +8,7 @@
 	text-align: center;
 
 	.fullheight {
-		@include backImage('/../images/Farmdale-Pic-1.jpg');
+		//@include backImage('/../images/Farmdale-Pic-1.jpg');
 		@include display-flex();
 		@include justify-content(center);  
 		background-position: top;

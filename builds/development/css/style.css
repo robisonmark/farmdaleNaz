@@ -276,16 +276,18 @@ a {
   border-right: 10px solid #121212;
   top: 3px;
 }
-.is-active:after .backtotop {
+
+.backtotop {
   position: fixed;
   bottom: 20em;
   right: 0;
   background-color: #E4E4E4;
-  opacity: .45;
+  opacity: .75;
   padding: .5em;
   color: #ff325d;
 }
-.is-active:after .hidden-top {
+
+.hidden-top {
   visibility: hidden;
 }
 
@@ -331,7 +333,7 @@ body {
 
 .btn_map {
   display: inline-block;
-  color: #E4E4E4;
+  color: #121212;
   width: 50%;
   max-width: 160px;
   margin: 0 auto;
@@ -353,7 +355,7 @@ body {
 }
 .btn_map:hover {
   background-color: #ff325d;
-  color: #121212;
+  color: #E4E4E4;
 }
 
 .btn_light {
@@ -453,7 +455,6 @@ header .fullheight .hgroup {
   right: 0;
   bottom: 0;
   width: 100%;
-  background: inherit;
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -464,7 +465,6 @@ header .fullheight .hgroup:before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: inherit;
   background-attachment: fixed;
   -webkit-filter: blur(12px);
   filter: blur(12px);
@@ -1311,13 +1311,6 @@ header #nav .navbar ul li a.active {
   text-align: center;
 }
 #about .fullheight {
-  background: url("/../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: center;
