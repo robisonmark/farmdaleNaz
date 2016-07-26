@@ -1,0 +1,66 @@
+/****************  Ministries ******************
+************************************************/
+
+#ministries {
+	background-color: $light;
+	color: $dark;
+	
+
+	#{headings()} {
+		color: $dark;
+		} // #{headings()}
+
+	.heading {
+		@include pad(1,1);
+		text-align: center;
+		color: $light;
+	
+			h1 {
+				font-size: 1.8em;
+				font-weight: $bold;	
+			} //h1
+		} //heading
+
+	h2 {
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+		} //h2
+
+	p {
+		font-size: 1em;
+		line-height: 130%;
+		text-align: center;
+	
+		} //p
+
+	img {
+		vertical-align: middle;
+		}
+
+	.with-padding{
+		padding: 25px 15% 25px 15%;
+		  @include clearfix;
+  	} 
+
+	  .min-content-con{
+	    text-align: left;
+	    display: inline-block;
+	    width: 66.6666667%;
+	    float: left;
+
+	    h2{
+	    	text-align: left !important;
+	    }
+
+	    p{
+	    	text-align: left;
+	    }
+	  }
+
+	  .img-con{
+	  	width: 33.3333333%;
+	  	float: left;
+	  }
+
+} //ministries

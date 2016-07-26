@@ -90,6 +90,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   content: "\e602";
 }
 
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-twitter2:before {
+  content: "\e901";
+}
+
 [data-icon]:before {
   font-family: 'icomoon';
   content: attr(data-icon);
@@ -115,8 +131,8 @@ body {
   font: 300 1em/1.5em "alegreya sans", Arial, sans-serif;
   background: #121212;
   color: #E4E4E4;
-  overflow-x: hidden;
   letter-spacing: 0.03em;
+  font-size: 18px;
 }
 
 /* Body */
@@ -128,6 +144,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* headings */
+h1 {
+  padding-bottom: 20px;
+}
+h1:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #ff325d;
+  margin: auto;
+  transform: skew(-27deg);
+  -webkit-transform: skew(-27deg);
+}
+
+header .fullheight .hgroup h1:after {
+  content: '';
+  display: none;
+  width: 100px;
+  height: 5px;
+  background-color: #ff325d;
+  margin: auto;
+  transform: skew(-27deg);
+  -webkit-transform: skew(-27deg);
+}
+
 strong {
   font-weight: 800;
 }
@@ -214,7 +255,28 @@ p {
   background-color: #d6d6d6;
 }
 
-.backtotop {
+a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+
+.is-active:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #121212;
+  top: 3px;
+}
+.is-active:after .backtotop {
   position: fixed;
   bottom: 20em;
   right: 0;
@@ -223,8 +285,7 @@ p {
   padding: .5em;
   color: #ff325d;
 }
-
-.hidden-top {
+.is-active:after .hidden-top {
   visibility: hidden;
 }
 
@@ -262,6 +323,10 @@ body {
     display: block;
     clear: both;
   }
+}
+
+.right {
+  float: right;
 }
 
 .btn_map {
@@ -344,24 +409,71 @@ body {
   color: #2a2a2a;
 }
 
+.btn-white {
+  font-size: 18px;
+  border: 1.5px solid #ffffff;
+  padding: 0 15px;
+  border-radius: 5px;
+  transition: .8s;
+}
+.btn-white:hover {
+  color: #121212;
+  background-color: #ffffff;
+}
+
+.overlay:after {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
 /****************************
 		Intro / Header
 *****************************/
+header {
+  height: 100vh;
+}
 header .fullheight {
   background-image: url("../images/Farmdale-Pic-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative;
+  background-attachment: fixed;
   top: 0;
   left: 0;
 }
 header .fullheight .hgroup {
   padding: 60px 0;
   position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 14em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+header .fullheight .hgroup:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+  transform: scale(1) translateY(20px);
+}
+header .fullheight .hgroup h1, header .fullheight .hgroup h2, header .fullheight .hgroup h4, header .fullheight .hgroup p, header .fullheight .hgroup ul li {
+  position: relative;
+  text-align: center;
+  z-index: 1;
 }
 @media (min-width: 0) and (max-width: 960px) {
   header .fullheight .hgroup {
@@ -375,15 +487,6 @@ header .fullheight .hgroup {
   }
   header .fullheight .hgroup span {
     display: none;
-  }
-}
-@media (min-width: 1200px) {
-  header .fullheight .hgroup {
-    padding: 100px 0;
-    position: absolute;
-    left: 40px;
-    right: 40px;
-    bottom: 14em;
   }
 }
 header .fullheight .hgroup h1 {
@@ -460,7 +563,7 @@ header .fullheight .scroll-down h4 {
 /****************************
 		Hamburger Menu
 ****************************/
-li a {
+nav li a {
   display: inline-block;
   position: relative;
   text-align: right;
@@ -468,8 +571,9 @@ li a {
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
+  outline: none;
 }
-li a:after {
+nav li a:after {
   content: '';
   position: absolute;
   background: #ffffff;
@@ -480,7 +584,7 @@ li a:after {
   bottom: 0;
   transition: .35s ease;
 }
-li a:hover:after {
+nav li a:hover:after {
   width: 100%;
 }
 
@@ -661,7 +765,7 @@ header #nav {
   width: 100%;
   height: 90px;
   z-index: 100;
-  border-bottom: solid 4px #121212;
+  box-shadow: 2px 2px 10px #121212;
 }
 header #nav:before, header #nav:after {
   content: '';
@@ -689,6 +793,7 @@ header #nav .navbar .brand a {
   color: #E4E4E4;
   text-decoration: none;
   text-align: center;
+  display: inline;
 }
 header #nav .navbar .brand a #logo {
   width: 125px;
@@ -739,6 +844,7 @@ header #nav .navbar ul li a {
   display: inline-block;
   padding: 8px 8px 8px 8px;
   text-decoration: none;
+  outline: none;
 }
 header #nav .navbar ul li a:hover {
   background-color: #ff325d;
@@ -812,64 +918,81 @@ header #nav .navbar ul li a.active {
   padding-left: 29px;
 }
 
-/************************************************
-		   		   About
-************************************************/
-#about {
-  color: #E4E4E4;
-  text-align: center;
-  text-shadow: 2px 2px #121212;
-}
-#about .fullheight {
-  background: url("/../images/Farmdale-Pic-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+#new {
+  background-image: url("../images/Photo-Banner/easter1.jpg");
   background-size: cover;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  justify-content: center;
-  background-position: top;
-  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
   background-attachment: fixed;
-  background-size: cover;
 }
-#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
-  color: #E4E4E4;
+#new .new {
+  max-width: 45vw;
+  margin-left: 25px;
+  background-color: rgba(12, 12, 12, 0.5);
+  position: relative;
+  top: 150px;
+  border-radius: 5px;
+  background-attachment: fixed;
+  position: relative;
+  left: 25px;
+  top: 25px;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
-#about .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-  color: #E4E4E4;
+#new .new h2, #new .new p, #new .new ul li {
+  position: relative;
+  text-align: left;
+  padding: 15px;
 }
-#about .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
+#new .new button.accordion {
+  background-color: rgba(12, 12, 12, 0);
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
 }
-#about h2 {
-  color: #cb002b;
-  font-size: 1.3em;
-  line-height: 110%;
-  padding: 10px 0;
+#new .new button.accordion.active, #new .new button.accordion:hover {
+  background-color: rgba(42, 42, 42, 0.4);
 }
-#about p {
-  font-size: 1em;
-  line-height: 130%;
-  text-align: center;
+#new .new div.panel {
+  padding: 0 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+  color: #121212;
+}
+#new .new div.panel.show {
+  opacity: 1;
+  max-height: 500px;
+  /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
 
-/********************  EVENTS *******************
-************************************************/
 .pictures {
-  margin-bottom: -10px;
   width: 100%;
   min-height: 500px;
   position: relative;
   overflow: hidden;
+}
+.pictures .picture {
+  height: 250px;
+  width: 20%;
+  margin: 0;
+  display: inline-block;
+  float: left;
+}
+.pictures .picture img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.2s ease-out 0s;
+}
+.pictures .picture img:hover {
+  transform: scale 1.1;
 }
 .pictures:before {
   content: '';
@@ -1044,8 +1167,9 @@ header #nav .navbar ul li a.active {
   text-align: left;
 }
 #ministries .img-con {
-  width: 33.3333333%;
+  width: 350px;
   float: left;
+  margin-right: 15px;
 }
 
 /****************** Staff **********************
@@ -1179,6 +1303,387 @@ header #nav .navbar ul li a.active {
   height: 400px;
 }
 
+/************************************************
+					About
+************************************************/
+#about {
+  color: #E4E4E4;
+  text-align: center;
+}
+#about .fullheight {
+  background: url("/../images/Farmdale-Pic-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#about h1, #about h2, #about h3, #about h4, #about h5, #about h6 {
+  color: #E4E4E4;
+}
+#about .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+  color: #E4E4E4;
+}
+#about .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#about h2 {
+  color: #cb002b;
+  font-size: 1.3em;
+  line-height: 110%;
+  padding: 10px 0;
+}
+#about p {
+  font-size: 1em;
+  line-height: 130%;
+  text-align: center;
+}
+#about .timeline {
+  width: 100%;
+  background-color: #E4E4E4;
+  display: inline-block;
+  color: #121212;
+  padding: 0 15px;
+}
+#about .timeline .years ul li {
+  display: inline-block;
+  margin: 20px;
+}
+
+#beliefs {
+  height: 50vh;
+}
+#beliefs .heading {
+  display: inline-block;
+  margin: auto;
+  width: 50%;
+}
+#beliefs .beliefs-side-bar {
+  text-align: left;
+  padding: 30px;
+  font-size: 21px;
+  max-width: 175px;
+  background-color: #ff325d;
+  display: inline-block;
+  float: left;
+}
+#beliefs .beliefs-side-bar li {
+  padding: 5px 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+#beliefs .beliefs-side-bar li a {
+  width: 80px;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+}
+#beliefs .beliefs-content {
+  float: left;
+  width: 50%;
+}
+#beliefs .beliefs-content:before, #beliefs .beliefs-content:after {
+  content: '';
+  display: table;
+}
+#beliefs .beliefs-content:after {
+  clear: both;
+}
+#beliefs .beliefs-content .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+#beliefs .beliefs-content .is-active {
+  display: inline-block;
+}
+#beliefs .background-img {
+  background-image: url("../images/Farmdale-Pic-2.jpg");
+  background-position: center;
+  background-size: cover;
+  float: right;
+  width: calc(50% - 175px);
+  height: 52vh;
+  margin: -80px 0 0 0;
+}
+
+/********************  EVENTS *******************
+************************************************/
+#events {
+  background-color: rgba(240, 240, 240, 0.4);
+  padding-bottom: 60px 0;
+  background-image: url("../images/Photo-Banner/faith-and-elizabeth.jpg");
+  padding: 60px 0;
+}
+#events .heading {
+  padding: 60px 0;
+}
+#events .News-Events-Con:before, #events .News-Events-Con:after {
+  content: '';
+  display: table;
+}
+#events .News-Events-Con:after {
+  clear: both;
+}
+#events .News-Events-Con .update-columns {
+  width: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+#events .News-Events-Con .update-columns .update-column {
+  display: inline-block;
+  width: 80vw;
+  margin: 0 1vw;
+}
+#events .News-Events-Con .update-columns .update-column .update-header {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+#events .News-Events-Con .update-columns .update-column .update-column-content {
+  height: 250px;
+  background: rgba(255, 255, 255, 0.8);
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  text-align: left;
+  padding: 30px;
+  position: relative;
+  color: #121212;
+}
+#events .News-Events-Con .update-columns .news-column .update-header {
+  background-color: #00B21D;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .news-column .update-column-content a {
+  color: #00B21D;
+}
+#events .News-Events-Con .update-columns .news-column .update-column-content a span, #events .News-Events-Con .update-columns .news-column .update-column-content a p {
+  color: #121212;
+}
+#events .News-Events-Con .update-columns .events-column .update-header {
+  background-color: #1A88B2;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .events-column .update-column-content a {
+  color: #1A88B2;
+}
+#events .News-Events-Con .update-columns .events-column .update-column-content a span, #events .News-Events-Con .update-columns .events-column .update-column-content a p {
+  color: #121212;
+}
+#events .News-Events-Con .update-columns .social-column .update-header {
+  background-color: #ff325d;
+  opacity: 0.8;
+}
+#events .News-Events-Con .update-columns .social-column .update-column-content a {
+  color: #ff325d;
+}
+#events .News-Events-Con .update-columns .social-column .update-column-content a span, #events .News-Events-Con .update-columns .social-column .update-column-content a p {
+  color: #121212;
+}
+
+/**************************
+	Map
+**************************/
+#map {
+  width: 100%;
+  height: 400px;
+}
+
+.pictures {
+  margin-bottom: -10px;
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.pictures:before {
+  content: '';
+  display: table;
+}
+.pictures .left {
+  display: inline-block;
+  left: 0;
+}
+.pictures .tall {
+  height: 500px;
+}
+.pictures .top {
+  position: absolute;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.pictures .three-quarters {
+  width: 500px;
+}
+.pictures .bottom {
+  display: inline-block;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.pictures .small {
+  height: 170px;
+}
+.pictures .right {
+  display: inline-block;
+  right: 0;
+}
+.pictures .wide {
+  width: 500px;
+}
+.pictures .work-info-bg {
+  background-color: #282b30;
+  opacity: 0.45;
+  will-change: opacity;
+}
+
+/****************** Staff **********************
+************************************************/
+#staff {
+  background-color: #E4E4E4;
+  color: #121212;
+  /*
+  	h2 {
+  		color: darken($pink, 20);
+  		font-size: 1.3em;
+  		line-height: 110%;
+  		padding: 10px 0;
+  		
+  	} //h2*/
+}
+#staff:before, #staff:after {
+  content: '';
+  display: table;
+}
+#staff:after {
+  clear: both;
+}
+#staff h1, #staff h2, #staff h3, #staff h4, #staff h5, #staff h6 {
+  color: #121212;
+}
+#staff .heading {
+  padding-left: 9.16667%;
+  padding-right: 9.16667%;
+  text-align: center;
+}
+#staff .heading h1 {
+  font-size: 1.8em;
+  font-weight: 800;
+}
+#staff .heading h1 a {
+  color: #121212;
+}
+#staff .content {
+  margin: 0 auto;
+  width: auto;
+  max-width: 1200px;
+}
+#staff .content:before, #staff .content:after {
+  content: '';
+  display: table;
+}
+#staff .content:after {
+  clear: both;
+}
+#staff .content .line1 {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+#staff .content .line1:before, #staff .content .line1:after {
+  content: '';
+  display: table;
+}
+#staff .content .line1:after {
+  clear: both;
+}
+#staff .content .line1 .staff {
+  width: 33%;
+  float: left;
+  text-align: left;
+}
+#staff .content .line1 .staff .staff-person {
+  padding: 15px;
+  perspective: 1000px;
+  text-align: left;
+}
+#staff .content .line1 .staff .staff-person .card-flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #E4E4E4;
+  text-align: center;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .front img {
+  width: 250px;
+  height: 350px;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .back {
+  max-height: 435px;
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .back p {
+  text-align: left;
+}
+#staff .content .line1 .staff .staff-person .card-flipper .back::-webkit-scrollbar {
+  display: none;
+}
+#staff .content .line1 .staff ul li {
+  padding: 8px 0;
+}
+#staff .content .line1 .staff ul li a {
+  color: #ff325d;
+}
+#staff .content .line1 .staff .favorites li {
+  padding: 10px 35px;
+}
+#staff .content .line1 .staff .favorites li a {
+  color: #ff325d;
+}
+#staff .content .line1 .staff:hover .card-flipper, #staff .content .line1 .staff.hover .card-flipper {
+  transform: rotateY(180deg);
+}
+
 /****************** baseline ********************
 ************************************************/
 #baseline {
@@ -1196,13 +1701,18 @@ header #nav .navbar ul li a.active {
 }
 #baseline #skyline_outer #social a {
   color: #E4E4E4;
-  text-shadow: 1px 2px #121212;
+  outline: 0;
+  transition: 0.4s;
+  vertical-align: middle;
+}
+#baseline #skyline_outer #social a:hover {
+  color: #121212;
 }
 @media (min-width: 650px) {
   #baseline #skyline_outer #social {
     position: absolute;
     left: 50px;
-    bottom-margin: 15px;
+    margin-bottom: 15px;
   }
 }
 #baseline #skyline_outer #social ul {

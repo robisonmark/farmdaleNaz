@@ -1,0 +1,48 @@
+/****************************
+		   Welcome
+*****************************/
+
+
+#welcome {
+	background-color: $light;
+	color: $dark;	
+
+	#{headings()} {
+		color: $dark;
+	} // #{headings()}
+
+	.heading {
+	  @include pad(1,1);
+	  text-align: center;
+
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+		} //h1
+	} //heading
+  
+	h2 {
+		font-size: 1.3em;
+		line-height: 110%;
+		padding: 10px 0;
+	} //h2
+
+	p {
+		font-size: 1em;
+		line-height: 130%;
+		text-align: center;
+	} //p
+  
+  .left{
+    float: left;
+    width: 50%;
+    padding-right: 30px;
+    border-right: 1px solid $dark;
+  }
+  
+  .right{
+    float: right;
+    width: 50%;
+    padding-left: 29px; 
+  }
+} //welcome

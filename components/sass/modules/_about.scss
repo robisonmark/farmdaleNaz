@@ -1,0 +1,123 @@
+/************************************************
+					About
+************************************************/
+
+
+#about {
+	color: $light;
+	text-align: center;
+
+	.fullheight {
+		@include backImage('/../images/Farmdale-Pic-1.jpg');
+		@include display-flex();
+		@include justify-content(center);  
+		background-position: top;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover; 
+	} //fullheight
+
+	#{headings()} {
+		color: $light;
+	} //#{headings()}
+
+	.heading {
+		@include pad(1,1);
+		text-align: center;
+		color: $light;
+
+		h1 {
+			font-size: 1.8em;
+			font-weight: $bold;	
+		} //h1
+	}//heading
+
+		h2 {
+			color: darken($pink, 20);
+			font-size: 1.3em;
+			line-height: 110%;
+			padding: 10px 0;
+		} //h2
+
+		p {
+			font-size: 1em;
+			line-height: 130%;
+			text-align: center;
+		} //p
+
+		.timeline{
+			width: 100%;
+			background-color: #E4E4E4;
+			display: inline-block;
+			color: #121212;
+			padding: 0 15px;
+			.years{
+				ul {
+					li {
+						display: inline-block;
+						margin: 20px;
+					} //li
+				} //ul
+			} //year
+		} //timeline
+
+
+} //about
+
+		#beliefs{ 
+			height: 50vh;
+			.heading{
+				display: inline-block;
+				margin: auto;
+				width: 50%;
+			}
+			.beliefs-side-bar{
+				text-align: left;
+				padding: 30px;
+				font-size: 21px;
+				max-width: 175px;
+				background-color: #ff325d;
+				display: inline-block;
+				float:left;
+
+				li{
+					padding: 5px 0;
+					font-weight: 500;
+					cursor: pointer;
+
+					a{
+						width: 80px;
+						outline: 0;
+						-o-outline: 0;
+						-moz-outline: 0;
+						-webkit-outline: 0;
+					} //a
+				} //li
+			} //beliefs side bar
+			
+			.beliefs-content{
+				float:left;
+				width: 50%; 
+				@include clearfix;
+				.tabcontent {
+					display: none;
+					padding: 6px 12px;
+					border-top: none;
+				}
+					
+					.is-active {
+				 	display: inline-block;
+				 }
+			}
+
+			.background-img{
+				background-image: url("../images/Farmdale-Pic-2.jpg");
+				background-position: center;
+				background-size: cover;
+				float: right;
+				width: calc(50% - 175px);
+				height: 52vh;
+				margin: -80px 0 0 0;
+					}
+
+	} //beliefs
