@@ -279,7 +279,7 @@ a {
 
 .backtotop {
   position: fixed;
-  bottom: 20em;
+  bottom: 10em;
   right: 0;
   background-color: #E4E4E4;
   opacity: .75;
@@ -1733,7 +1733,7 @@ header #nav .navbar ul li a.active {
   }
 }
 
-/****************** FOOTER ********************
+/****************** FOOTER *******************
 ***********************************************/
 footer {
   background-color: #121212;
@@ -1746,10 +1746,15 @@ footer {
 footer .legal .servicetimes {
   float: left;
   width: 40vw;
-  text-align: left !important;
+  text-align: left;
+  padding: 0 2%;
 }
-footer .legal .servicetimes .weekly {
-  text-align: left !important;
+footer .legal .servicetimes h4 {
+  text-align: left;
+  padding: 0 1%;
+}
+footer .legal .servicetimes div {
+  float: left;
 }
 footer .legal .address {
   float: left;
