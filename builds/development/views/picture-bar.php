@@ -1,0 +1,33 @@
+<div class="pictures">
+	<div class="picture">
+		<img src="../images/Photo-Banner/danny.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/easter1.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/fall-festival.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/arnie.jpg" />
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/easter2.jpg" />
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/lizzie.jpg" />
+		<div class="work-info-bg"></div>
+	</div> <div class="picture">
+		<img src="../images/Photo-Banner/danny.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/easter1.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/fall-festival.jpg"/>
+		<div class="work-info-bg"></div>
+	</div><div class="picture">
+		<img src="../images/Photo-Banner/arnie.jpg" />
+		<div class="work-info-bg"></div>
+	</div>
+</div>

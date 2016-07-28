@@ -352,23 +352,7 @@
            <!--  <div class="left tall">
                 <img src="../images/Photo-Banner/danny.jpg" height="500" style="position: relative; left: 0;"/>
                 <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div><div class="top three-quarters">
-                <img src="../images/Photo-Banner/easter1.jpg" width="510" style="display: inline-block;"/>
-                <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div><div class="bottom small">
-                <img src="../images/Photo-Banner/fall-festival.jpg" height="170"/>
-                <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div><div class="bottom small">
-                <img src="../images/Photo-Banner/arnie.jpg" height="170"/>
-                <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div><div class="right tall">
-                <img src="../images/Photo-Banner/easter2.jpg" height="500"/>
-                <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div><div class="right wide">
-                <img src="../images/Photo-Banner/lizzie.jpg" height="500"/>
-                <!--<div class="work-info-bg" style="opacity: 0.45;"></div>-->
-            </div>
-        </div> <!-- End events -->
+
    
     <!-- Ministries Section -->
         <div id="ministries" >   
