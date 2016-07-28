@@ -279,7 +279,7 @@ a {
 
 .backtotop {
   position: fixed;
-  bottom: 20em;
+  bottom: 10em;
   right: 0;
   background-color: #E4E4E4;
   opacity: .75;
@@ -1747,9 +1747,7 @@ footer .legal .servicetimes {
   float: left;
   width: 40vw;
   text-align: left !important;
-}
-footer .legal .servicetimes .weekly {
-  text-align: left !important;
+  padding: 10px;
 }
 footer .legal .address {
   float: left;

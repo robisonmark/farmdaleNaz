@@ -72,15 +72,15 @@ footer {
 	width: 95%;
 	padding: 10px;
 	.legal {
-		.servicetimes{
+		
+			.servicetimes{
 			float: left;
 			width: 40vw;
 			text-align: left !important;
-
-			.weekly{
-				text-align: left !important;
-			}
+			padding:10px;
+				
 		}
+	
 		.address {
 			float:left;
 		}
