@@ -61,7 +61,7 @@
 	} //skyline outer
 } //baseline
 
-/****************** FOOTER ********************
+/****************** FOOTER *******************
 ***********************************************/
 
 footer {
@@ -74,10 +74,17 @@ footer {
 	.legal {
 		
 			.servicetimes{
+				h4{
+					text-align:left;
+					padding:0 1%;
+				}
 			float: left;
 			width: 40vw;
-			text-align: left !important;
-			padding:10px;
+			text-align: left;
+			padding:0 2%;
+			div{
+				float:left;
+			}
 				
 		}
 	
