@@ -133,6 +133,7 @@ body {
   color: #E4E4E4;
   letter-spacing: 0.03em;
   font-size: 18px;
+  max-width: 100%;
 }
 
 /* Body */
@@ -431,133 +432,6 @@ body {
   height: 100%;
   background-color: black;
   opacity: 0.6;
-}
-
-/****************************
-		Intro / Header
-*****************************/
-header {
-  height: 100vh;
-}
-header .fullheight {
-  background-image: url("../images/Farmdale-Pic-3.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
-  top: 0;
-  left: 0;
-}
-header .fullheight .hgroup {
-  padding: 60px 0;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-header .fullheight .hgroup:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-attachment: fixed;
-  -webkit-filter: blur(12px);
-  filter: blur(12px);
-  transform: scale(1) translateY(20px);
-}
-header .fullheight .hgroup h1, header .fullheight .hgroup h2, header .fullheight .hgroup h4, header .fullheight .hgroup p, header .fullheight .hgroup ul li {
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .hgroup {
-    bottom: 11em;
-    width: 100%;
-    left: 0;
-  }
-  header .fullheight .hgroup::after {
-    content: '\000a0';
-    display: block;
-  }
-  header .fullheight .hgroup span {
-    display: none;
-  }
-}
-header .fullheight .hgroup h1 {
-  color: #E4E4E4;
-  font-size: 4em;
-  font-weight: 800;
-  line-height: .1em;
-  text-shadow: #121212 0 0 20px;
-  text-align: center;
-}
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .hgroup h1 {
-    font-size: 2.3em;
-    line-height: .3em;
-    width: 100%;
-  }
-  header .fullheight .hgroup h1 span {
-    display: none;
-  }
-}
-header .fullheight .hgroup h2 {
-  display: block;
-  color: #E4E4E4;
-  width: 60%;
-  max-width: 200px;
-  min-width: 80px;
-  margin: 0 auto;
-  text-align: center;
-  border: 1px solid #E4E4E4;
-  margin-top: 25px;
-  padding: 10px;
-  background: rgba(18, 18, 18, 0.5);
-  font-size: 1.3em;
-}
-header .fullheight .hgroup p {
-  text-align: center;
-}
-header .fullheight .scroll-down {
-  position: absolute;
-  width: 100%;
-  bottom: 12em;
-}
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .scroll-down {
-    bottom: 9em;
-  }
-}
-@media (min-width: 1200px) {
-  header .fullheight .scroll-down {
-    bottom: 12em;
-  }
-}
-header .fullheight .scroll-down h4 {
-  background-color: rgba(18, 18, 18, 0.5);
-  border: 1px solid #fff;
-  line-height: 1em;
-  padding: 10px;
-  font-weight: 400;
-  font-size: 21px;
-  margin: auto;
-  width: 650px;
-}
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .scroll-down h4 {
-    width: 282px;
-  }
-}
-@media (min-width: 1200px) {
-  header .fullheight .scroll-down h4 {
-    width: 650px;
-  }
 }
 
 /****************************
@@ -878,82 +752,65 @@ header #nav .navbar ul li a.active {
 }
 
 /****************************
-		Intro / Header
+Intro
 *****************************/
-header {
+.hero {
   height: 100vh;
+  position: relative;
 }
-header .fullheight {
+.hero .fullheight {
   background-image: url("../images/Farmdale-Pic-3.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-attachment: fixed;
-  top: 0;
-  left: 0;
 }
-header .fullheight .hgroup {
+.hero .fullheight .hgroup {
   padding: 60px 0;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  background: inherit;
   background-attachment: fixed;
   overflow: hidden;
 }
-header .fullheight .hgroup:before {
+.hero .fullheight .hgroup:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: inherit;
   background-attachment: fixed;
   -webkit-filter: blur(12px);
   filter: blur(12px);
   transform: scale(1) translateY(20px);
 }
-header .fullheight .hgroup h1, header .fullheight .hgroup h2, header .fullheight .hgroup h4, header .fullheight .hgroup p, header .fullheight .hgroup ul li {
+.hero .fullheight .hgroup h1, .hero .fullheight .hgroup h2, .hero .fullheight .hgroup h4, .hero .fullheight .hgroup p, .hero .fullheight .hgroup ul li {
   position: relative;
   text-align: center;
   z-index: 1;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .hgroup {
-    bottom: 11em;
-    width: 100%;
-    left: 0;
-  }
-  header .fullheight .hgroup::after {
-    content: '\000a0';
-    display: block;
-  }
-  header .fullheight .hgroup span {
-    display: none;
-  }
-}
-header .fullheight .hgroup h1 {
+.hero .fullheight .hgroup h1 {
   color: #E4E4E4;
   font-size: 4em;
   font-weight: 800;
   line-height: .1em;
-  text-shadow: #121212 0 0 20px;
   text-align: center;
+  text-shadow: #121212 0 0 20px;
 }
 @media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .hgroup h1 {
+  .hero .fullheight .hgroup h1 {
     font-size: 2.3em;
     line-height: .3em;
     width: 100%;
   }
-  header .fullheight .hgroup h1 span {
+  .hero .fullheight .hgroup h1 span {
     display: none;
   }
 }
-header .fullheight .hgroup h2 {
+.hero .fullheight .hgroup h2 {
   display: block;
   color: #E4E4E4;
   width: 60%;
@@ -967,25 +824,7 @@ header .fullheight .hgroup h2 {
   background: rgba(18, 18, 18, 0.5);
   font-size: 1.3em;
 }
-header .fullheight .hgroup p {
-  text-align: center;
-}
-header .fullheight .scroll-down {
-  position: absolute;
-  width: 100%;
-  bottom: 12em;
-}
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .scroll-down {
-    bottom: 9em;
-  }
-}
-@media (min-width: 1200px) {
-  header .fullheight .scroll-down {
-    bottom: 12em;
-  }
-}
-header .fullheight .scroll-down h4 {
+.hero .fullheight .hgroup h4 {
   background-color: rgba(18, 18, 18, 0.5);
   border: 1px solid #fff;
   line-height: 1em;
@@ -995,14 +834,17 @@ header .fullheight .scroll-down h4 {
   margin: auto;
   width: 650px;
 }
-@media (min-width: 0) and (max-width: 960px) {
-  header .fullheight .scroll-down h4 {
-    width: 282px;
-  }
+.hero .fullheight .hgroup p {
+  text-align: center;
 }
-@media (min-width: 1200px) {
-  header .fullheight .scroll-down h4 {
-    width: 650px;
+.hero .fullheight .scroll-down {
+  position: absolute;
+  width: 100%;
+  bottom: 12em;
+}
+@media (min-width: 0) and (max-width: 960px) {
+  .hero .fullheight .scroll-down {
+    bottom: 9em;
   }
 }
 
