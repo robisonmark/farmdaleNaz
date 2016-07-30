@@ -69,7 +69,7 @@
 							text-align: center;
 
 							img{
-								width: 250px;
+								width: 100%;
 								height: 350px;
 							//	padding: 0 25px;
 							} //img
@@ -78,7 +78,8 @@
 
 						} //front
 						.back {
-							max-height: 435px;
+							height: 460px;
+							max-height: 460px;
 							width: 100%;
 							padding: 15px;
 							background-color: #fff;

@@ -18,7 +18,6 @@
 							</div>
 						</div>
 						<div class="back">
-							<h6>Arnie</h6>
 							<p>
 								Arnie is from Henderson, Kentucky and has been at Farmdale since January 2009. Arnie has been married to his wonderful wife Faith since September 2005 and they have 3 adorable boys, Brady, Grant, and Reed. Arnie is passionate about relational ministry and he desires to CONNECT people to God, to each other, and to the community. He loves studying God’s Word and preaching. He is also involved in young adult ministry through teaching a class on Sunday mornings. Arnie is a graduate of Trevecca Nazarene University with a degree in Religion and a minor in Pastoral Ministry-He is currently close to finishing a M.A. in Biblical Preaching. Arnie is a huge sports fan; favorite teams are: Kentucky Wildcats, San Francisco 49ers, Cincinnati Reds, San Antonio Spurs, and all Hendrick Racing Drivers. He still plays basketball, softball, and golf. He also enjoys coaching teens in basketball.
 							</p>
@@ -61,7 +60,6 @@
 							</div>
 						</div>
 						<div class="back">
-							<h6>Faith</h6>
 							<ul>
 								<li>
 								   phone
@@ -89,7 +87,6 @@
 							</div>
 						</div>
 						<div class="back">
-							<h6>Mark</h6>
 							<p>
 								Mark is a Florida native who joined our staff in August of 2013.  In Florida he met his wife, Laura, while working at a grocery store.  Mark is passionate about bringing teens to Christ, as well as the Florida Gators, Pittsburgh Steelers, and Orlando Magic.  Mark is a graduate of Trevecca Nazarene University where he earned a degree in Youth Ministry.  He joined our staff as the Youth Pastor but is involved in the Young Adult Ministries and the Praise Team.  He also loves to play any sport from basketball to ultimate Frisbee and everything in between!
 							</p>

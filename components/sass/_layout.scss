@@ -75,7 +75,7 @@ body {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	-o-border-radius: 20px; 
-	background-color: $pink;
+	background-color: $accent;
 	box-shadow: 3px 3px 10px 3px rgba(222,222,155,.25);
 	transition: 0.45s;
 	outline: 0;
@@ -86,7 +86,7 @@ body {
 	} //visited
 
 	&:hover {
-		background-color: #32FF54; 
+		background-color: $pink; 
 		//color: $pink;
 		box-shadow: 3px 3px 10px 3px rgba(222,222,155,.7);
 	} //hover

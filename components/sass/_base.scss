@@ -28,7 +28,7 @@ h1{
     display: block;
     width: 100px;
     height: 5px;
-    background-color: $pink;
+    background-color: $accent;
     margin: auto;
     // border-right: #ff325d 4px solid;
     // border-bottom: #ff325d 4px solid;
@@ -49,7 +49,7 @@ h2{
     display: block;
     width: 100px;
     height: 5px;
-    background-color: $pink;
+    background-color: $accent;
     margin: auto;
     // border-right: #ff325d 4px solid;
     // border-bottom: #ff325d 4px solid;
@@ -178,30 +178,34 @@ p{
 .medium{
   background-color: #d6d6d6;
 }
-.is-active:after {
-  content: ' ';
-  height: 0;
-  position: absolute;
-  width: 0;
+// .is-active:after {
+//   content: ' ';
+//   height: 0;
+//   position: absolute;
+//   width: 0;
 
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
+//   border-top: 10px solid transparent;
+//   border-bottom: 10px solid transparent; 
 
-  border-right:10px solid #121212; 
-  //right: -30px;
-  top: 3px;
+//   border-right:10px solid #121212; 
+//   //right: -30px;
+//   top: 3px;
+// }
+
+.backtotop{
+  position: fixed;
+  bottom: 10em;
+  right: 0;
+  background-color: $light;
+  opacity: .75;
+  padding: .5em;
+  color: $navbrand;
+}
+.hidden-top{
+  visibility: hidden;
 }
 
-
-// .backtotop{
-//   position: fixed;
-//   bottom: 10em;
-//   right: 0;
-//   background-color: $light;
-//   opacity: .75;
-//   padding: .5em;
-//   color: $navbrand;
-// }
-// .hidden-top{
-//   visibility: hidden;
-// }
+.right{
+  position: absolute;
+  right: 0;
+}
