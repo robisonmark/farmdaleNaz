@@ -1,10 +1,9 @@
-<div id="events">
-	<div class="heading">
+<div class="container">
+	<div id="events">
 		<h1>What's Happening at Farmdale</h1>
-	</div>
 	<div class="News-Events-Con">
 		<div class="update-columns">
-			<div class="update-column news-column">
+			<!-- <div class="update-column news-column">
 				<div class="update-header">
 					News
 				</div>
@@ -35,7 +34,7 @@
 						<p>Farmdale St. Paul graduate AB Wright (’11) was&nbsp;named the 2016 Minnesota Teacher of the Year by Education Minnesota. AB, an […]</p>
 					</a>
 				</div>
-			</div>
+			</div> -->
 			<div class="update-column events-column">
 				<div class="update-header">Coming Up <a href="#" class="right" alt='google-cal'><div class="btn-white">Full Calendar</div></a></div>
 				<div class="update-column-content">
@@ -75,4 +74,6 @@
 			<div style="clear:both"></div>
 		</div>
 	</div>
+</div>
+
 </div>

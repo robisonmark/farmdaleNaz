@@ -19,31 +19,33 @@
 	</head>
 	<body>
 		<header id="intro">
-			<nav id="nav">
-				<section class="navbar">
-					<div class="brand">
-						<a href="#welcome">
-							<img id="logo" src="./images/farmdaleLogo.svg" alt="farmdale logo">
-							<img class="script" src="./images/farmdaleScript.svg" alt="farmdale wordmark">
-						</a>
-					</div>
-					<div class="button_container" id="toggle"> 
-						<span class="top"></span>
-						<span class="middle"></span>
-						<span class="bottom"></span>
-					</div>
+			<div class="container">
+				<nav id="nav">
+					<div class="navbar">
+						<div class="brand">
+							<a href="#welcome">
+								<img id="logo" src="./images/farmdaleLogo.svg" alt="farmdale logo">
+								<img class="script" src="./images/farmdaleScript.svg" alt="farmdale wordmark">
+							</a>
+						</div>
+						<div class="button_container" id="toggle"> 
+							<span class="top"></span>
+							<span class="middle"></span>
+							<span class="bottom"></span>
+						</div>
 
-					<div class="overlay" id="overlay">
-						<div class="overlay-menu">
-							<ul>
-								<li><a class="welcome" href="#welcome">I'm New</a></li>
-								<li><a class="events" href="#events">Events</a></li>
-								<li><a class="ministries" href="#ministries">Connect</a></li>
-								<li><a class="about" href="#about">About Us</a></li>
-								<li><a class="staff" href="#staff">Staff</a></li> 
-							</ul>
+						<div class="overlay" id="overlay">
+							<div class="overlay-menu">
+								<ul>
+									<li><a class="nav-welcome" href="#new">New?</a></li>
+									<li><a class="ministries" href="#ministries">Ministries</a></li>
+									<li><a class="about" href="#about">About Us</a></li>
+									<li><a class="events" href="#events">Events</a></li>
+									<li><a class="staff" href="#staff">Staff</a></li> 
+								</ul>
+							</div>
 						</div>
 					</div>
-				</section>
-			</nav> 
+				</nav> 
+			</div>
 		</header>

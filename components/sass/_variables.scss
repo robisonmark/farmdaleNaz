@@ -77,7 +77,7 @@ $susy: (
 	container: 70em,
 	gutters: 1/4,
 	gutter-position: inside,
-	var container2: (width: 100%),
+	var container: (width: 100%),
 	);
 
 //breakpoint
@@ -103,14 +103,13 @@ $navHover			: $darkpink;
 $mainFont			: $light;
 $headersubbg		: $dark;
 
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700';
 //font variables
-$fontfamily: 'alegreya sans', Arial, sans-serif;
-
+$fontfamily: 'Source Sans Pro', sans-serif;
 $thin		: 300;
 $normal		: 400;
 $bold		: 800;
 $italic		: 400 italic;
 
-$headFont : $thin 1.5em/1.5em $fontfamily;
-$mainFont : $thin 1em/1.5em $fontfamily;
-
+// $headFont : $thin 1.5em/1.5em $fontfamily;
+// $mainFont : $thin 1em/1.5em $fontfamily;

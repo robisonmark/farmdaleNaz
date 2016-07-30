@@ -58,29 +58,37 @@ body {
 
 .btn_light {
 	display: inline-block;
-	color: $white;
+	color: $dark;
 	width: 50%; 
 	max-width: 160px;
 	margin: 0 auto;
     text-align: center; 
-    border: 1.5px solid $pink;
-	padding: .3em;
-	background: transparent;
+   // border: 1.5px solid $pink;
+	//padding: .3em;
+	height: 45px;
+//	background: transparent;
 	font-size: 1em; 
     font-weight: $bold; 
     text-transform: uppercase;
     text-decoration:none; 
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px; 
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px; 
+	background-color: $pink;
+	box-shadow: 3px 3px 10px 3px rgba(222,222,155,.25);
+	transition: 0.45s;
+	outline: 0;
+
  
 	&:visited {
 		color: $white;
 	} //visited
 
 	&:hover {
-		background-color: $pink; 
+		background-color: #32FF54; 
+		//color: $pink;
+		box-shadow: 3px 3px 10px 3px rgba(222,222,155,.7);
 	} //hover
 
 	
