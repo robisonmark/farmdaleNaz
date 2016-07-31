@@ -65,35 +65,56 @@
 	} //skyline outer
 } //baseline
 
-/****************** FOOTER *******************
-***********************************************/
 
-footer {
+footer{
 	background-color: $dark;
-	text-align: center;
-	line-height: 130%;
-	display:inline;
-	width: 95%;
-	padding: 10px;
-	.legal {
-		
-			.servicetimes{
-				h4{
-					text-align:left;
-					padding:0 1%;
-				}
-			float: left;
-			width: 40vw;
+	.row{
+		.col.half.one{
+			padding: 25px;
 			text-align: left;
-			padding:0 2%;
-			div{
-				float:left;
+			.sunday{
+				padding: 15px 0;
 			}
-				
-		}
-	
-		.address {
-			float:left;
+			.foot_add, .foot_phone, .foot_email{
+				padding: 15px 0;
+				text-align: right;
+			}
 		}
 	}
+	.legal{
+		text-align: center;
+		padding-bottom: 25px;
+	}
 }
+// /****************** FOOTER *******************
+// ***********************************************/
+
+// footer {
+// 	background-color: $dark;
+// 	text-align: center;
+// 	line-height: 130%;
+// 	display:inline;
+// 	width: 95%;
+// 	padding: 10px;
+// 	.legal {
+		
+// 			.servicetimes{
+// 				h4{
+// 					text-align:left;
+// 					padding:0 1%;
+// 				}
+// 			float: left;
+// 			width: 40vw;
+// 			text-align: left;
+// 			padding:0 2%;
+// 			div{
+// 				float:left;
+// 			}
+				
+// 		}
+	
+// 		.address {
+// 			float:left;
+// 		}
+// 	}
+// }

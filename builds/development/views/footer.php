@@ -30,37 +30,44 @@
         </div><!-- baseline -->
     </main><!-- Body -->
     <footer><!-- Footer -->
-        <article class="legal">
-            <div class="servicetimes">
-                <div class="weekly">
-                    <h4> Sunday </h4>
-                    <p>Small Groups 9:30am </p>
-                    <p>Worship Service 10:30am </p>                
-                    <h4> Wednesday </h4>
-                    <p> Livewire Student Ministries 6:00pm</p>
-                    <p> Men, Women and Kids 7:00pm</p>
+        <div class="row">
+            <div class="con-content">
+                <div class="col half one">
+                    <div class="servicetimes">
+                        <div class="weekly">
+                            <div class="sunday">
+                                <h4>Sunday</h4>
+                                <p>Small Groups 9:30am </p>
+                                <p>Worship Service 10:30am </p>
+                            </div>
+                            <div class="wednesday">
+                                <h4>Wednesday</h4>
+                                <p>Livewire Student Ministries 6:00pm</p>
+                                <p>Men, Women and Kids 7:00pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div><div class="col half one">
+                     <div class="foot_add">
+                        <h4>Address:</h4>
+                        <p>6501 Vandre Avenue</p>
+                        <p>Louisville, Kentucky 40218</p>
+                   </div>
+                   <div class="foot_phone">
+                        <h4>Phone:</h4>
+                        <a href="tel:502-969-1432">502.969.1432</a>
+                    </div>
+                    <div class="foot_email">
+                        <h4>Email:</h4>
+                        <a href="mailto: info@farmdalenaz.org">info@farmdalenaz.org</a>
+                    </div>
+                    </div><!-- Address -->
                 </div>
             </div>
-            <section> 
-                <br />
-                <div id="legal">
-                    Copyright &copy; 2014 Farmdale Church of the Nazarene
-                </div><!-- Legal -->
-                <div id="foot_add">
-                    6501 Vandre Avenue, Louisville, Kentucky 40218
-                </div><!-- Address -->
-            </section>
-            <div class="servicetimes">
-                <div class="weekly">
-                    <h4> Sunday </h4>
-                    <p>Small Groups 9:30am </p>
-                    <p>Worship Service 10:30am </p>                
-                    <h4> Wednesday </h4>
-                    <p> Livewire Student Ministries 6:00pm</p>
-                    <p> Men, Women and Kids 7:00pm</p>
-                </div>
-            </div>
-        </article> <!-- Legal -->
+        </div>
+        <div class="legal">
+            Copyright &copy; <?php echo date("Y") ?> Farmdale Church of the Nazarene
+        </div><!-- Legal -->
     </footer><!-- Footer -->
     <a id="sp-totop" class="backtotop hidden-top" href="#">
         <i class="fa fa-angle-up"></i>

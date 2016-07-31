@@ -1544,29 +1544,21 @@ header .container #nav .navbar ul li a.active {
   }
 }
 
-/****************** FOOTER *******************
-***********************************************/
 footer {
   background-color: #121212;
+}
+footer .row .col.half.one {
+  padding: 25px;
+  text-align: left;
+}
+footer .row .col.half.one .sunday {
+  padding: 15px 0;
+}
+footer .row .col.half.one .foot_add, footer .row .col.half.one .foot_phone, footer .row .col.half.one .foot_email {
+  padding: 15px 0;
+  text-align: right;
+}
+footer .legal {
   text-align: center;
-  line-height: 130%;
-  display: inline;
-  width: 95%;
-  padding: 10px;
-}
-footer .legal .servicetimes {
-  float: left;
-  width: 40vw;
-  text-align: left;
-  padding: 0 2%;
-}
-footer .legal .servicetimes h4 {
-  text-align: left;
-  padding: 0 1%;
-}
-footer .legal .servicetimes div {
-  float: left;
-}
-footer .legal .address {
-  float: left;
+  padding-bottom: 25px;
 }
