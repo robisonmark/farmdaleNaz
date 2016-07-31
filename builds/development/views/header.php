@@ -24,7 +24,7 @@
 
 	<body>
 	<!-- Landing Page -->
-		<script>
+		<!--<script>
 		window.fbAsyncInit = function() {
 			FB.init({
 			appId      : '300796576938021',
@@ -40,7 +40,7 @@
 			js.src = "//connect.facebook.net/en_US/sdk.js";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-		</script>
+		</script> -->
 		
 		<header id="intro">
 			<div class="container">

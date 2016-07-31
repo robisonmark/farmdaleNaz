@@ -1041,6 +1041,7 @@ header .container #nav .navbar ul li a.active {
   padding: 5px 0;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
 }
 .container #beliefs .row .col.half.one .beliefs-side-bar li a {
   width: 80px;
@@ -1048,16 +1049,23 @@ header .container #nav .navbar ul li a.active {
   -o-outline: 0;
   -moz-outline: 0;
   -webkit-outline: 0;
+  text-align: center;
+  padding: 2px 0;
+}
+.container #beliefs .row .col.half.one .beliefs-side-bar li a:hover {
+  color: #121212;
+}
+.container #beliefs .row .col.half.one .beliefs-side-bar .isactive:after {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #99695B;
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 20%;
 }
 .container #beliefs .row .col.half.one .beliefs-content {
-  width: calc(50% - 175px);
-}
-.container #beliefs .row .col.half.one .beliefs-content:before, .container #beliefs .row .col.half.one .beliefs-content:after {
-  content: '';
-  display: table;
-}
-.container #beliefs .row .col.half.one .beliefs-content:after {
-  clear: both;
+  width: calc(50% - 190px);
 }
 .container #beliefs .row .col.half.one .beliefs-content .tabcontent {
   display: none;

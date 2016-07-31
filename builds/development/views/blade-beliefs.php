@@ -9,22 +9,22 @@
 			</h1>
 			<div id="tabs" class="beliefs-side-bar">
 			<ul class="tab">
-				<li>
+				<li class="belieflink isactive">
 					<a href="#/" id="belief-1" class="tablinks" onclick="openBelief(event, 'content-1')">God</a>
 				</li>
-				<li>
+				<li class="belieflink">
 					<a href="#/" id="belief-2" class="tablinks" onclick="openBelief(event, 'content-2')">Man</a>
 				</li>
-				<li>
+				<li class="belieflink">
 					<a href="#/" id="belief-3" class="tablinks" onclick="openBelief(event, 'content-3')">Jesus</a>
 				</li>
-				<li>
+				<li class="belieflink">
 					<a href="#/" id="belief-4" class="tablinks" onclick="openBelief(event, 'content-4')">Spirit</a>
 				</li>
-				<li>
+				<li class="belieflink">
 					<a href="#/" id="belief-5" class="tablinks" onclick="openBelief(event, 'content-5')">The Bible</a>
 				</li>
-				<li>
+				<li class="belieflink">
 					<a href="#/" id="belief-6" class="tablinks" onclick="openBelief(event, 'content-6')">More</a>
 				</li>
 			</ul>

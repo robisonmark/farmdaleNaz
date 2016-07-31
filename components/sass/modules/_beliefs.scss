@@ -15,29 +15,45 @@
 						padding: 5px 0;
 						font-weight: 500;
 						cursor: pointer;
-
+						position: relative;
 						a{
 							width: 80px;
 							outline: 0;
 							-o-outline: 0;
 							-moz-outline: 0;
 							-webkit-outline: 0;
+							text-align: center;
+							padding: 2px 0;
+
+							&:hover{
+								color: $dark;
+							}
 						} //a
 					} //li
+					.isactive{
+						&:after{
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent; 
+						border-left:10px solid $darkpink;
+						content: "";
+						position: absolute;
+						right: -40px;
+						top:20%;
+						}
+					}// is-active
 				} //beliefs side bar
 				.beliefs-content{
-				//float:left;
-				width: calc(50% - 175px); 
-				@include clearfix;
-					.tabcontent {
-						display: none;
-						padding: 6px 12px;
-						border-top: none;
-					}
-						
+
+					width: calc(50% - 190px); 
+					// @include clearfix;
+						.tabcontent {
+							display: none;
+							padding: 6px 12px;
+							border-top: none;
+						}
 						.is-active {
-					 	display: inline-block;
-					 }
+							display: inline-block;
+						}
 				}
 				&.belief-img{
 					.background-img{
