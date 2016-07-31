@@ -4,22 +4,28 @@
 		<div id="tabs" class="beliefs-side-bar">
 			<ul class="tab">
 				<li class="belieflink isactive">
-					<a href="#/" id="belief-1" class="tablinks" onclick="openBelief(event, 'content-1')">God</a>
+					<!-- <a href="#/" id="belief-1" class="tablinks" onclick="openBelief(event, 'content-1')">God</a> -->
+					God
 				</li>
 				<li class="belieflink">
-					<a href="#/" id="belief-2" class="tablinks" onclick="openBelief(event, 'content-2')">Man</a>
+					<!--  <a href="#/" id="belief-2" class="tablinks" onclick="openBelief(event, 'content-2')">Man</a> -->
+					Man
 				</li>
 				<li class="belieflink">
-					<a href="#/" id="belief-3" class="tablinks" onclick="openBelief(event, 'content-3')">Jesus</a>
+					<!-- <a href="#/" id="belief-3" class="tablinks" onclick="openBelief(event, 'content-3')">Jesus</a> -->
+					Jesus
 				</li>
 				<li class="belieflink">
-					<a href="#/" id="belief-4" class="tablinks" onclick="openBelief(event, 'content-4')">Spirit</a>
+					<!-- <a href="#/" id="belief-4" class="tablinks" onclick="openBelief(event, 'content-4')">Spirit</a> -->
+					Spirit
 				</li>
 				<li class="belieflink">
-					<a href="#/" id="belief-5" class="tablinks" onclick="openBelief(event, 'content-5')">The Bible</a>
+					<!-- <a href="#/" id="belief-5" class="tablinks" onclick="openBelief(event, 'content-5')">The Bible</a> -->
+					The Bible
 				</li>
 				<li class="belieflink">
-					<a href="#/" id="belief-6" class="tablinks" onclick="openBelief(event, 'content-6')">More</a>
+					<!-- <a href="#/" id="belief-6" class="tablinks" onclick="openBelief(event, 'content-6')">More</a> -->
+					More
 				</li>
 			</ul>
 		</div>
@@ -121,7 +127,7 @@
 		<div class="left-quote-mark">
 			&ldquo;
 		</div>
-		<h1>"To make Chirstlike disciples in the nations we are:</h1>
+		<h1>"To make Christlike disciples in the nations we are:</h1>
 		<h2> Connecting to God, Each Other and Our Community"</h2>
 		<div class="right-quote-mark">
 			&rdquo;
