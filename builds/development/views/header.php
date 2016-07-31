@@ -51,20 +51,6 @@
 						<a href="tel: 502-969-1436">Call Us</a>
 						<a href="https://goo.gl/maps/1aEiKpc9yyQ2">Directions</a>
 		 <!--Begin Nav Bar -->
-			<nav id="nav">
-				<section class="navbar">
-					<div class="brand">
-						<a href="#welcome">
-							<img id="logo" src="./images/farmdaleLogo.svg" alt="farmdale logo">
-							<img class="script" src="./images/farmdaleScript.svg" alt="farmdale wordmark">
-						</a>
-					</div>
-					<div class="button_container" id="toggle"> 
-						<span class="top"></span>
-						<span class="middle"></span>
-						<span class="bottom"></span>
-					</div>
-				</div>
 					<div class="navbar">
 						<div class="brand">
 							<a href="#welcome">
@@ -78,7 +64,6 @@
 							<span class="bottom"></span>
 						</div>
 
-<<<<<<< HEAD
 						<div class="overlay" id="overlay">
 							<div class="overlay-menu">
 								<ul>
@@ -94,20 +79,3 @@
 				</nav> 
 			</div>
 		</header>
-=======
-					<div class="overlay" id="overlay">
-						<div class="overlay-menu">
-							<ul>
-								<li><a class="welcome" href="#welcome">I'm New</a></li>
-								<li><a class="new" href="#new">I'm New</a></li>
-								<li><a class="events" href="#events">Events</a></li>
-								<li><a class="ministries" href="#ministries">Connect</a></li>
-								<li><a class="about" href="#about">About Us</a></li>
-								<li><a class="staff" href="#staff">Staff</a></li> 
-							</ul>
-						</div>
-					</div>
-				</section>
-			</nav>
-			<!-- End Nav Bar --> 
->>>>>>> Matt

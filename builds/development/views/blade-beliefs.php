@@ -3,7 +3,9 @@
 	 <div class="row">
  		<div class="col half one">
  			<h1>
-				<a name="beliefs">Beliefs</a> 
+				<!--<a name="beliefs"> -->
+				Beliefs
+				<!-- </a> -->
 			</h1>
 			<div id="tabs" class="beliefs-side-bar">
 			<ul class="tab">

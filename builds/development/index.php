@@ -8,13 +8,13 @@
 
 		render('/new');
 
-		render('/ministries');
+		render('/blade-ministries');
 
-		render('/events');
+		render('/blade-events');
 		
 		render('/about');
 		
-		render('/beliefs');
+		render('/blade-beliefs');
 		
 		render('/picture-bar');
 
