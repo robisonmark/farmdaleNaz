@@ -42,6 +42,45 @@
 			} //beliefs side bar
 			.col.half.one{
 				padding: 0;
+				.beliefs-side-bar{
+					text-align: left;
+					padding: 30px;
+					font-size: 21px;
+					max-width: 175px;
+					background-color: $darkpink;
+					display: inline-block;
+					height: 100%;
+					li{
+						padding: 5px 0;
+						font-weight: 500;
+						cursor: pointer;
+						a{
+							width: 80px;
+							outline: 0;
+							-o-outline: 0;
+							-moz-outline: 0;
+							-webkit-outline: 0;
+							text-align: center;
+							padding: 2px 0;
+
+							&:hover{
+								color: $dark;
+							}
+						} //a
+					} //li
+					.isactive{
+						&:after{
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent; 
+						border-left:10px solid $darkpink;
+						content: "";
+						position: absolute;
+						right: -40px;
+						top:20%;
+						}
+					}// is-active
+				} //beliefs side bar
+				.beliefs-content{
 
 				h1{
 					text-align: center;
