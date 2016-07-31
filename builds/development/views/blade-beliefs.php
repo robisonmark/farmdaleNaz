@@ -117,3 +117,13 @@
 			</div>
 			 -->
 	</div>
+	<div class="medium-hero">
+		<div class="left-quote-mark">
+			&ldquo;
+		</div>
+		<h1>"To make Chirstlike disciples in the nations we are:</h1>
+		<h2> Connecting to God, Each Other and Our Community"</h2>
+		<div class="right-quote-mark">
+			&rdquo;
+		</div>
+	</div>

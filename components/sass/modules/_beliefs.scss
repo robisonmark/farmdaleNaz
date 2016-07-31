@@ -12,8 +12,8 @@
 				background-color: $darkpink;
 				display: inline-block;
 				position: absolute;
-				left: 700px;
-				top: 25%;
+				left: 875px;
+				top: 19%;
 				li{
 					padding: 5px 0;
 					font-weight: 500;
@@ -51,7 +51,7 @@
 					display: inline-block;
 					height: 100%;
 					li{
-						padding: 5px 0;
+						padding: 15px 0;
 						font-weight: 500;
 						cursor: pointer;
 						a{
@@ -80,12 +80,7 @@
 						}
 					}// is-active
 				} //beliefs side bar
-				.beliefs-content{
-
-				h1{
-					text-align: center;
-				}
-				&.belief{
+				.belief{
 					padding-top: 60px;
 				}
 				.beliefs-content{
@@ -96,6 +91,7 @@
 						display: none;
 						padding: 6px 12px;
 						border-top: none;
+						width: 100%;
 					}
 						
 					.is-active {
@@ -117,7 +113,48 @@
 		}
 	}
 }
+.medium-hero {
+    background-color: #e4e4e4;
+    color: #ff3d52;
+    height: 350px;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    h1{
+    	&:after{
+    		display: none;
+    	}
+    }
+    h1, h2{
+    	z-index: 10;
+    }
+    .left-quote-mark{
+    	position:absolute;
+    	z-index: 1;
+    	font-size: 255px;
+    	opacity: 0.3;
+    	color: $darkpink;
+	    left: 22%;
+	    top: 17%;
+	    -ms-transform: rotate(7deg);
+	    -webkit-transform: rotate(7deg);
+	    transform: rotate(7deg);
+    }
+     .right-quote-mark{
+    	position:absolute;
+    	z-index: 1;
+    	font-size: 255px;
+    	opacity: 0.3;
+    	color: $darkpink;
+		position: absolute;
+		right: 25%;
+		bottom: -12%;
+		-ms-transform: rotate(7deg);
+		-webkit-transform: rotate(7deg);
+		transform: rotate(7deg);
+    }
 
+}
 // .container{
 
 // 		#beliefs{ 

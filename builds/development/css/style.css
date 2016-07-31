@@ -158,7 +158,7 @@ h1:after {
   display: block;
   width: 100px;
   height: 5px;
-  background-color: #6FCC14;
+  background-color: #1098eb;
   margin: auto;
   transform: skew(-27deg);
   -webkit-transform: skew(-27deg);
@@ -176,7 +176,7 @@ h2:after {
   display: block;
   width: 100px;
   height: 5px;
-  background-color: #6FCC14;
+  background-color: #1098eb;
   margin: auto;
   transform: skew(-27deg);
   -webkit-transform: skew(-27deg);
@@ -415,7 +415,7 @@ body {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -o-border-radius: 20px;
-  background-color: #6FCC14;
+  background-color: #1098eb;
   box-shadow: 3px 3px 10px 3px rgba(222, 222, 155, 0.25);
   transition: 0.45s;
   outline: 0;
@@ -782,6 +782,7 @@ header .container #nav .navbar ul li a.active {
   bottom: 0;
   width: 100%;
   margin: auto;
+  background: inherit;
   background-attachment: fixed;
 }
 .container .hero .mission-statement:before {
@@ -1054,11 +1055,11 @@ header .container #nav .navbar ul li a.active {
   padding: 30px;
   font-size: 21px;
   max-width: 175px;
-  background-color: #99695B;
+  background-color: #ffa325;
   display: inline-block;
   position: absolute;
-  left: 700px;
-  top: 25%;
+  left: 875px;
+  top: 19%;
 }
 .container #beliefs .row .beliefs-side-bar li {
   padding: 5px 0;
@@ -1075,7 +1076,7 @@ header .container #nav .navbar ul li a.active {
 .container #beliefs .row .beliefs-side-bar .isactive:after {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-right: 10px solid #99695B;
+  border-right: 10px solid #ffa325;
   content: "";
   position: absolute;
   left: -10px;
@@ -1083,10 +1084,42 @@ header .container #nav .navbar ul li a.active {
 .container #beliefs .row .col.half.one {
   padding: 0;
 }
-.container #beliefs .row .col.half.one h1 {
-  text-align: center;
+.container #beliefs .row .col.half.one .beliefs-side-bar {
+  text-align: left;
+  padding: 30px;
+  font-size: 21px;
+  max-width: 175px;
+  background-color: #ffa325;
+  display: inline-block;
+  height: 100%;
 }
-.container #beliefs .row .col.half.one.belief {
+.container #beliefs .row .col.half.one .beliefs-side-bar li {
+  padding: 15px 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container #beliefs .row .col.half.one .beliefs-side-bar li a {
+  width: 80px;
+  outline: 0;
+  -o-outline: 0;
+  -moz-outline: 0;
+  -webkit-outline: 0;
+  text-align: center;
+  padding: 2px 0;
+}
+.container #beliefs .row .col.half.one .beliefs-side-bar li a:hover {
+  color: #121212;
+}
+.container #beliefs .row .col.half.one .beliefs-side-bar .isactive:after {
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #ffa325;
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 20%;
+}
+.container #beliefs .row .col.half.one .belief {
   padding-top: 60px;
 }
 .container #beliefs .row .col.half.one .beliefs-content {
@@ -1104,6 +1137,7 @@ header .container #nav .navbar ul li a.active {
   display: none;
   padding: 6px 12px;
   border-top: none;
+  width: 100%;
 }
 .container #beliefs .row .col.half.one .beliefs-content .is-active {
   display: inline-block;
@@ -1114,6 +1148,46 @@ header .container #nav .navbar ul li a.active {
   background-size: cover;
   height: 500px;
   width: 100%;
+}
+
+.medium-hero {
+  background-color: #e4e4e4;
+  color: #ff3d52;
+  height: 350px;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+.medium-hero h1:after {
+  display: none;
+}
+.medium-hero h1, .medium-hero h2 {
+  z-index: 10;
+}
+.medium-hero .left-quote-mark {
+  position: absolute;
+  z-index: 1;
+  font-size: 255px;
+  opacity: 0.3;
+  color: #ffa325;
+  left: 22%;
+  top: 17%;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(7deg);
+}
+.medium-hero .right-quote-mark {
+  position: absolute;
+  z-index: 1;
+  font-size: 255px;
+  opacity: 0.3;
+  color: #ffa325;
+  position: absolute;
+  right: 25%;
+  bottom: -12%;
+  -ms-transform: rotate(7deg);
+  -webkit-transform: rotate(7deg);
+  transform: rotate(7deg);
 }
 
 .container #events {
@@ -1169,7 +1243,7 @@ header .container #nav .navbar ul li a.active {
   color: #121212;
 }
 .container #events .News-Events-Con .update-columns .news-column .update-header {
-  background-color: #99695B;
+  background-color: #ffa325;
   opacity: 0.8;
 }
 .container #events .News-Events-Con .update-columns .news-column .update-column-content a {
@@ -1179,7 +1253,7 @@ header .container #nav .navbar ul li a.active {
   color: #121212;
 }
 .container #events .News-Events-Con .update-columns .events-column .update-header {
-  background-color: #99695B;
+  background-color: #ffa325;
   opacity: 0.8;
 }
 .container #events .News-Events-Con .update-columns .events-column .update-column-content a {
@@ -1189,7 +1263,7 @@ header .container #nav .navbar ul li a.active {
   color: #121212;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-header {
-  background-color: #99695B;
+  background-color: #ffa325;
   opacity: 0.8;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-column-content a {
@@ -1216,15 +1290,23 @@ header .container #nav .navbar ul li a.active {
   margin: 0;
   display: inline-block;
   float: left;
+  overflow: hidden;
 }
 .pictures .picture img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   transition: all 0.2s ease-out 0s;
+  transform: scale(1);
+  position: relative;
+  background-color: #121212;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 .pictures .picture img:hover {
-  transform: scale 1.1;
+  transform: scale(1.1);
+  opacity: 1;
+  filter: alpha(opacity=50);
 }
 .pictures .left {
   display: inline-block;

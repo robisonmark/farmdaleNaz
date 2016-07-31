@@ -12,7 +12,7 @@
 
 		render('/blade-events');
 		
-		render('/about');
+		// render('/about');
 		
 		render('/blade-beliefs');
 		

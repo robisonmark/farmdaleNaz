@@ -31,21 +31,16 @@
     </main><!-- Body -->
     <footer><!-- Footer -->
         <article class="legal">
-        <div class="servicetimes">
-                <h4 class="title">Service Times</h4>
-                
+            <div class="servicetimes">
                 <div class="weekly">
-                    <div class="morning">Sunday Morning:</div><div class="morning"> Small Groups 9:30am 
-                        <br /> Worship Service 10:30am</div>
-                        <br />------------------------------------
-                        <br /><div>Evening:</div><div> 1st - Sabbath
-                        <br />2nd - Prayer 6:30pm
-                        <br />3rd - Application
-                        <br />4th - ?
-                        <br />5th - Special</div>
-                    </p>                
+                    <h4> Sunday </h4>
+                    <p>Small Groups 9:30am </p>
+                    <p>Worship Service 10:30am </p>                
+                    <h4> Wednesday </h4>
+                    <p> Livewire Student Ministries 6:00pm</p>
+                    <p> Men, Women and Kids 7:00pm</p>
                 </div>
-                </div>
+            </div>
             <section> 
                 <br />
                 <div id="legal">
@@ -55,6 +50,16 @@
                     6501 Vandre Avenue, Louisville, Kentucky 40218
                 </div><!-- Address -->
             </section>
+            <div class="servicetimes">
+                <div class="weekly">
+                    <h4> Sunday </h4>
+                    <p>Small Groups 9:30am </p>
+                    <p>Worship Service 10:30am </p>                
+                    <h4> Wednesday </h4>
+                    <p> Livewire Student Ministries 6:00pm</p>
+                    <p> Men, Women and Kids 7:00pm</p>
+                </div>
+            </div>
         </article> <!-- Legal -->
     </footer><!-- Footer -->
     <a id="sp-totop" class="backtotop hidden-top" href="#">
