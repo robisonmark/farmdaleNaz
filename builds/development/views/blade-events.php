@@ -68,6 +68,13 @@
 			<div class="update-column social-column">
 				<div class="update-header">Social</div>
 				<div class="update-column-content">
+				<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+  
+</div>
 					<div id="twitter-news"><ul></ul></div>
 				</div>
 			</div>

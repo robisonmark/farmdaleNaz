@@ -459,7 +459,6 @@ body {
   background-color: black;
   opacity: 0.6;
 }
-
 header .container #nav {
   background-color: #ff325d;
   width: 100%;
@@ -567,6 +566,8 @@ header .container #nav .navbar .button_container span:nth-of-type(3) {
 header .container #nav .navbar ul {
   position: absolute;
   right: 0;
+}
+#nav li a {
   display: inline-block;
 }
 header .container #nav .navbar ul li {
@@ -751,7 +752,6 @@ header .container #nav .navbar ul li a.active {
   width: 100%;
   background-image: url("../images/Farmdale-Pic-3.jpg");
   background-repeat: no-repeat;
-  background-position: center center;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
@@ -767,6 +767,7 @@ header .container #nav .navbar ul li a.active {
   margin: auto;
   background: inherit;
   background-attachment: fixed;
+  overflow: hidden;
 }
 .container .hero .mission-statement:before {
   content: "";
@@ -775,13 +776,11 @@ header .container #nav .navbar ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: inherit;
   background-attachment: fixed;
   -webkit-filter: blur(12px);
   -moz-filter: blur(12px);
   -o-filter: blur(12px);
   filter: blur(12px);
-  transform: scale(1) translateY(20px);
 }
 .container .hero .mission-statement h2, .container .hero .mission-statement h3, .container .hero .mission-statement h4, .container .hero .mission-statement p, .container .hero .mission-statement ul li {
   position: relative;
@@ -862,7 +861,7 @@ header .container #nav .navbar ul li a.active {
   width: 100%;
   bottom: 12em;
 }
-@media (max-width 960px) {
+@media (max-width: 960px) {
   .container .hero .scroll-down {
     bottom: 9em;
   }
@@ -1009,7 +1008,7 @@ header .container #nav .navbar ul li a.active {
   text-align: left;
   display: inline-block;
   width: 66.6666667%;
-  float: left;
+  /*float: left;*/
 }
 #ministries .with-padding .img-con {
   width: 33.3333%;
