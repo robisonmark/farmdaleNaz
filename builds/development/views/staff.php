@@ -11,7 +11,7 @@
 				<div class="staff-person">
 					<div class="card-flipper">
 						<div class="front">
-							<img src="./images/staffPics/Arnie_Wilson.jpg" alt="Lead Pastor - Arnie Wilson">
+							<img src="./images/staffPics/arnie.jpg" alt="Lead Pastor - Arnie Wilson">
 							 <div class="staff-title">
 								<h4>Arnie Wilson</h4>
 								<h5>Lead Pastor</h5>

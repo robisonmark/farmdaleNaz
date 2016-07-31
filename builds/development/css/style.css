@@ -1062,16 +1062,20 @@ header .container #nav .navbar ul li a.active {
   top: 19%;
 }
 .container #beliefs .row .beliefs-side-bar li {
-  padding: 5px 0;
+  padding: 15px 0;
   font-weight: 500;
   cursor: pointer;
   text-align: center;
 }
 .container #beliefs .row .beliefs-side-bar li a {
+  font-weight: 800;
   outline: 0;
   -o-outline: 0;
   -moz-outline: 0;
   -webkit-outline: 0;
+}
+.container #beliefs .row .beliefs-side-bar li a:hover {
+  color: #121212;
 }
 .container #beliefs .row .beliefs-side-bar .isactive:after {
   border-top: 10px solid transparent;
@@ -1080,6 +1084,10 @@ header .container #nav .navbar ul li a.active {
   content: "";
   position: absolute;
   left: -10px;
+}
+.container #beliefs .row .beliefs-side-bar .isactive a {
+  color: #121212;
+  font-weight: 800;
 }
 .container #beliefs .row .col.half.one {
   padding: 0;
@@ -1119,12 +1127,20 @@ header .container #nav .navbar ul li a.active {
   right: -40px;
   top: 20%;
 }
-.container #beliefs .row .col.half.one .belief {
-  padding-top: 60px;
+.container #beliefs .row .col.half.one.belief {
+  padding: 60px 25px;
+}
+.container #beliefs .row .col.half.one.belief h1 {
+  width: 80%;
+  margin: auto;
+}
+.container #beliefs .row .col.half.one.belief h1:after {
+  margin: 15px 0 0;
 }
 .container #beliefs .row .col.half.one .beliefs-content {
   position: relative;
-  width: 50%;
+  width: 80%;
+  margin: auto;
 }
 .container #beliefs .row .col.half.one .beliefs-content:before, .container #beliefs .row .col.half.one .beliefs-content:after {
   content: '';
@@ -1135,7 +1151,6 @@ header .container #nav .navbar ul li a.active {
 }
 .container #beliefs .row .col.half.one .beliefs-content .tabcontent {
   display: none;
-  padding: 6px 12px;
   border-top: none;
   width: 100%;
 }

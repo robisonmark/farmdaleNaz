@@ -15,28 +15,35 @@
 				left: 875px;
 				top: 19%;
 				li{
-					padding: 5px 0;
+					padding: 15px 0;
 					font-weight: 500;
 					cursor: pointer;
 					text-align: center;
 
 					a{
-						
+						font-weight: $bold;
 						outline: 0;
 						-o-outline: 0;
 						-moz-outline: 0;
 						-webkit-outline: 0;
+						&:hover{
+							color: $dark;
+						}
 					} //a
 				} //li
 				.isactive{
 					&:after{
-					border-top: 10px solid transparent;
-					border-bottom: 10px solid transparent; 
-					border-right:10px solid $darkpink;
-					content: "";
-					position: absolute;
-					left: -10px;
-					// top:15%;
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent; 
+						border-right:10px solid $darkpink;
+						content: "";
+						position: absolute;
+						left: -10px;
+						// top:15%;
+					}
+					a{
+						color: $dark;
+						font-weight: $bold;
 					}
 				}// is-active
 			} //beliefs side bar
@@ -80,16 +87,24 @@
 						}
 					}// is-active
 				} //beliefs side bar
-				.belief{
-					padding-top: 60px;
+				&.belief{
+					padding: 60px 25px;
+					h1{
+						width: 80%;
+						margin:auto;
+						&:after{
+							margin: 15px 0 0; 
+						}
+					}
 				}
 				.beliefs-content{
 				position: relative;
-				width: 50%; 
+				width: 80%; 
+				margin: auto;
 				@include clearfix;
 					.tabcontent {
 						display: none;
-						padding: 6px 12px;
+						//padding: 6px 12px;
 						border-top: none;
 						width: 100%;
 					}

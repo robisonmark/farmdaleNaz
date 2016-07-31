@@ -30,28 +30,28 @@
 		<div class="beliefs-content">
 			<div class="content-con">
 				<div class="tabcontent is-active" id="content-1">
-					<h4>God</h4>
+					<h3>God</h3>
 					<p>God is the creator of all things and the sustainer of all life</p>
 				</div>
 			</div>
 			<div class="tabcontent" id="content-2">
-				<h4>Man</h4>
+				<h3>Man</h3>
 				<p>Man is God's creation</p>
 			</div>
 			<div class="tabcontent" id="content-3">
-				<h4>Jesus</h4>
+				<h3>Jesus</h3>
 				<p>Jesus is son of God. He came to earth to be the savior of all.</p>
 			</div>
 			<div class="tabcontent" id="content-4">
-				<h4>Spirit</h4>
+				<h3>Spirit</h3>
 				<p>The spirit is the third part of the trinity</p>
 			</div>
 			<div class="tabcontent" id="content-5">
-				<h4>Bible</h4>
+				<h3>Bible</h3>
 				<p>The Bible is the written world of God.  He inspired the writings by its many different authors</p>
 			</div>
 			<div class="tabcontent" id="content-6">
-				<h4>More</h4>
+				<h3>More</h3>
 				<p>More of whatever we determine to be important</p>
 			</div>
 		</div>
