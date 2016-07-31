@@ -1,70 +1,78 @@
+
 .container{
 	#beliefs{
+		position: relative;
 		.row{
+				margin: 0;
+			.beliefs-side-bar{
+				text-align: left;
+				padding: 30px;
+				font-size: 21px;
+				max-width: 175px;
+				background-color: $darkpink;
+				display: inline-block;
+				position: absolute;
+				left: 700px;
+				top: 25%;
+				li{
+					padding: 5px 0;
+					font-weight: 500;
+					cursor: pointer;
+					text-align: center;
+
+					a{
+						
+						outline: 0;
+						-o-outline: 0;
+						-moz-outline: 0;
+						-webkit-outline: 0;
+					} //a
+				} //li
+				.isactive{
+					&:after{
+					border-top: 10px solid transparent;
+					border-bottom: 10px solid transparent; 
+					border-right:10px solid $darkpink;
+					content: "";
+					position: absolute;
+					left: -10px;
+					// top:15%;
+					}
+				}// is-active
+			} //beliefs side bar
 			.col.half.one{
 				padding: 0;
-				.beliefs-side-bar{
-					text-align: left;
-					padding: 30px;
-					font-size: 21px;
-					max-width: 175px;
-					background-color: $darkpink;
-					display: inline-block;
-					height: 100%;
-					li{
-						padding: 5px 0;
-						font-weight: 500;
-						cursor: pointer;
-						position: relative;
-						a{
-							width: 80px;
-							outline: 0;
-							-o-outline: 0;
-							-moz-outline: 0;
-							-webkit-outline: 0;
-							text-align: center;
-							padding: 2px 0;
 
-							&:hover{
-								color: $dark;
-							}
-						} //a
-					} //li
-					.isactive{
-						&:after{
-						border-top: 10px solid transparent;
-						border-bottom: 10px solid transparent; 
-						border-left:10px solid $darkpink;
-						content: "";
-						position: absolute;
-						right: -40px;
-						top:20%;
-						}
-					}// is-active
-				} //beliefs side bar
-				.beliefs-content{
-
-					width: calc(50% - 190px); 
-					// @include clearfix;
-						.tabcontent {
-							display: none;
-							padding: 6px 12px;
-							border-top: none;
-						}
-						.is-active {
-							display: inline-block;
-						}
+				h1{
+					text-align: center;
 				}
-				&.belief-img{
-					.background-img{
-						background-image: url("../images/Farmdale-Pic-2.jpg");
-						background-position: center;
-						background-size: cover;
-						// float: right;
-						// width: calc(50% - 175px);
-						// height: 52vh;
-						// margin: -80px 0 0 0;
+				&.belief{
+					padding-top: 60px;
+				}
+				.beliefs-content{
+				position: relative;
+				width: 50%; 
+				@include clearfix;
+					.tabcontent {
+						display: none;
+						padding: 6px 12px;
+						border-top: none;
 					}
+						
+					.is-active {
+						display: inline-block;
+					}
+				}
+				.background-img{
+					background-image: url("../images/Farmdale-Pic-2.jpg");
+					background-position: center;
+					background-size: cover;
+					height: 500px;
+					width: 100%;
+					// float: right;
+					// width: calc(50% - 175px);
+					// height: 52vh;
+					// margin: -80px 0 0 0;
 				}
 			}
 		}

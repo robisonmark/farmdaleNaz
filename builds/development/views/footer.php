@@ -1,37 +1,40 @@
-       <div id="baseline">
+        <div id="baseline">
             <div id="skyline_outer">
                 <article id="social">
                     <ul class="group">
                         <li>
-                            <a href="https://twitter.com/FarmdaleNaz"> <!-- data-icon="&#xe601;"-->
-                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                            <a href="https://twitter.com/FarmdaleNaz"><!-- data-icon="&#xe601;"-->
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
-                        </li><li>
-                            <a href="https://www.facebook.com/farmdalenazarene/"> <!-- data-icon="&#xe600;" -->
-                             <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>   
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/farmdalenazarene/"><!-- data-icon="&#xe600;"-->
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                           
                             </a>
-                        </li><li>
-                            <a href="https://www.youtube.com/channel/UCuFnmhskS_qS74pZXJMRh5A"> <!-- data-icon="&#xe602;" -->
-                             <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCuFnmhskS_qS74pZXJMRh5A"> <!-- data-icon="&#xf16a;"-->
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+
                             </a>
                         </li>
                     </ul>
                 </article><!--social -->
                 <article id="skyline">  
                     <span> 	
-                        <img src="./images/skyline_gray_shadow.png" /> 
+                        <img src="images/skyline.png" /> 
                     </span> 
                 </article>  <!-- skyline -->
          </div><!-- skyline outer --> 
         </div><!-- baseline -->
-
     </main><!-- Body -->
     <footer><!-- Footer -->
         <article class="legal">
-            <div class="servicetimes">
-				<h4 class="title">Service Times</h4>
-				
-				<div class="weekly">
+        <div class="servicetimes">
+                <h4 class="title">Service Times</h4>
+                
+                <div class="weekly">
                     <div class="morning">Sunday Morning:</div><div class="morning"> Small Groups 9:30am 
                         <br /> Worship Service 10:30am</div>
                         <br />------------------------------------
@@ -40,47 +43,38 @@
                         <br />3rd - Application
                         <br />4th - ?
                         <br />5th - Special</div>
-                    </p>				
-				</div>
+                    </p>                
                 </div>
-            <div class="address">
-			<br>
-				  <h4 class="title">Farmdale Church of the Nazarene</h4>
-				  <address>
-				  6501 Vandre Ave.<br>
-				  Louisville, KY 40228<br>
-				  <abbr title="Phone">P:</abbr> (502) 969-3214
-				  </address>
-			</div>
+                </div>
             <section> 
                 <br />
-                <!--<div id="legal">
+                <div id="legal">
                     Copyright &copy; 2014 Farmdale Church of the Nazarene
-                </div><!-- Legal --
+                </div><!-- Legal -->
                 <div id="foot_add">
                     6501 Vandre Avenue, Louisville, Kentucky 40218
                 </div><!-- Address -->
-                
             </section>
         </article> <!-- Legal -->
     </footer><!-- Footer -->
     <a id="sp-totop" class="backtotop hidden-top" href="#">
-    <i class="fa fa-angle-up fa-3x"></i></a>
+        <i class="fa fa-angle-up"></i>
+    </a>
     <script>
-       	// $(".backtotop").addClass("hidden-top");
-		$(window).scroll(function () {
+        // $(".backtotop").addClass("hidden-top");
+        $(window).scroll(function () {
             if ($(this).scrollTop() <= 600) {
                 $(".backtotop").addClass("hidden-top");
             } else {
                 $(".backtotop").removeClass("hidden-top");
-		    }
-	    });
-    	$('.backtotop').click(function () {
+            }
+        });
+        $('.backtotop').click(function () {
             $('body,html').animate({
                 scrollTop:0
-			}, 1200);
-		return false;
-	    });
+            }, 1200);
+        return false;
+        });
     </script>
         <script src="js/script.js"></script><!-- js -->
         <script>
