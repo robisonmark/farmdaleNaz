@@ -6,7 +6,7 @@ function render($template, $data = array())
     if (file_exists($path))
     {
         // extract($data);
-        require($path);
+        require_once($path);
     }
 //    echo $path;
 }

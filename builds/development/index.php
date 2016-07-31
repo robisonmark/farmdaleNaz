@@ -1,30 +1,49 @@
 <?php 
 	require_once('./includes/functions.php');
-	render('/header');
-	//  require_once("./views/header.php");
-?>
-<main>
-	<?php include "views/hero.php" ?>
+		// require_once __DIR__ . '/includes/facebook-php-sdk-v4-5.0.0/src/Facebook/autoload.php';
 
-	<?php include "views/welcome.php" ?>
+// 		$fb = new Facebook\FacebookApp('300796576938021', '7cb1f06939ce4978ce25a9500b39df62');
+// 		$request = new Facebook\FacebookRequest($fb, 'LGf5l4ZAJ1-NMAfn_SAq-Y7WCCo', 'GET', '/me' );
+// 		try {
+//   $response = $fb->getClient()->sendRequest($request);
+// } catch(Facebook\Exceptions\FacebookResponseException $e) {
+//   // When Graph returns an error
+//   echo 'Graph returned an error: ' . $e->getMessage();
+//   exit;
+// } catch(Facebook\Exceptions\FacebookSDKException $e) {
+//   // When validation fails or other local issues
+//   echo 'Facebook SDK returned an error: ' . $e->getMessage();
+//   exit;
+// }
 
-	<?php include "views/new.php" ?>
+// $graphNode = $response->getGraphNode();
 
-	<?php include "views/ministries.php" ?>
+// echo 'User name: ' . $graphNode['name'];
 
-	<?php include "views/events.php" ?>
-	
-	<?php include "views/about.php" ?>
-	
-		<?php include "views/beliefs.php" ?>
-	
-	<?php include "views/picture-bar.php" ?>
+		render('/header');
 
-	<?php include "views/staff.php" ?>
+		render('/hero'); 
 
-	<?php include "views/map.php" ?>
+		render('/welcome');
 
-	<?php include "views/baseline.php" ?>
+		render('/new');
 
-<?php render('/footer');
-// require_once("./views/footer.php"); ?>
+		render('/ministries');
+
+		render('/events');
+		
+		render('/about');
+		
+		render('/beliefs');
+		
+		render('/picture-bar');
+
+		render('/staff');
+
+		render('/map');
+
+		// render('/baseline');
+
+		render('/footer');	
+		// require_once('./views/footer.php'); 
+	?>

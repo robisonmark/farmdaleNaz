@@ -11,7 +11,7 @@
 				<div class="staff-person">
 					<div class="card-flipper">
 						<div class="front">
-							<img src="../images/staffPics/Arnie_Wilson.jpg" alt="Lead Pastor - Arnie Wilson">
+							<img src="./images/staffPics/Arnie_Wilson.jpg" alt="Lead Pastor - Arnie Wilson">
 							 <div class="staff-title">
 								<h4>Arnie Wilson</h4>
 								<h5>Lead Pastor</h5>
@@ -54,7 +54,7 @@
 				<div class="staff-person">
 					<div class="card-flipper">
 						<div class="front">
-							<img src="../images/staffPics/Faith_Wilson.jpg"  alt="Childrens Leader - Faith Wilson">
+							<img src="./images/staffPics/Faith_Wilson.jpg"  alt="Childrens Leader - Faith Wilson">
 							<div class="staff-title">
 								<h4>Faith Wilson</h4>
 								<h5>Children's Pastor</h5>
@@ -82,7 +82,7 @@
 				<div class="staff-person">
 					<div class="card-flipper">
 						<div class="front">
-							<img src="../images/staffPics/Mark_Robison.jpg" alt="Youth Pastor - Mark Robison">
+							<img src="./images/staffPics/Mark_Robison.jpg" alt="Youth Pastor - Mark Robison">
 							<div class="staff-title">
 								<h4>Mark Robison</h4>
 								<h5>Youth Pastor</h5>

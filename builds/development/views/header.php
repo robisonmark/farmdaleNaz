@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp">
 	<head>
 		<meta charset="utf-8">
 		<meta name="dcterms.created" content="Thu, 23 October 2014 02:33:32 GMT">
@@ -11,14 +11,39 @@
 		<title>
 			Farmdale Nazarene - Louisville, Kentucky - Connecting
 		</title>
+		<script src="js/angular.min.js"></script>
+		<script src="https://use.fontawesome.com/72047c876c.js"></script>
+		
 		<link rel="stylesheet" href="./css/normalize.css">
 		<link rel="stylesheet" href="./css/style.css">
-		<script src="https://use.fontawesome.com/72047c876c.js"></script>
+		
 		<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 		
 	</head>
+	<!-- END HEAD -->
+
 	<body>
+	<!-- Landing Page -->
+		<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+			appId      : '300796576938021',
+			xfbml      : true,
+			version    : 'v2.7'
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
+		
 		<header id="intro">
+		 <!--Begin Nav Bar -->
 			<nav id="nav">
 				<section class="navbar">
 					<div class="brand">
@@ -37,6 +62,7 @@
 						<div class="overlay-menu">
 							<ul>
 								<li><a class="welcome" href="#welcome">I'm New</a></li>
+								<li><a class="new" href="#new">I'm New</a></li>
 								<li><a class="events" href="#events">Events</a></li>
 								<li><a class="ministries" href="#ministries">Connect</a></li>
 								<li><a class="about" href="#about">About Us</a></li>
@@ -45,5 +71,5 @@
 						</div>
 					</div>
 				</section>
-			</nav> 
-		</header>
+			</nav>
+			<!-- End Nav Bar --> 
