@@ -162,7 +162,7 @@ h1:after {
   margin: auto;
   transform: skew(-27deg);
   -webkit-transform: skew(-27deg);
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 h2 {
@@ -180,7 +180,7 @@ h2:after {
   margin: auto;
   transform: skew(-27deg);
   -webkit-transform: skew(-27deg);
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 h3 {
@@ -296,14 +296,43 @@ a {
   background-color: #d6d6d6;
 }
 
+.is-active:after {
+  content: ' ';
+  height: 0;
+  position: absolute;
+  left: 50%;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #121212;
+  top: 64px;
+}
+
 .backtotop {
   position: fixed;
-  bottom: 10em;
-  right: 0;
-  background-color: #E4E4E4;
-  opacity: .75;
-  padding: .5em;
-  color: #ff325d;
+  bottom: 55px;
+  right: 15px;
+  background-color: #ff325d;
+  color: #e4e4e4;
+  border-radius: 50%;
+  height: 55px;
+  width: 55px;
+  margin: auto;
+  outline: 0;
+  text-align: center;
+  transition: 0.45s;
+}
+.backtotop i {
+  margin-top: 8px;
+}
+.backtotop i:before {
+  font-size: 35px;
+}
+.backtotop:hover {
+  box-shadow: 3px 3px 10px 3px rgba(222, 222, 155, 0.5);
+}
+.backtotop:hover i {
+  color: #121212;
 }
 
 .hidden-top {
@@ -932,7 +961,7 @@ header .container #nav .navbar ul li a.active {
   padding: 15px;
 }
 .new #new .con-new h2:after {
-  margin: 0;
+  margin: 15px 0;
 }
 .new #new .con-new .con-accordion:before, .new #new .con-new .con-accordion:after {
   content: '';
@@ -986,6 +1015,7 @@ header .container #nav .navbar ul li a.active {
 #ministries {
   background-color: #E4E4E4;
   color: #121212;
+  padding: 60px 0 0;
 }
 #ministries h2 {
   text-align: center;
@@ -1026,32 +1056,47 @@ header .container #nav .navbar ul li a.active {
   max-width: 300px;
 }
 
-.container #beliefs .row .col.half.one {
-  padding: 0;
+.container #beliefs {
+  position: relative;
 }
-.container #beliefs .row .col.half.one .beliefs-side-bar {
+.container #beliefs .row {
+  margin: 0;
+}
+.container #beliefs .row .beliefs-side-bar {
   text-align: left;
   padding: 30px;
   font-size: 21px;
   max-width: 175px;
   background-color: #99695B;
   display: inline-block;
-  height: 100%;
+  position: absolute;
+  left: 870px;
+  top: 10%;
 }
-.container #beliefs .row .col.half.one .beliefs-side-bar li {
+.container #beliefs .row .beliefs-side-bar li {
   padding: 5px 0;
   font-weight: 500;
   cursor: pointer;
+  text-align: center;
 }
-.container #beliefs .row .col.half.one .beliefs-side-bar li a {
-  width: 80px;
+.container #beliefs .row .beliefs-side-bar li a {
   outline: 0;
   -o-outline: 0;
   -moz-outline: 0;
   -webkit-outline: 0;
 }
+.container #beliefs .row .col.half.one {
+  padding: 0;
+}
+.container #beliefs .row .col.half.one h1 {
+  text-align: center;
+}
+.container #beliefs .row .col.half.one.belief {
+  padding-top: 60px;
+}
 .container #beliefs .row .col.half.one .beliefs-content {
-  width: calc(50% - 175px);
+  position: relative;
+  width: 50%;
 }
 .container #beliefs .row .col.half.one .beliefs-content:before, .container #beliefs .row .col.half.one .beliefs-content:after {
   content: '';
@@ -1068,10 +1113,12 @@ header .container #nav .navbar ul li a.active {
 .container #beliefs .row .col.half.one .beliefs-content .is-active {
   display: inline-block;
 }
-.container #beliefs .row .col.half.one.belief-img .background-img {
+.container #beliefs .row .col.half.one .background-img {
   background-image: url("../images/Farmdale-Pic-2.jpg");
   background-position: center;
   background-size: cover;
+  height: 500px;
+  width: 100%;
 }
 
 .container #events {
@@ -1367,8 +1414,9 @@ header .container #nav .navbar ul li a.active {
   display: inline;
   padding: 0 auto;
 }
-#baseline #skyline_outer #social ul li img {
-  width: 50px;
+#baseline #skyline_outer #social ul li a i:before {
+  font-size: 50px;
+  padding: 0 15px;
 }
 #baseline #skyline_outer #skyline {
   float: right;

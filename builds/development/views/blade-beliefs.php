@@ -1,11 +1,7 @@
 <div class="container">
 	<div id="beliefs" ng-controller="BeliefController"> 
 	 <div class="row">
- 		<div class="col half one">
- 			<h1>
-				<a name="beliefs">Beliefs</a> 
-			</h1>
-			<div id="tabs" class="beliefs-side-bar">
+		<div id="tabs" class="beliefs-side-bar">
 			<ul class="tab">
 				<li>
 					<a href="#/" id="belief-1" class="tablinks" onclick="openBelief(event, 'content-1')">God</a>
@@ -27,6 +23,10 @@
 				</li>
 			</ul>
 		</div>
+ 		<div class="col half one belief">
+ 			<h1>
+				<a name="#beliefs">Beliefs</a> 
+			</h1>
 		<div class="beliefs-content">
 			<div class="content-con">
 				<div class="tabcontent is-active" id="content-1">
@@ -55,7 +55,7 @@
 				<p>More of whatever we determine to be important</p>
 			</div>
 		</div>
- 		</div><div class="col half one belief-img">
+ 		</div><div class="col half one">
  			<div class="background-img"></div>
  		</div>
  	</div>

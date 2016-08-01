@@ -3,19 +3,19 @@
                 <article id="social">
                     <ul class="group">
                         <li>
-                            <a href="https://twitter.com"><!-- data-icon="&#xe601;"-->
-                            <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+                            <a href="https://twitter.com/FarmdaleNaz"><!-- data-icon="&#xe601;"-->
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.facebook.com"><!-- data-icon="&#xe600;"-->
-                            <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+                            <a href="https://www.facebook.com/farmdalenazarene/"><!-- data-icon="&#xe600;"-->
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
                            
                             </a>
                         </li>
                         <li>
-                            <a href="http://www.youtube.com"> <!-- data-icon="&#xf16a;"-->
-                            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                            <a href="https://www.youtube.com/channel/UCuFnmhskS_qS74pZXJMRh5A"> <!-- data-icon="&#xf16a;"-->
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
 
                             </a>
                         </li>
@@ -43,7 +43,8 @@
         </article> <!-- Legal -->
     </footer><!-- Footer -->
     <a id="sp-totop" class="backtotop hidden-top" href="#">
-    <i class="fa fa-angle-up fa-3x"></i></a>
+        <i class="fa fa-angle-up"></i>
+    </a>
     <script>
        	// $(".backtotop").addClass("hidden-top");
 		$(window).scroll(function () {

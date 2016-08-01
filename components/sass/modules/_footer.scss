@@ -38,10 +38,14 @@
 				li {
 					display: inline;
 					padding: 0 auto;
-					img {
-						width:50px;
-						
-					} //img
+					a{
+						i{
+							&:before{
+								font-size: 50px;
+								padding: 0 15px;
+							}
+						}
+					}
 				} //li
 			} //ul
 		} //social 
