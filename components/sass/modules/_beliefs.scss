@@ -20,19 +20,27 @@
 					font-weight: 500;
 					cursor: pointer;
 					text-align: center;
-
-					a{
-						font-weight: $bold;
+					font-weight: $bold;
 						outline: 0;
 						-o-outline: 0;
 						-moz-outline: 0;
 						-webkit-outline: 0;
-						&:hover{
-							color: $dark;
-						}
-					} //a
+					&:hover{
+						color: $dark;
+					}
+					// a{
+					// 	font-weight: $bold;
+					// 	outline: 0;
+					// 	-o-outline: 0;
+					// 	-moz-outline: 0;
+					// 	-webkit-outline: 0;
+					// 	&:hover{
+					// 		color: $dark;
+					// 	}
+					// } //a
 				} //li
 				.isactive{
+					color: $dark;
 					&:after{
 						border-top: 10px solid transparent;
 						border-bottom: 10px solid transparent; 
@@ -40,6 +48,7 @@
 						content: "";
 						position: absolute;
 						left: -10px;
+						
 						// top:15%;
 					}
 					a{

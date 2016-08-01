@@ -3,28 +3,28 @@
 	 <div class="row">
 		<div id="tabs" class="beliefs-side-bar">
 			<ul class="tab">
-				<li class="belieflink isactive">
+				<li class="belieflink isactive" id="belief-1" >
 					<!-- <a href="#/" id="belief-1" class="tablinks" onclick="openBelief(event, 'content-1')">God</a> -->
 					God
 				</li>
-				<li class="belieflink">
+				<li class="belieflink" id="belief-2" >
 					<!--  <a href="#/" id="belief-2" class="tablinks" onclick="openBelief(event, 'content-2')">Man</a> -->
 					Man
 				</li>
-				<li class="belieflink">
-					<!-- <a href="#/" id="belief-3" class="tablinks" onclick="openBelief(event, 'content-3')">Jesus</a> -->
+				<li class="belieflink" id="belief-3" >
+					<!--  <a href="#/" id="belief-3" class="tablinks" onclick="openBelief(event, 'content-3')">Jesus</a> -->
 					Jesus
 				</li>
-				<li class="belieflink">
-					<!-- <a href="#/" id="belief-4" class="tablinks" onclick="openBelief(event, 'content-4')">Spirit</a> -->
+				<li class="belieflink" id="belief-4" >
+					<!--  <a href="#/" id="belief-4" class="tablinks" onclick="openBelief(event, 'content-4')">Spirit</a> -->
 					Spirit
 				</li>
-				<li class="belieflink">
+				<li class="belieflink" id="belief-5" >
 					<!-- <a href="#/" id="belief-5" class="tablinks" onclick="openBelief(event, 'content-5')">The Bible</a> -->
 					The Bible
 				</li>
-				<li class="belieflink">
-					<!-- <a href="#/" id="belief-6" class="tablinks" onclick="openBelief(event, 'content-6')">More</a> -->
+				<li class="belieflink" id="belief-6" >
+					<!-- <a href="#/" id="belief-6" class="tablinks">More</a> -->
 					More
 				</li>
 			</ul>
