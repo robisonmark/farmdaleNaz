@@ -51,20 +51,6 @@
 						<a href="tel: 502-969-1436">Call Us</a>
 						<a href="https://goo.gl/maps/1aEiKpc9yyQ2">Directions</a>
 		 <!--Begin Nav Bar -->
-			<nav id="nav">
-				<section class="navbar">
-					<div class="brand">
-						<a href="#welcome">
-							<img id="logo" src="./images/farmdaleLogo.svg" alt="farmdale logo">
-							<img class="script" src="./images/farmdaleScript.svg" alt="farmdale wordmark">
-						</a>
-					</div>
-					<div class="button_container" id="toggle"> 
-						<span class="top"></span>
-						<span class="middle"></span>
-						<span class="bottom"></span>
-					</div>
-				</div>
 					<div class="navbar">
 						<div class="brand">
 							<a href="#welcome">
@@ -92,3 +78,4 @@
 				</nav> 
 			</div>
 		</header>
+

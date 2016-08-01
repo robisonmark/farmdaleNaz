@@ -36,7 +36,11 @@
 				</div>
 			</div> -->
 			<div class="update-column events-column">
-				<div class="update-header">Coming Up <a href="#" class="right" alt='google-cal'><div class="btn-white">Full Calendar</div></a></div>
+				<div class="update-header">Coming Up 
+					<a href="#" class="right" alt='google-cal'>
+						<div class="btn-white">Full Calendar</div>
+					</a>
+				</div>
 				<div class="update-column-content">
 					<a href="https://www.csp.edu/event/2016-creation-conference/">
 						<span>June 10, 2016</span>
