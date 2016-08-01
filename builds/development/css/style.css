@@ -850,7 +850,6 @@ header .container #nav .navbar ul li a.active {
   bottom: 0;
   width: 100%;
   margin: auto;
-  background: inherit;
   background-attachment: fixed;
 }
 .container .hero .mission-statement:before {
@@ -1125,23 +1124,25 @@ header .container #nav .navbar ul li a.active {
   background-color: #ffa325;
   display: inline-block;
   position: absolute;
-  left: 875px;
-  top: 19%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .container #beliefs .row .beliefs-side-bar li {
   padding: 15px 0;
   font-weight: 500;
   cursor: pointer;
   text-align: center;
-}
-.container #beliefs .row .beliefs-side-bar li a {
   font-weight: 800;
   outline: 0;
   -o-outline: 0;
   -moz-outline: 0;
   -webkit-outline: 0;
 }
-.container #beliefs .row .beliefs-side-bar li a:hover {
+.container #beliefs .row .beliefs-side-bar li:hover {
+  color: #121212;
+}
+.container #beliefs .row .beliefs-side-bar .isactive {
   color: #121212;
 }
 .container #beliefs .row .beliefs-side-bar .isactive:after {
@@ -1173,6 +1174,9 @@ header .container #nav .navbar ul li a.active {
   font-weight: 500;
   cursor: pointer;
 }
+.container #beliefs .row .col.half.one .beliefs-side-bar li:hover {
+  color: #121212;
+}
 .container #beliefs .row .col.half.one .beliefs-side-bar li a {
   width: 80px;
   outline: 0;
@@ -1181,9 +1185,6 @@ header .container #nav .navbar ul li a.active {
   -webkit-outline: 0;
   text-align: center;
   padding: 2px 0;
-}
-.container #beliefs .row .col.half.one .beliefs-side-bar li a:hover {
-  color: #121212;
 }
 .container #beliefs .row .col.half.one .beliefs-side-bar .isactive:after {
   border-top: 10px solid transparent;
