@@ -1133,15 +1133,16 @@ header .container #nav .navbar ul li a.active {
   font-weight: 500;
   cursor: pointer;
   text-align: center;
-}
-.container #beliefs .row .beliefs-side-bar li a {
   font-weight: 800;
   outline: 0;
   -o-outline: 0;
   -moz-outline: 0;
   -webkit-outline: 0;
 }
-.container #beliefs .row .beliefs-side-bar li a:hover {
+.container #beliefs .row .beliefs-side-bar li:hover {
+  color: #121212;
+}
+.container #beliefs .row .beliefs-side-bar .isactive {
   color: #121212;
 }
 .container #beliefs .row .beliefs-side-bar .isactive:after {
