@@ -120,10 +120,8 @@
                         $(this).addClass('isactive');
                         id = $(this).attr('id');
                         idnum = id.split('-',2);
-                        // alert(idnum[1]);
                         content = '#content-'+idnum[1];
                         currentActive = '#' + $('.is-active').attr('id');
-                        // alert(currentActive);
                         $(currentActive).removeClass('is-active');
                         $(content).addClass('is-active');
                     });
