@@ -1,9 +1,8 @@
-
 .container{
 	#beliefs{
 		position: relative;
 		.row{
-				margin: 0;
+			margin: 0;
 			.beliefs-side-bar{
 				text-align: left;
 				padding: 30px;
@@ -21,23 +20,13 @@
 					cursor: pointer;
 					text-align: center;
 					font-weight: $bold;
-						outline: 0;
-						-o-outline: 0;
-						-moz-outline: 0;
-						-webkit-outline: 0;
+					outline: 0;
+					-o-outline: 0;
+					-moz-outline: 0;
+					-webkit-outline: 0;
 					&:hover{
 						color: $dark;
 					}
-					// a{
-					// 	font-weight: $bold;
-					// 	outline: 0;
-					// 	-o-outline: 0;
-					// 	-moz-outline: 0;
-					// 	-webkit-outline: 0;
-					// 	&:hover{
-					// 		color: $dark;
-					// 	}
-					// } //a
 				} //li
 				.isactive{
 					color: $dark;
@@ -69,13 +58,12 @@
 					height: 100%;
 
 					li{
-<<<<<<< 8a90a621ae3371b817ba6ff388aed5c234330edc
 						padding: 15px 0;
-=======
-						padding: 5px 0;
->>>>>>> Fixing for merge
 						font-weight: 500;
 						cursor: pointer;
+						&:hover{
+							color: $dark;
+						}
 						a{
 							width: 80px;
 							outline: 0;
@@ -84,32 +72,7 @@
 							-webkit-outline: 0;
 							text-align: center;
 							padding: 2px 0;
-<<<<<<< 8a90a621ae3371b817ba6ff388aed5c234330edc
-=======
 
-							&:hover{
-								color: $dark;
-							}
-						} //a
-					} //li
-					.isactive{
-						&:after{
-						border-top: 10px solid transparent;
-						border-bottom: 10px solid transparent; 
-						border-left:10px solid $darkpink;
-						content: "";
-						position: absolute;
-						right: -40px;
-						top:20%;
-						}
-					}// is-active
-				} //beliefs side bar
-				.beliefs-content{
->>>>>>> Fixing for merge
-
-							&:hover{
-								color: $dark;
-							}
 						} //a
 					} //li
 					.isactive{
@@ -135,10 +98,10 @@
 					}
 				}
 				.beliefs-content{
-				position: relative;
-				width: 80%; 
-				margin: auto;
-				@include clearfix;
+					position: relative;
+					width: 80%; 
+					margin: auto;
+					@include clearfix;
 					.tabcontent {
 						display: none;
 						//padding: 6px 12px;
