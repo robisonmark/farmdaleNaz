@@ -8,10 +8,10 @@
 
 		render('/new');
 
+		render('/blade-events');
+
 		render('/blade-ministries');
 
-		render('/blade-events');
-		
 		// render('/about');
 		
 		render('/blade-beliefs');

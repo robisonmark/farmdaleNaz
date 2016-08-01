@@ -29,3 +29,13 @@
 		</div>
 	</div>
 </div>
+	<div class="medium-hero family">
+		<div class="left-quote-mark">
+			&ldquo;
+		</div>
+		<h1>"You only visit once after that </h1>
+		<h2> you're family" </h2>
+		<div class="right-quote-mark">
+			&rdquo;
+		</div>
+	</div>

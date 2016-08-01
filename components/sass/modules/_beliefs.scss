@@ -128,48 +128,7 @@
 		}
 	}
 }
-.medium-hero {
-    background-color: #e4e4e4;
-    color: #ff3d52;
-    height: 350px;
-    text-align: center;
-    padding: 100px 0;
-    position: relative;
-    h1{
-    	&:after{
-    		display: none;
-    	}
-    }
-    h1, h2{
-    	z-index: 10;
-    }
-    .left-quote-mark{
-    	position:absolute;
-    	z-index: 1;
-    	font-size: 255px;
-    	opacity: 0.3;
-    	color: $darkpink;
-	    left: 22%;
-	    top: 17%;
-	    -ms-transform: rotate(7deg);
-	    -webkit-transform: rotate(7deg);
-	    transform: rotate(7deg);
-    }
-     .right-quote-mark{
-    	position:absolute;
-    	z-index: 1;
-    	font-size: 255px;
-    	opacity: 0.3;
-    	color: $darkpink;
-		position: absolute;
-		right: 25%;
-		bottom: -12%;
-		-ms-transform: rotate(7deg);
-		-webkit-transform: rotate(7deg);
-		transform: rotate(7deg);
-    }
 
-}
 // .container{
 
 // 		#beliefs{ 

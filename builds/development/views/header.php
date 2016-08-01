@@ -46,10 +46,12 @@
 			<div class="container">
 
 				<nav id="nav">
-				<div class="top-hat">
-					<div class="con-content">
-						<a href="tel: 502-969-1436">Call Us</a>
-						<a href="https://goo.gl/maps/1aEiKpc9yyQ2">Directions</a>
+					<div class="top-hat">
+						<div class="con-content">
+							<a href="tel: 502-969-1436">Call Us</a>
+							<a href="https://goo.gl/maps/1aEiKpc9yyQ2">Directions</a>
+						</div>
+					</div>
 		 <!--Begin Nav Bar -->
 					<div class="navbar">
 						<div class="brand">
