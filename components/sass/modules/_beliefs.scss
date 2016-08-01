@@ -1,9 +1,8 @@
-
 .container{
 	#beliefs{
 		position: relative;
 		.row{
-				margin: 0;
+			margin: 0;
 			.beliefs-side-bar{
 				text-align: left;
 				padding: 30px;
@@ -12,26 +11,25 @@
 				background-color: $darkpink;
 				display: inline-block;
 				position: absolute;
-				left: 875px;
-				top: 19%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
 				li{
 					padding: 15px 0;
 					font-weight: 500;
 					cursor: pointer;
 					text-align: center;
-
-					a{
-						font-weight: $bold;
-						outline: 0;
-						-o-outline: 0;
-						-moz-outline: 0;
-						-webkit-outline: 0;
-						&:hover{
-							color: $dark;
-						}
-					} //a
+					font-weight: $bold;
+					outline: 0;
+					-o-outline: 0;
+					-moz-outline: 0;
+					-webkit-outline: 0;
+					&:hover{
+						color: $dark;
+					}
 				} //li
 				.isactive{
+					color: $dark;
 					&:after{
 						border-top: 10px solid transparent;
 						border-bottom: 10px solid transparent; 
@@ -39,6 +37,7 @@
 						content: "";
 						position: absolute;
 						left: -10px;
+						
 						// top:15%;
 					}
 					a{
@@ -57,10 +56,14 @@
 					background-color: $darkpink;
 					display: inline-block;
 					height: 100%;
+
 					li{
 						padding: 15px 0;
 						font-weight: 500;
 						cursor: pointer;
+						&:hover{
+							color: $dark;
+						}
 						a{
 							width: 80px;
 							outline: 0;
@@ -70,9 +73,6 @@
 							text-align: center;
 							padding: 2px 0;
 
-							&:hover{
-								color: $dark;
-							}
 						} //a
 					} //li
 					.isactive{
@@ -98,10 +98,10 @@
 					}
 				}
 				.beliefs-content{
-				position: relative;
-				width: 62%; 
-				margin: auto;
-				@include clearfix;
+					position: relative;
+					width: 80%; 
+					margin: auto;
+					@include clearfix;
 					.tabcontent {
 						display: none;
 						//padding: 6px 12px;
