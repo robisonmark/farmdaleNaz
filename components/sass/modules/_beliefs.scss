@@ -12,8 +12,9 @@
 				background-color: $darkpink;
 				display: inline-block;
 				position: absolute;
-				left: 875px;
-				top: 19%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
 				li{
 					padding: 15px 0;
 					font-weight: 500;
@@ -57,6 +58,7 @@
 					background-color: $darkpink;
 					display: inline-block;
 					height: 100%;
+
 					li{
 <<<<<<< 8a90a621ae3371b817ba6ff388aed5c234330edc
 						padding: 15px 0;
