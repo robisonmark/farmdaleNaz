@@ -582,6 +582,7 @@ header .container #nav .navbar .brand a {
   text-align: center;
   display: inline-block;
   font-size: 18px;
+  outline: 0;
 }
 header .container #nav .navbar .brand a #logo {
   width: 125px;
@@ -1097,7 +1098,6 @@ header .container #nav .navbar ul li a.active {
 }
 #ministries .with-padding .img-con {
   width: 33.3333%;
-  max-width: 350px;
   float: left;
   padding-right: 15px;
   position: relative;
@@ -1199,7 +1199,7 @@ header .container #nav .navbar ul li a.active {
   padding: 60px 25px;
 }
 .container #beliefs .row .col.half.one.belief h1 {
-  width: 80%;
+  width: 62%;
   margin: auto;
 }
 .container #beliefs .row .col.half.one.belief h1:after {
@@ -1207,7 +1207,7 @@ header .container #nav .navbar ul li a.active {
 }
 .container #beliefs .row .col.half.one .beliefs-content {
   position: relative;
-  width: 80%;
+  width: 62%;
   margin: auto;
 }
 .container #beliefs .row .col.half.one .beliefs-content:before, .container #beliefs .row .col.half.one .beliefs-content:after {
@@ -1521,7 +1521,7 @@ header .container #nav .navbar ul li a.active {
 @media (min-width: 650px) {
   #baseline #skyline_outer #social {
     position: absolute;
-    left: 50px;
+    left: 10%;
     margin-bottom: 15px;
   }
 }

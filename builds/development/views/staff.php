@@ -3,10 +3,9 @@
 		<h1>
 			<a name="staff">Meet Our Staff</a> 
 		</h1>
-		
 	</section>
 	<section class="content">
-	   <div class="line1">
+		<div class="line1">
 			<div class="staff">
 				<div class="staff-person">
 					<div class="card-flipper">
@@ -34,21 +33,20 @@
 					</div>
 				</div>
 				<ul class="favorites">
-								<li>
-									Favorite Story: Luke 15s
-								</li>
-								 <li>
-									Favorite Dessert: All of it!!! (Cherry Cobbler)
-								</li>
-								<li>
-									Favorite Music: Contemporary Praise and Worship; Country; and Bluegrass
-								</li>
-								<li> 
-									Place wish to visit most: Jerusalem
-								</li>
-							</ul>
+					<li>
+						Favorite Story: Luke 15s
+					</li>
+					 <li>
+						Favorite Dessert: All of it!!! (Cherry Cobbler)
+					</li>
+					<li>
+						Favorite Music: Contemporary Praise and Worship; Country; and Bluegrass
+					</li>
+					<li> 
+						Place wish to visit most: Jerusalem
+					</li>
+				</ul>
 			</div>
-
 			<div class="staff">
 				<div class="staff-person">
 					<div class="card-flipper">
@@ -75,7 +73,6 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="staff">
 				<div class="staff-person">
 					<div class="card-flipper">
@@ -90,7 +87,6 @@
 							<p>
 								Mark is a Florida native who joined our staff in August of 2013.  In Florida he met his wife, Laura, while working at a grocery store.  Mark is passionate about bringing teens to Christ, as well as the Florida Gators, Pittsburgh Steelers, and Orlando Magic.  Mark is a graduate of Trevecca Nazarene University where he earned a degree in Youth Ministry.  He joined our staff as the Youth Pastor but is involved in the Young Adult Ministries and the Praise Team.  He also loves to play any sport from basketball to ultimate Frisbee and everything in between!
 							</p>
-
 							 <ul>
 								<li>
 									<i class=""></i><a href="@tel: 772-321-6450">772-321-6450</a>
@@ -103,19 +99,18 @@
 						</div>
 					</div>
 				</div>
-					 <ul class="favorites">
-								<li>
-									Favorite Verse: Philippians 4:13, “I can do all things through Christ who strengthens me!”
-								</li>
-								 <li>
-									Favorite Snack/Desert:  Cookies (Chocolate Chip)
-								</li>
-								<li>
-								   Place You Wish to Visit the Most: The Eastern Hemisphere
-								</li>
-							</ul>
+				<ul class="favorites">
+					<li>
+						Favorite Verse: Philippians 4:13, “I can do all things through Christ who strengthens me!”
+					</li>
+					 <li>
+						Favorite Snack/Desert:  Cookies (Chocolate Chip)
+					</li>
+					<li>
+					   Place You Wish to Visit the Most: The Eastern Hemisphere
+					</li>
+				</ul>
 			</div>
-
 		</div>
 	</section>
 </div>
