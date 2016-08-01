@@ -849,7 +849,6 @@ header .container #nav .navbar ul li a.active {
   bottom: 0;
   width: 100%;
   margin: auto;
-  background: inherit;
   background-attachment: fixed;
 }
 .container .hero .mission-statement:before {
@@ -995,7 +994,7 @@ header .container #nav .navbar ul li a.active {
 }
 .new #new .con-new {
   max-width: 45vw;
-  margin-left: 25px;
+  margin-left: 200px;
   background-color: rgba(12, 12, 12, 0.5);
   position: relative;
   top: 150px;
@@ -1125,8 +1124,9 @@ header .container #nav .navbar ul li a.active {
   background-color: #ffa325;
   display: inline-block;
   position: absolute;
-  left: 875px;
-  top: 19%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .container #beliefs .row .beliefs-side-bar li {
   padding: 15px 0;
