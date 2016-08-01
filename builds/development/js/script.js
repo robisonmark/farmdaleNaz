@@ -63,7 +63,7 @@ for (i = 0; i < acc.length; i++) {
     }
 }
 
-    var topoffset = 89;
+    var topoffset = 121;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
@@ -98,9 +98,9 @@ for (i = 0; i < acc.length; i++) {
     var windowpos = $(window).scrollTop() + topoffset;
     $('nav li a').removeClass('active');
 
-    if (windowpos > $('#welcome').offset().top-1) {
+    if (windowpos > $('#new').offset().top-1) {
       $('nav li a').removeClass('active');
-      $('a[href$="#welcome"]').addClass('active');
+      $('a[href$="#new"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#events').offset().top-1) {
@@ -113,9 +113,9 @@ for (i = 0; i < acc.length; i++) {
       $('a[href$="#ministries"]').addClass('active');
     } //windowpos
 
-    if (windowpos > $('#about').offset().top-1) {
+    if (windowpos > $('#beliefs').offset().top-1) {
       $('nav li a').removeClass('active');
-      $('a[href$="#about"]').addClass('active');
+      $('a[href$="#beliefs"]').addClass('active');
     } //windowpos
 
     if (windowpos > $('#staff').offset().top-1) {

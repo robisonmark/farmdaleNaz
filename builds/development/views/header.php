@@ -69,9 +69,9 @@
 							<div class="overlay-menu">
 								<ul>
 									<li><a class="nav-welcome" href="#new">New?</a></li>
-									<li><a class="ministries" href="#ministries">Ministries</a></li>
-									<li><a class="about" href="#about">About Us</a></li>
 									<li><a class="events" href="#events">Events</a></li>
+									<li><a class="ministries" href="#ministries">Ministries</a></li>
+									<li><a class="about" href="#beliefs">Beliefs</a></li>
 									<li><a class="staff" href="#staff">Staff</a></li> 
 								</ul>
 							</div>

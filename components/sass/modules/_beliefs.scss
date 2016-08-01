@@ -90,7 +90,7 @@
 				&.belief{
 					padding: 60px 25px;
 					h1{
-						width: 80%;
+						width: 62%;
 						margin:auto;
 						&:after{
 							margin: 15px 0 0; 
@@ -99,7 +99,7 @@
 				}
 				.beliefs-content{
 				position: relative;
-				width: 80%; 
+				width: 62%; 
 				margin: auto;
 				@include clearfix;
 					.tabcontent {
