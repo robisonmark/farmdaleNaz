@@ -1,130 +1,208 @@
-/****************** Staff **********************
-************************************************/
+#staff{
+	h1{
+		text-align: center;
+		padding: 60px 0 0;
+	}
+	.con-content{
+		.staff{
+			.row{
+				.one{
+					@media(max-width: $medium){
+						width: 80%;
+						margin: auto;
+					}
+					.con-staff{
+						position:relative;
+						padding: 0 15px;
 
-#staff {
-	background-color: $light;
-	color: $dark;
-	@include clearfix;
+						.con-img{
+							
+							text-align: left;
+							
+							img{
+								height: 400px;
+								    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+   
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;    
+    color: #666;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+								&:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $darkpink;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+								@media(max-width: $wide){
+									max-height: 300px;
+								}
+							}
+						}
+						h2{
+							&:after{
+								margin: 15px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// /****************** Staff **********************
+// ************************************************/
+
+// #staff {
+// 	background-color: $light;
+// 	color: $dark;
+// 	@include clearfix;
 	
 
-	#{headings()} {
-		color: $dark;
-	}
+// 	#{headings()} {
+// 		color: $dark;
+// 	}
 
-	.heading {
-	  @include pad(1,1);
-	  text-align: center;
+// 	.heading {
+// 	  @include pad(1,1);
+// 	  text-align: center;
 
-		h1 {
-			font-size: 1.8em;
-			font-weight: $bold;	
+// 		h1 {
+// 			font-size: 1.8em;
+// 			font-weight: $bold;	
 
-			a{
-				color: #121212;
-			}
-		} //h1
-	}//heading
-/*
-	h2 {
-		color: darken($pink, 20);
-		font-size: 1.3em;
-		line-height: 110%;
-		padding: 10px 0;
+// 			a{
+// 				color: #121212;
+// 			}
+// 		} //h1
+// 	}//heading
+// /*
+// 	h2 {
+// 		color: darken($pink, 20);
+// 		font-size: 1.3em;
+// 		line-height: 110%;
+// 		padding: 10px 0;
 		
-	} //h2*/
-	.content{
-		@include clearfix;
-		margin: 0 auto;
-		width: auto;
-		max-width: 1200px;
-		.line1 {
-			@include clearfix;
-			margin-left: -10px;
-			margin-right: -10px;
-			.staff{
-				width: 33%;
-				float: left;
-				text-align: left;
+// 	} //h2*/
+// 	.content{
+// 		@include clearfix;
+// 		margin: 0 auto;
+// 		width: auto;
+// 		max-width: 1200px;
+// 		.line1 {
+// 			@include clearfix;
+// 			margin-left: -10px;
+// 			margin-right: -10px;
+// 			.staff{
+// 				width: 33%;
+// 				float: left;
+// 				text-align: left;
 
-				.staff-person{
-					padding: 15px;
-					perspective: 1000px;
-					text-align: left;
+// 				.staff-person{
+// 					padding: 15px;
+// 					perspective: 1000px;
+// 					text-align: left;
 
-					.card-flipper{
-						transition: 0.6s;
-						transform-style: preserve-3d;
+// 					.card-flipper{
+// 						transition: 0.6s;
+// 						transform-style: preserve-3d;
 
-						position: relative;
+// 						position: relative;
 
-						.front {
-							z-index: 2;
-							/* for firefox 31 */
-							transform: rotateY(0deg);
-							backface-visibility: hidden;
-							position: relative;
-							top: 0;
-							left: 0;
-							background-color: $light;
-							text-align: center;
+// 						.front {
+// 							z-index: 2;
+// 							/* for firefox 31 */
+// 							transform: rotateY(0deg);
+// 							backface-visibility: hidden;
+// 							position: relative;
+// 							top: 0;
+// 							left: 0;
+// 							background-color: $light;
+// 							text-align: center;
 
-							img{
-								width: 100%;
-								height: 350px;
-							//	padding: 0 25px;
-							} //img
+// 							img{
+// 								width: 100%;
+// 								height: 350px;
+// 							//	padding: 0 25px;
+// 							} //img
 
 
 
-						} //front
-						.back {
-							height: 460px;
-							max-height: 460px;
-							width: 100%;
-							padding: 15px;
-							background-color: #fff;
-							transform: rotateY(180deg);
-							overflow-y: auto;
-							backface-visibility: hidden;
+// 						} //front
+// 						.back {
+// 							height: 460px;
+// 							max-height: 460px;
+// 							width: 100%;
+// 							padding: 15px;
+// 							background-color: #fff;
+// 							transform: rotateY(180deg);
+// 							overflow-y: auto;
+// 							backface-visibility: hidden;
 
-							position: absolute;
-							top: 0;
-							left: 0;
-							text-align: left;
+// 							position: absolute;
+// 							top: 0;
+// 							left: 0;
+// 							text-align: left;
 
-							p{
-								text-align: left;
-							}
+// 							p{
+// 								text-align: left;
+// 							}
 
-							&::-webkit-scrollbar { 
-								display: none; 
-							}
-						} //back
-					} //card-flipper
-				} //staff-person
-				ul {
-					li{
-						padding: 8px 0;
-						a{
-							color: $pink;
-						} //a
-					} //li
-				} //ul
-				.favorites {
-					li{
-						padding: 10px 35px;
-						a{
-							color: $pink;
-						} //a
-					} //li
-				} //favorites
-			} //staff
+// 							&::-webkit-scrollbar { 
+// 								display: none; 
+// 							}
+// 						} //back
+// 					} //card-flipper
+// 				} //staff-person
+// 				ul {
+// 					li{
+// 						padding: 8px 0;
+// 						a{
+// 							color: $pink;
+// 						} //a
+// 					} //li
+// 				} //ul
+// 				.favorites {
+// 					li{
+// 						padding: 10px 35px;
+// 						a{
+// 							color: $pink;
+// 						} //a
+// 					} //li
+// 				} //favorites
+// 			} //staff
 
-			.staff:hover .card-flipper, .staff.hover .card-flipper {
-				transform: rotateY(180deg);
-			}
-		} //line 1
-	} //content
-} //staff
+// 			.staff:hover .card-flipper, .staff.hover .card-flipper {
+// 				transform: rotateY(180deg);
+// 			}
+// 		} //line 1
+// 	} //content
+// } //staff
 
 

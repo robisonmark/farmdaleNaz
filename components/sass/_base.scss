@@ -241,9 +241,26 @@ p{
       &:after{
         display: none;
       }
+       @media(max-width: $medium){
+        font-size: 36px;
+        
+      }
+       @media(max-width: $small){
+        font-size: 30px;
+        
+      }
     }
     h1, h2{
       z-index: 10;
+    }
+    h2{
+      @media(max-width: $medium){
+        font-size: 30px;
+        
+      }
+      @media(max-width: $small){
+        font-size: 24px;
+      }
     }
     .left-quote-mark{
       position:absolute;
@@ -251,11 +268,14 @@ p{
       font-size: 255px;
       opacity: 0.3;
       color: $darkpink;
-      left: 22%;
+      left: 5%;
       top: 17%;
       -ms-transform: rotate(7deg);
       -webkit-transform: rotate(7deg);
       transform: rotate(7deg);
+       @media(max-width: $wide){
+        
+      }
     }
      .right-quote-mark{
       position:absolute;
@@ -269,6 +289,10 @@ p{
     -ms-transform: rotate(7deg);
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
+
+      @media(max-width: $wide){
+        right: 11%;
+      }
     }
     &.family{
       h2{
@@ -285,6 +309,12 @@ p{
       -ms-transform: rotate(7deg);
       -webkit-transform: rotate(7deg);
       transform: rotate(7deg);
+       @media(max-width: $wide){
+        left: 17%;
+      }
+       @media(max-width: $phone){
+        left: 5%;
+      }
     }
      .right-quote-mark{
       position:absolute;
@@ -298,6 +328,12 @@ p{
     -ms-transform: rotate(7deg);
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
+     @media(max-width: $wide){
+        right: 36%;
+      }
+       @media(max-width: $phone){
+        right: 27%;
+      }
     }
     }
 }
