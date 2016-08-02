@@ -21,6 +21,10 @@
 			display: inline-block;
 			width: 66.6666667%;
 			float: left;
+			@media(max-width: $small){
+					padding: 15px;
+					width:100%;
+				}
 
 			// h2{
 			// text-align: left !important;
@@ -38,8 +42,18 @@
 			padding-right: 15px;
 			position: relative;
 
+			@media(max-width: $small){
+				display: block;
+				float: none;
+				width: 100%;
+				margin: auto;
+			}
+
 			img{
 				width:100%;
+				@media(max-width: $small){
+					padding: 15px;
+				}
 			}
 		}
 		.btn_dark{

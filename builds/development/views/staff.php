@@ -15,7 +15,7 @@
 						<h2>Arnie Wilson</h2>
 						<p>Arnie grew up in Henderson, Kentucky and has been on staff at Farmdale since 2009.  Together he and his wife, Faith, have 3 boys: Brady, Grant and Reed. Arnie is passionate about relational ministry and desires to connect people to God, to each other, and to the community.  Arnie teaches the young adult class, visits the church and ministers through sports (his favorite).</p>
 						<br>
-						<p>Arnie is an avid wildcat fan, never wanting to miss game.  When the Wildcats aren't playing uou can catch Arnie cheering on the San Francisco 49ers, Cincinnati Reds, San Antonio Spurs, and all Hendrick Racing Drivers.</p>
+						<p>Arnie is an avid Kentucky Wildcat fan, never wanting to miss game.  When the Wildcats aren't playing uou can catch Arnie cheering on the San Francisco 49ers, Cincinnati Reds, San Antonio Spurs, and all Hendrick Racing Drivers.</p>
 					</div>
 				</div><div class="col thirds one">
 				<div class="con-staff">
@@ -35,7 +35,7 @@
 						<h2>Mark Robison</h2>
 						<p>Mark and his wife, Laura moved to Louisville in 2013 and have since adopted two dogs and a fish (Lizzie, Avi and Dumbledore).  Along with his responibities as the youth pastor he maintains the website, is a part of the praise band and spend time with youth adults.  His goal is to connect with his students and connect them to God.</p>
 						<br>
-						<p>Mark spends his time being active, watching and playing sports, learning new technology, catching Pokemon and most frequently spending time with his wife and dogs.</p>
+						<p>Mark spends his time being active, watching and playing sports, learning new technology, listening to music and most frequently spending time with his wife and dogs.</p>
 					</div>
 				</div>
 			</div>
