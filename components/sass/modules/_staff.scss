@@ -1,130 +1,160 @@
-/****************** Staff **********************
-************************************************/
+#staff{
+	.con-content{
+		.staff{
+			.row{
+				.one{
+					.con-staff{
+					
+						padding: 0 15px;
+						height: 700px;
+						.con-img{
+							max-height: 600px;
+							text-align: left;
+							
+							img{
+								max-height: 400px;
+							}
+						}
+						h2{
+							&:after{
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
-#staff {
-	background-color: $light;
-	color: $dark;
-	@include clearfix;
+
+// /****************** Staff **********************
+// ************************************************/
+
+// #staff {
+// 	background-color: $light;
+// 	color: $dark;
+// 	@include clearfix;
 	
 
-	#{headings()} {
-		color: $dark;
-	}
+// 	#{headings()} {
+// 		color: $dark;
+// 	}
 
-	.heading {
-	  @include pad(1,1);
-	  text-align: center;
+// 	.heading {
+// 	  @include pad(1,1);
+// 	  text-align: center;
 
-		h1 {
-			font-size: 1.8em;
-			font-weight: $bold;	
+// 		h1 {
+// 			font-size: 1.8em;
+// 			font-weight: $bold;	
 
-			a{
-				color: #121212;
-			}
-		} //h1
-	}//heading
-/*
-	h2 {
-		color: darken($pink, 20);
-		font-size: 1.3em;
-		line-height: 110%;
-		padding: 10px 0;
+// 			a{
+// 				color: #121212;
+// 			}
+// 		} //h1
+// 	}//heading
+// /*
+// 	h2 {
+// 		color: darken($pink, 20);
+// 		font-size: 1.3em;
+// 		line-height: 110%;
+// 		padding: 10px 0;
 		
-	} //h2*/
-	.content{
-		@include clearfix;
-		margin: 0 auto;
-		width: auto;
-		max-width: 1200px;
-		.line1 {
-			@include clearfix;
-			margin-left: -10px;
-			margin-right: -10px;
-			.staff{
-				width: 33%;
-				float: left;
-				text-align: left;
+// 	} //h2*/
+// 	.content{
+// 		@include clearfix;
+// 		margin: 0 auto;
+// 		width: auto;
+// 		max-width: 1200px;
+// 		.line1 {
+// 			@include clearfix;
+// 			margin-left: -10px;
+// 			margin-right: -10px;
+// 			.staff{
+// 				width: 33%;
+// 				float: left;
+// 				text-align: left;
 
-				.staff-person{
-					padding: 15px;
-					perspective: 1000px;
-					text-align: left;
+// 				.staff-person{
+// 					padding: 15px;
+// 					perspective: 1000px;
+// 					text-align: left;
 
-					.card-flipper{
-						transition: 0.6s;
-						transform-style: preserve-3d;
+// 					.card-flipper{
+// 						transition: 0.6s;
+// 						transform-style: preserve-3d;
 
-						position: relative;
+// 						position: relative;
 
-						.front {
-							z-index: 2;
-							/* for firefox 31 */
-							transform: rotateY(0deg);
-							backface-visibility: hidden;
-							position: relative;
-							top: 0;
-							left: 0;
-							background-color: $light;
-							text-align: center;
+// 						.front {
+// 							z-index: 2;
+// 							/* for firefox 31 */
+// 							transform: rotateY(0deg);
+// 							backface-visibility: hidden;
+// 							position: relative;
+// 							top: 0;
+// 							left: 0;
+// 							background-color: $light;
+// 							text-align: center;
 
-							img{
-								width: 100%;
-								height: 350px;
-							//	padding: 0 25px;
-							} //img
+// 							img{
+// 								width: 100%;
+// 								height: 350px;
+// 							//	padding: 0 25px;
+// 							} //img
 
 
 
-						} //front
-						.back {
-							height: 460px;
-							max-height: 460px;
-							width: 100%;
-							padding: 15px;
-							background-color: #fff;
-							transform: rotateY(180deg);
-							overflow-y: auto;
-							backface-visibility: hidden;
+// 						} //front
+// 						.back {
+// 							height: 460px;
+// 							max-height: 460px;
+// 							width: 100%;
+// 							padding: 15px;
+// 							background-color: #fff;
+// 							transform: rotateY(180deg);
+// 							overflow-y: auto;
+// 							backface-visibility: hidden;
 
-							position: absolute;
-							top: 0;
-							left: 0;
-							text-align: left;
+// 							position: absolute;
+// 							top: 0;
+// 							left: 0;
+// 							text-align: left;
 
-							p{
-								text-align: left;
-							}
+// 							p{
+// 								text-align: left;
+// 							}
 
-							&::-webkit-scrollbar { 
-								display: none; 
-							}
-						} //back
-					} //card-flipper
-				} //staff-person
-				ul {
-					li{
-						padding: 8px 0;
-						a{
-							color: $pink;
-						} //a
-					} //li
-				} //ul
-				.favorites {
-					li{
-						padding: 10px 35px;
-						a{
-							color: $pink;
-						} //a
-					} //li
-				} //favorites
-			} //staff
+// 							&::-webkit-scrollbar { 
+// 								display: none; 
+// 							}
+// 						} //back
+// 					} //card-flipper
+// 				} //staff-person
+// 				ul {
+// 					li{
+// 						padding: 8px 0;
+// 						a{
+// 							color: $pink;
+// 						} //a
+// 					} //li
+// 				} //ul
+// 				.favorites {
+// 					li{
+// 						padding: 10px 35px;
+// 						a{
+// 							color: $pink;
+// 						} //a
+// 					} //li
+// 				} //favorites
+// 			} //staff
 
-			.staff:hover .card-flipper, .staff.hover .card-flipper {
-				transform: rotateY(180deg);
-			}
-		} //line 1
-	} //content
-} //staff
+// 			.staff:hover .card-flipper, .staff.hover .card-flipper {
+// 				transform: rotateY(180deg);
+// 			}
+// 		} //line 1
+// 	} //content
+// } //staff
 
 

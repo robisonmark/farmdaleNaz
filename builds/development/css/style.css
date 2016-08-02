@@ -553,6 +553,13 @@ header .container #nav {
   position: fixed;
   box-shadow: 2px 2px 10px #121212;
 }
+header .container #nav:before, header .container #nav:after {
+  content: '';
+  display: table;
+}
+header .container #nav:after {
+  clear: both;
+}
 header .container #nav .top-hat {
   background-color: #121212;
   height: 30px;
@@ -850,6 +857,7 @@ header .container #nav .navbar ul li a.active {
   bottom: 0;
   width: 100%;
   margin: auto;
+  background: inherit;
   background-attachment: fixed;
 }
 .container .hero .mission-statement:before {
@@ -1207,7 +1215,7 @@ header .container #nav .navbar ul li a.active {
 }
 .container #beliefs .row .col.half.one .beliefs-content {
   position: relative;
-  width: 62%;
+  width: 80%;
   margin: auto;
 }
 .container #beliefs .row .col.half.one .beliefs-content:before, .container #beliefs .row .col.half.one .beliefs-content:after {
@@ -1369,129 +1377,19 @@ header .container #nav .navbar ul li a.active {
   overflow: hidden;
 }
 
-/****************** Staff **********************
-************************************************/
-#staff {
-  background-color: #E4E4E4;
-  color: #121212;
-  /*
-  	h2 {
-  		color: darken($pink, 20);
-  		font-size: 1.3em;
-  		line-height: 110%;
-  		padding: 10px 0;
-  		
-  	} //h2*/
+#staff .con-content .staff .row .one .con-staff {
+  padding: 0 15px;
+  height: 700px;
 }
-#staff:before, #staff:after {
-  content: '';
-  display: table;
-}
-#staff:after {
-  clear: both;
-}
-#staff h1, #staff h2, #staff h3, #staff h4, #staff h5, #staff h6 {
-  color: #121212;
-}
-#staff .heading {
-  padding-left: 9.16667%;
-  padding-right: 9.16667%;
-  text-align: center;
-}
-#staff .heading h1 {
-  font-size: 1.8em;
-  font-weight: 800;
-}
-#staff .heading h1 a {
-  color: #121212;
-}
-#staff .content {
-  margin: 0 auto;
-  width: auto;
-  max-width: 1200px;
-}
-#staff .content:before, #staff .content:after {
-  content: '';
-  display: table;
-}
-#staff .content:after {
-  clear: both;
-}
-#staff .content .line1 {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-#staff .content .line1:before, #staff .content .line1:after {
-  content: '';
-  display: table;
-}
-#staff .content .line1:after {
-  clear: both;
-}
-#staff .content .line1 .staff {
-  width: 33%;
-  float: left;
+#staff .con-content .staff .row .one .con-staff .con-img {
+  max-height: 600px;
   text-align: left;
 }
-#staff .content .line1 .staff .staff-person {
-  padding: 15px;
-  perspective: 1000px;
-  text-align: left;
+#staff .con-content .staff .row .one .con-staff .con-img img {
+  max-height: 400px;
 }
-#staff .content .line1 .staff .staff-person .card-flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-#staff .content .line1 .staff .staff-person .card-flipper .front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-  backface-visibility: hidden;
-  position: relative;
-  top: 0;
-  left: 0;
-  background-color: #E4E4E4;
-  text-align: center;
-}
-#staff .content .line1 .staff .staff-person .card-flipper .front img {
-  width: 100%;
-  height: 350px;
-}
-#staff .content .line1 .staff .staff-person .card-flipper .back {
-  height: 460px;
-  max-height: 460px;
-  width: 100%;
-  padding: 15px;
-  background-color: #fff;
-  transform: rotateY(180deg);
-  overflow-y: auto;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: left;
-}
-#staff .content .line1 .staff .staff-person .card-flipper .back p {
-  text-align: left;
-}
-#staff .content .line1 .staff .staff-person .card-flipper .back::-webkit-scrollbar {
-  display: none;
-}
-#staff .content .line1 .staff ul li {
-  padding: 8px 0;
-}
-#staff .content .line1 .staff ul li a {
-  color: #ff325d;
-}
-#staff .content .line1 .staff .favorites li {
-  padding: 10px 35px;
-}
-#staff .content .line1 .staff .favorites li a {
-  color: #ff325d;
-}
-#staff .content .line1 .staff:hover .card-flipper, #staff .content .line1 .staff.hover .card-flipper {
-  transform: rotateY(180deg);
+#staff .con-content .staff .row .one .con-staff h2:after {
+  margin: 0;
 }
 
 /****************** baseline ********************
