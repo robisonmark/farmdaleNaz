@@ -625,7 +625,7 @@ header .container #nav .navbar {
 header .container #nav .navbar .brand {
   margin-top: 15px;
   position: absolute;
-  top: 0px;
+  top: -10px;
   z-index: 100;
 }
 header .container #nav .navbar .brand a {
@@ -639,6 +639,7 @@ header .container #nav .navbar .brand a {
 header .container #nav .navbar .brand a #logo {
   width: 125px;
   height: 125px;
+  top: -3%;
   margin: -20px auto;
 }
 header .container #nav .navbar .brand a .script {

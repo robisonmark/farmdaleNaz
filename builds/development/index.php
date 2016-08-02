@@ -1,5 +1,6 @@
 <?php 
 	require_once('./includes/functions.php');
+
 		render('/header');
 
 		render('/hero'); 
@@ -12,7 +13,7 @@
 
 		render('/blade-ministries');
 
-		// render('/about');
+	    // render('/about');
 		
 		render('/blade-beliefs');
 		
@@ -22,7 +23,7 @@
 
 		render('/map');
 
-		// render('/baseline');
+		// / render('/baseline');
 
 		render('/footer');	
 		// require_once('./views/footer.php'); 

@@ -1,0 +1,2 @@
+<?php
+function render($template, $data = array()) { $path = './views' . $template . '.php'; if (file_exists($path)) { require_once($path); } else { $path = './views' . $template . '.html'; if(file_exists($path)) { require_once($path); } } } ?>

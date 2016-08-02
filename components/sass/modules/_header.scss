@@ -28,7 +28,7 @@ header{
 				.brand{
 					margin-top: 15px;
 					position: absolute;
-					top: 0px;
+					top: -10px;
 					z-index: 100;
 					// margin-left: 1.2em;
 					// float: left;
@@ -43,6 +43,7 @@ header{
 						#logo {
 							width: 125px;
 							height: 125px;
+							top: -3%;
 							margin: -20px auto;
 						//	float: left;
 						}

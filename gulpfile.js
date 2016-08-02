@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
+    minifyPHP = require('gulp-php-minify'),
     concat = require('gulp-concat');
     path = require('path');
 
@@ -16,7 +17,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -35,7 +36,7 @@ jsSources = [
   'components/scripts/jquery-1.10.1.min.js',
   'components/scripts/script.js'
 ];
-sassSources = ['components/sass/style.scss'];
+sassSources = ['/components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
 gulp.task('js', function() {
@@ -57,7 +58,11 @@ gulp.task('compass', function() {
       style: sassStyle,
       require: ['susy', 'breakpoint']
     })
-    .on('error', gutil.log))
+    .on('error', function(err){
+        new gutil.PluginError('COMPASS', err, {showStack: true});
+      }
+        )
+      )
 //    .pipe(gulp.dest( outputDir + 'css'))
     .pipe(connect.reload())
 });
@@ -65,8 +70,8 @@ gulp.task('compass', function() {
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
   gulp.watch(['components/sass/*.scss', 'components/sass/*/*.scss'], ['compass']);
-  gulp.watch('builds/development/*.html', ['html']);
-  gulp.watch('builds/development/*.php', ['php']);
+  gulp.watch('builds/development/**/*.html', ['html']);
+  gulp.watch('builds/development/*/*.php', ['minify:php']);
 });
 
 gulp.task('connect', function() {
@@ -77,15 +82,16 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('builds/development/*.html')
+  gulp.src('builds/development/**/*.html')
     .pipe(gulpif(env === 'production', minifyHTML()))
     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
 
-gulp.task('php', function() {
-  gulp.src('builds/development/*.php')
+gulp.task('minify:php', function() { 
+  gulp.src('builds/development/**/*.php')
     .pipe(gulpif(env === 'production', minifyHTML()))
+    .pipe(gulpif(env === 'production', minifyPHP({binary: 'C:\\wamp\\bin\\php\\php5.6.19\\php.exe'})))
     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
@@ -97,4 +103,4 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect', 'minify:php']);
