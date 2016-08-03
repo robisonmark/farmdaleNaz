@@ -7,7 +7,46 @@
 			font-size: 1em;
 			//line-height: 130%;
 			text-align: center;
-		} 
+		}
+		.row{
+			.one{
+				.sunday{
+					text-align: left;
+					h3{
+						@media(max-width: $phone){
+							font-size: 26px;
+						}
+					}
+					p{
+						text-align: left;
+					}
+				}
+				.wednesday{
+					text-align: right;
+					h3{
+						@media(max-width: $phone){
+							font-size: 26px;
+						}
+					}
+					p{
+						text-align: right;
+					}
+					.hide{
+						@media(max-width: $medium){
+							display: none;
+							visibility: hidden;
+						}
+					}
+				}
+				.bold{
+					font-weight: $bold;
+					@media(max-width: 550px){
+						display: block;
+						padding: 1px 0 20px;
+					}
+				}
+			}
+		}
 		
 	}
 }
