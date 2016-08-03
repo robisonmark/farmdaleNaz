@@ -1,49 +1,14 @@
 $(function() {
-  // Accordion tabs
-
-  $('.picture')
-  // tile mouse actions
-  .on('mouseover', function(){
-    $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-  })
-  .on('mouseout', function(){
-    $(this).children('.photo').css({'transform': 'scale(1)'});
-  })
-  .on('mousemove', function(e){
-    $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-  })
-  // tiles set up
-  .each(function(){
-    $(this)
-      // add a photo container
-      .append('<div class="photo"></div>')
-      // some text just to show zoom level on current item in this example
-      // .append('<div class="txt"><div class="x">'+ $(this).attr('data-scale') +'x</div>ZOOM ON<br>HOVER</div>')
-      // set up a background image for each tile based on data-image attribute
-      .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-  })
-  
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-    }
-}
 
     var topoffset = 121;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
-
       $('.fullheight').css('height', wheight);
-
       $(window).resize(function() {
             var wheight =$(window).height(); //get height of window using jquery
             $('.fullheight').css('height', wheight);
-      }) //on resize
+      }); //on resize
 
 
 
@@ -103,7 +68,7 @@ for (i = 0; i < acc.length; i++) {
   //remove scroll down
   $(window).scroll(function() {
     var windowpos = $(window).scrollTop() + topoffset;
-     $(".arrow").fadeOut(400)
+     $(".arrow").fadeOut(400);
    });
 
 
@@ -114,11 +79,7 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 
-  //pin the navigation
-  var pin = new ScrollScene({
-    triggerElement: '#nav',
-    }).setPin('#nav').addTo(controller);
-  }); //on load
+
 
 // Hamburger Menu
 $('#toggle').click(function() {
@@ -132,41 +93,43 @@ $('#toggle').click(function() {
    $('#overlay').removeClass('open');
   });
 }
- 
-//  Vertical Tabs
 
 
-// Accordion tabs
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
+
+  $('.picture')
+
+  .on('mouseover', function(){
+    $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
+  })
+  .on('mouseout', function(){
+    $(this).children('.photo').css({'transform': 'scale(1)'});
+  })
+  .on('mousemove', function(e){
+    $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
+  })
+  // tiles set up
+  .each(function(){
+    $(this)
+      .append('<div class="photo"></div>')
+      .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
+  });
+  
+
+    twttr.widgets.createTimeline({
+      sourceType: "profile",
+      screenName: "farmdalenaz"
+    }, document.getElementById("twitter-news"));
+
+window.onload = function () {
+    var acc = document.getElementsByClassName( "accordion" );
+
+    for ( var j = 0; j < acc.length; j++ ) {
+        acc[j].onclick = function () {
+            this.classList.toggle( "active" );
+            this.nextElementSibling.classList.toggle( "show" );
+        }
     }
 }
 
-
-
-
-//close menu
-
-  // function closeSubMenu(){
-  //   $('.menu-item').removeClass('submenu-is-visible');
-  // }
-
-  // // Close menu on escape
-  // $('body').on('click keyup', function(event) {
-  //  if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-  //    if ($('body').hasClass('menu-open')) {
-  //      $(this).removeClass('menu-open');
-  //      $('#main-nav .menu-item-has-children').removeClass('submenu-is-visible');
-  //      $('.menu-con').removeClass('submenu-is-visible');
-  //    } else {
-  //      $('body').addClass('menu-open');
-  //    }
-  //  }
-  // });
-
-  //Mutiple hero pictures not stories
+  }); //on load
