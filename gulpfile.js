@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
     minifyPHP = require('gulp-php-minify'),
+    ftp = require('gulp-ftp'),
     concat = require('gulp-concat');
     path = require('path');
 
@@ -103,4 +104,17 @@ gulp.task('move', function() {
   .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
+gulp.task('ftp', function(){
+return gulp.src('src/*')
+        .pipe(ftp({
+            host: 'ftp.farmdalenaz.org',
+            user: 'marrob113',
+            pass: 'Baller.03'
+        }))
+        // you need to have some kind of stream after gulp-ftp to make sure it's flushed 
+        // this can be a gulp plugin, gulp.dest, or any kind of stream 
+        // here we use a passthrough stream 
+        .pipe(gutil.noop());
+
+}); 
 gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect', 'minify:php']);
