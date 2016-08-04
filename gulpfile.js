@@ -117,4 +117,4 @@ return gulp.src('src/*')
         .pipe(gutil.noop());
 
 }); 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'ftp', 'connect']);

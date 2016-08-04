@@ -42,48 +42,7 @@
 					</a>
 				</div>
 				<div class="update-column-content">
-					<?php 
-
-						include  '/home/marrob113/google-api-php-client/src/Google/autoload.php';
-						
-						$client = new Google_Client();
-						$client->setApplicationName("First Care CPR");
-						$client->setDeveloperKey("AIzaSyBs_-QQWSTiC_Ep0VkyyQ-z_Nw3cD2mpWA");
-
-						$service = new Google_Service_Calendar($client);
-
-						$calendarId = 'farmdalenaz@gmail.com';
-
-						$optParams = array(
-							'maxResults' => 10,
-							'orderBy' => 'startTime',
-							'singleEvents' => TRUE,
-							'timeMin' => date('c'),
-						);
-
-						$results = $service->events->listEvents($calendarId, $optParams);
-
-						if (count($results->getItems()) == 0) {
-							echo "<p> No Upcoming Events found. </p>";
-						} else {
-							foreach ($results->getItems() as $event) {
-								$start = $event->start->dateTime;
-								if (empty($start)) {
-									$start = $event->start->date;
-								}
-
-								$startdate = new  DateTime($start);
-								$enddate = new DateTime($event->end->dateTime);
-								$dateString = $startdate->format('M d Y');
-								$endDateString = $enddate->format('d/m/Y H:i:s');
-								$link = $event->getHtmlLink();
-								echo "<a href= ".$link."><span>".$dateString."</span><strong>".$event->getSummary()."<p>".$event->description."</p></a>";
-								//echo ."<br/>Start Time:".$dateString."<br/>End Time:". $endDateString."<br />Description: ". $event->description."<br>";
-							}
-
-						}
-
-					?>
+					
 					
 					
 					<!--<a href="https://www.csp.edu/event/2016-creation-conference/">

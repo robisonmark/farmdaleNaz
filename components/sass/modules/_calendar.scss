@@ -1,0 +1,57 @@
+.dp-cur, .chip dt, .te, .te-t, .te-rev-s, .rb-n, .rb-i, .agenda, .event-title{
+white-space:normal !important;
+}
+
+#container{
+	background-color: $light;
+	.calendar-container{
+		width: 70%;
+		margin: 109px  auto 0;
+		.header{
+			.date-controls{
+				.nav-table{
+					.date-nav-buttons{
+						width: 100%;
+						#navBack1{
+
+						}
+					}
+				}
+			}
+		}
+		.view-cap, .view-container-border {
+			background-color: $light;
+			.mv-daynames-table{
+				padding: 10px 0;
+
+				.mv-dayname{
+					font-size: 18px;
+					color: #121212;
+					font-family: $fontfamily;
+					background-color: $light;
+					text-align: center;
+				}
+			}
+			.mv-event-container{
+				top: 30px;
+			}
+		}
+		#mvEventContainer2{
+			.st-dtitle{
+				font-size: 13px;
+				color: $dark;
+			}
+			.st-dtitle-today{
+				background-color: $accent;
+				border: 1px solid $accent;
+			}
+			.st-bg-today{
+				background-color: $accent;
+				opacity: 0.3;
+				border: 1px solid $accent;
+				border-right: 1px solid $accent;
+				border-bottom: 1px solid $accent;
+			}
+		}
+	}
+}

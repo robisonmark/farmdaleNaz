@@ -206,6 +206,7 @@ p{
     outline: 0;
     text-align: center;
     transition: 0.45s;
+    outline: 0;
 
     i{
       margin-top: 8px;
@@ -268,13 +269,13 @@ p{
       font-size: 255px;
       opacity: 0.3;
       color: $darkpink;
-      left: 5%;
+      left: 21%;
       top: 17%;
       -ms-transform: rotate(7deg);
       -webkit-transform: rotate(7deg);
       transform: rotate(7deg);
        @media(max-width: $wide){
-        
+         left: 5%;
       }
     }
      .right-quote-mark{

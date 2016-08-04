@@ -1,10 +1,13 @@
 $(function() {
 
+
     var topoffset = 121;
 
 //window height
     var wheight = $(window).height(); //get height of window using jquery
+
       $('.fullheight').css('height', wheight);
+
       $(window).resize(function() {
             var wheight =$(window).height(); //get height of window using jquery
             $('.fullheight').css('height', wheight);
@@ -36,26 +39,40 @@ $(function() {
     if (windowpos > $('#new').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#new"]').addClass('active');
+       $("#toggle").removeClass('active');
+      $('#overlay').removeClass('open');
+
     } //windowpos
 
     if (windowpos > $('#events').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#events"]').addClass('active');
+       $("#toggle").removeClass('active');
+      $('#overlay').removeClass('open');
+
     } //windowpos
 
     if (windowpos > $('#ministries').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#ministries"]').addClass('active');
+       $("#toggle").removeClass('active');
+      $('#overlay').removeClass('open');
+
     } //windowpos
 
     if (windowpos > $('#beliefs').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#beliefs"]').addClass('active');
+       $("#toggle").removeClass('active');
+      $('#overlay').removeClass('open');
+
     } //windowpos
 
     if (windowpos > $('#staff').offset().top-1) {
       $('nav li a').removeClass('active');
       $('a[href$="#staff"]').addClass('active');
+       $("#toggle").removeClass('active');
+      $('#overlay').removeClass('open');
     } //windowpos
     
     // if (windowpos > $('#giving').offset().top-1) {
@@ -79,7 +96,11 @@ $(function() {
     }
   });
 
-
+  //pin the navigation
+  var pin = new ScrollScene({
+    triggerElement: '#nav',
+    }).setPin('#nav').addTo(controller)
+  }); //on load
 
 // Hamburger Menu
 $('#toggle').click(function() {
@@ -93,43 +114,20 @@ $('#toggle').click(function() {
    $('#overlay').removeClass('open');
   });
 }
+ 
+//  Vertical Tabs
 
 
+// Accordion tabs
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-
-  $('.picture')
-
-  .on('mouseover', function(){
-    $(this).children('.photo').css({'transform': 'scale('+ $(this).attr('data-scale') +')'});
-  })
-  .on('mouseout', function(){
-    $(this).children('.photo').css({'transform': 'scale(1)'});
-  })
-  .on('mousemove', function(e){
-    $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 +'%'});
-  })
-  // tiles set up
-  .each(function(){
-    $(this)
-      .append('<div class="photo"></div>')
-      .children('.photo').css({'background-image': 'url('+ $(this).attr('data-image') +')'});
-  });
-  
-
-    twttr.widgets.createTimeline({
-      sourceType: "profile",
-      screenName: "farmdalenaz"
-    }, document.getElementById("twitter-news"));
-
-window.onload = function () {
-    var acc = document.getElementsByClassName( "accordion" );
-
-    for ( var j = 0; j < acc.length; j++ ) {
-        acc[j].onclick = function () {
-            this.classList.toggle( "active" );
-            this.nextElementSibling.classList.toggle( "show" );
-        }
-    }
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+    };
 }
 
-  }); //on load
+
+

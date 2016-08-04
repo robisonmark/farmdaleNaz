@@ -54,6 +54,12 @@ header{
 							@media(max-width: $small){
 								display: none;
 							}
+
+							@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+							  img[src*=".svg"] {
+							    width: 100%; 
+							  }
+							}
 						}
 
 					} // a
