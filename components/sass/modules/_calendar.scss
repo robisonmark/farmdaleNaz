@@ -13,7 +13,9 @@ white-space:normal !important;
 					.date-nav-buttons{
 						width: 100%;
 						#navBack1{
-
+							img{
+								width: 100px;
+							}
 						}
 					}
 				}
@@ -27,9 +29,10 @@ white-space:normal !important;
 				.mv-dayname{
 					font-size: 18px;
 					color: #121212;
-					font-family: $fontfamily;
-					background-color: $light;
+					font-family: "Source Sans Pro", sans-serif;
+					background-color: #ff3d52;
 					text-align: center;
+					padding: 10px;
 				}
 			}
 			.mv-event-container{

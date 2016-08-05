@@ -37,7 +37,7 @@
 			</div> -->
 			<div class="update-column events-column">
 				<div class="update-header">Coming Up 
-					<a href="#" class="right" alt='google-cal'>
+					<a href="/events-full.php" class="right" alt='google-cal'>
 						<div class="btn-white">Full Calendar</div>
 					</a>
 				</div>
