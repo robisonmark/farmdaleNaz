@@ -1,0 +1,24 @@
+.dp-cur, .chip dt, .te, .te-t, .te-rev-s, .rb-n, .rb-i, .agenda, .event-title{
+white-space:normal !important;
+}
+
+.view-cap, .view-container-border {
+	background-color: #121212;
+}
+
+.mv-dayname{
+	font-size: 15px;
+	color: #121212;
+	font-family: $fontfamily;
+	background-color: $light;
+}
+
+.mv-daynames-table{
+	padding: 10px 0;
+}
+.mv-daynames-table{
+	top:38px;
+}
+.st-dtitle{
+	font-size: 13px
+}

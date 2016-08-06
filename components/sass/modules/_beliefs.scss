@@ -14,6 +14,12 @@
 				left: 50%;
 				top: 50%;
 				transform: translate(-50%, -50%);
+				@media(max-width: 767px){
+					top: 132px;
+					transform: inherit;
+					right: 0;
+					left: initial;
+				}
 				li{
 					padding: 15px 0;
 					font-weight: 500;
@@ -91,7 +97,7 @@
 					padding: 60px 25px;
 					h1{
 						width: 62%;
-						margin:auto;
+						padding: 25px;
 						&:after{
 							margin: 15px 0 0; 
 						}
@@ -99,8 +105,8 @@
 				}
 				.beliefs-content{
 					position: relative;
-					width: 80%; 
-					margin: auto;
+					width: 70%;
+					padding: 0 25px;
 					@include clearfix;
 					.tabcontent {
 						display: none;

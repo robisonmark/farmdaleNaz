@@ -1,0 +1,127 @@
+.dp-cur, .chip dt, .te, .te-t, .te-rev-s, .rb-n, .rb-i, .agenda, .event-title{
+white-space:normal !important;
+}
+
+#container{
+	background-color: $light;
+
+	.calendar-container{
+		width: 70%;
+		margin: 109px  auto 0;
+
+		.header{
+			.date-controls{
+				.nav-table{
+					.date-nav-buttons{
+						width: 100%;
+						.navBack,
+						.navForward{
+							background-image: none;
+						}
+						.navBack{
+							display: inline-block;
+							font: normal normal normal 14px/1 FontAwesome;
+							font-size: inherit;
+							text-rendering: auto;
+							-webkit-font-smoothing: antialiased;
+							-moz-osx-font-smoothing: grayscale;
+							&:before{
+								content: "\f104";
+							}
+						}
+						.ui-rtsr-unselected{
+							padding: 10px 15px;
+							background-color: rgba(255,163,37, 0.6);
+						}
+					}
+				}
+			}
+		}
+		table{
+			border-collapse: separate;
+			border-spacing: 10px;
+			td{
+				border: 0px;
+			}
+		}
+		.view-cap, .view-container-border {
+			background-color: $light;
+			.mv-daynames-table{
+				// padding: 10px 0;
+				border-collapse: collapse;
+				border-spacing: 0;
+				background-color: rgba(255,163,37, 0.6);
+
+				.mv-dayname{
+					font-size: 18px;
+					color: #121212;
+					font-family: "Source Sans Pro", sans-serif;
+					background-color: $light;
+					text-align: center;
+				//	background-color: rgba(255,163,37, 0.6);
+				//	padding: 10px;
+				}
+			}
+			.mv-event-container{
+				top: 30px;
+			}
+		}
+		#mvEventContainer2{
+			border-radius: 5px;
+			.st-dtitle{
+				font-size: 15px;
+				color: $dark;
+				padding: 10px;
+				background-color: #fff;
+				border-top: 1px solid rgba(255,163,37, 0.6);
+			}
+			.st-dtitle-today{
+				background-color: transparent;
+				border-top: 4px solid $accent;
+				border-right: 0px;
+				border-bottom: 0px;
+				border-left: 0px;
+			}
+			.st-bg-today{
+				background-color: transparent;
+				opacity: 0.3;
+				border: 0 solid $accent;
+				border-right: 0 solid $accent;
+				border-bottom: 0 solid $accent;
+			}
+		}
+		.bubble-table{
+			border-collapse: collapse;
+			border-spacing: 10px;
+			.bubble-mid{
+				.details{
+					.title{
+						color: $accent;
+					}
+				}
+				.detail-content{
+					.detail-item{
+						.event-when,
+						.event-description{
+							color: $dark;
+						}
+					}
+				}
+				.links{
+					a{
+						color: $pink;
+					}
+				}
+			}
+		}
+		#footer1{
+			#timezone{
+				color: $dark;
+			}
+			.subscribe-image{
+				display: none;
+				visibility: hidden;
+			}
+		}
+	}
+}

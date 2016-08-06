@@ -21,6 +21,13 @@
 			display: inline-block;
 			width: 66.6666667%;
 			float: left;
+
+			h3{
+				padding: 15px;
+			}
+			p{
+				padding: 15px;
+			}
 			@media(max-width: $small){
 					padding: 15px;
 					width:100%;
@@ -47,6 +54,8 @@
 				float: none;
 				width: 100%;
 				margin: auto;
+				position: initial
+
 			}
 
 			img{

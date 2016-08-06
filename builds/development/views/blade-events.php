@@ -88,9 +88,7 @@
 
 						}
 
-					?>
-					
-					
+					?>					
 					<a href="https://www.csp.edu/event/2016-creation-conference/">
 						<span>June 10, 2016</span>
 						<strong>2016 Creation Conference</strong>
