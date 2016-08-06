@@ -37,15 +37,15 @@
 			</div> -->
 			<div class="update-column events-column">
 				<div class="update-header">Coming Up 
-					<a href="#" class="right" alt='google-cal'>
+					<a href="/events-full.php" class="right" alt='google-cal'>
 						<div class="btn-white">Full Calendar</div>
 					</a>
 				</div>
 				<div class="update-column-content">
 					<?php 
 
-						include  '/home/marrob113/google-api-php-client/src/Google/autoload.php';
-						
+						include  '/var/www/google-api-php-client/src/Google/autoload.php';
+
 						$client = new Google_Client();
 						$client->setApplicationName("First Care CPR");
 						$client->setDeveloperKey("AIzaSyBs_-QQWSTiC_Ep0VkyyQ-z_Nw3cD2mpWA");
@@ -74,11 +74,16 @@
 
 								$startdate = new  DateTime($start);
 								$enddate = new DateTime($event->end->dateTime);
-								$dateString = $startdate->format('M d Y');
-								$endDateString = $enddate->format('d/m/Y H:i:s');
+								$dateString = $startdate->format('M d, Y');
 								$link = $event->getHtmlLink();
-								echo "<a href= ".$link."><span>".$dateString."</span><strong>".$event->getSummary()."<p>".$event->description."</p></a>";
-								//echo ."<br/>Start Time:".$dateString."<br/>End Time:". $endDateString."<br />Description: ". $event->description."<br>";
+								if(strlen($event->getDescription()) > 100) {
+									$shortDesc = substr($event->getDescription(),0,100);
+								}
+								else 
+								{
+									$shortDesc = $event->getDescription();
+								}
+								echo "<a href= ".$link."><span>".$dateString."</span><strong>".$event->getSummary()."<p>".$shortDesc."</p></a>";
 							}
 
 						}
@@ -86,12 +91,12 @@
 					?>
 					
 					
-					<!--<a href="https://www.csp.edu/event/2016-creation-conference/">
+					<a href="https://www.csp.edu/event/2016-creation-conference/">
 						<span>June 10, 2016</span>
 						<strong>2016 Creation Conference</strong>
 						<p>Concordia St. Paul will host the 4th annual Creation Conference, entitled, “The Origin of Humans, Adam and Eve: Myth or […]</p>
 					</a>
-					<a href="https://www.csp.edu/event/minnesota-private-college-week/">
+					<!--<a href="https://www.csp.edu/event/minnesota-private-college-week/">
 						<span>June 20, 2016</span>
 						<strong>Minnesota Private College Week</strong>
 						<p>A week that encourages you to explore all your college options. Along with other partnering private colleges in Minnesota, Concordia […]</p>
