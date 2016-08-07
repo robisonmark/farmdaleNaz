@@ -123,5 +123,71 @@ white-space:normal !important;
 				visibility: hidden;
 			}
 		}
+	}	
+}
+#containernew{
+	position: relative;
+	width: 100%;
+	top: 135px;
+	height: 90vh;
+	table {
+		width: 80%;
+		height: 80%;
+		margin: auto;
+		tbody{
+			tr{
+				align-content: center;	
+				.title{
+						// background-color: $darkpink;
+						color: $darkpink;
+						font-size: 1.5em;
+						align-content: center;
+						text-align: center;
+						font-weight: bold;
+				}
+				.day{
+					background-color: $darkpink;
+					color: $dark;
+
+				}
+				td{
+					background-color: $dark;
+					align-content: center;
+					text-align: center;
+					width: calc(100%/7);
+					height: 50px;
+					border-color: $light;
+					border: 4px;
+				}
+				.arrow{
+					background-color: $dark;
+					i{
+						color: $darkpink;
+						// background-color: $accent;
+						// border-radius: 55%;
+					}
+					
+
+
+				}
+				.lastMonth,
+				.nextMonth
+				{
+						background-color: $light;
+						color: $pink;
+				}
+				.today{
+					border-radius: 45%;
+					background-color: $accent;
+					color: $light;
+				}
+				.event{
+					a{
+						color: $light;
+					}
+				}
+
+			}
+		}	
 	}
 }

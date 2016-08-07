@@ -89,11 +89,6 @@
 						}
 
 					?>					
-					<a href="https://www.csp.edu/event/2016-creation-conference/">
-						<span>June 10, 2016</span>
-						<strong>2016 Creation Conference</strong>
-						<p>Concordia St. Paul will host the 4th annual Creation Conference, entitled, “The Origin of Humans, Adam and Eve: Myth or […]</p>
-					</a>
 					<!--<a href="https://www.csp.edu/event/minnesota-private-college-week/">
 						<span>June 20, 2016</span>
 						<strong>Minnesota Private College Week</strong>
@@ -119,14 +114,22 @@
 			<div class="update-column social-column">
 				<div class="update-header">Social</div>
 				<div class="update-column-content">
-				<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-  
-</div>
-					<div id="twitter-news"><ul></ul></div>
+				
+					<div id="twitter-news"><a class="twitter-timeline"
+  href="https://twitter.com/farmdaleNaz">
+Tweets by @farmdaleNaz
+</a></div>
+<div class="fb-page" data-href="https://www.facebook.com/farmdalenazarene" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/farmdalenazarene" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/farmdalenazarene">Farmdale Church of the Nazarene</a></blockquote></div>
+<?php
+	$request = new FacebookRequest(
+		$session,
+		'GET',
+		'/farmdaleNaz/feed'
+	);
+	$response = $request->execute();
+	$graphObject = $response->getGraphObject();
+	/* handle the result */
+?>
 				</div>
 			</div>
 			<div style="clear:both"></div>

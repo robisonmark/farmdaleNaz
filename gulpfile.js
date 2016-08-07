@@ -6,7 +6,7 @@ var gulp = require('gulp'),
     gulpif = require('gulp-if'),
     uglify = require('gulp-uglify'),
     minifyHTML = require('gulp-minify-html'),
-    // minifyPHP = require('gulp-php-minify'),
+    minifyPHP = require('gulp-php-minify'),
     ftp = require('gulp-ftp'),
     concat = require('gulp-concat');
     path = require('path');
@@ -18,7 +18,7 @@ var env,
     outputDir,
     sassStyle;
 
-env = 'development';
+env = 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';
@@ -89,13 +89,13 @@ gulp.task('html', function() {
     .pipe(connect.reload())
 });
 
-// gulp.task('minify:php', function() { 
-//   gulp.src('builds/development/**/*.php')
-//     .pipe(gulpif(env === 'production', minifyHTML()))
-//     .pipe(gulpif(env === 'production', minifyPHP({binary: 'C:\\wamp\\bin\\php\\php5.6.19\\php.exe'})))
-//     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
-//     .pipe(connect.reload())
-// });
+gulp.task('minify:php', function() { 
+  gulp.src('builds/development/**/*.php')
+    .pipe(gulpif(env === 'production', minifyHTML()))
+    .pipe(gulpif(env === 'production', minifyPHP({binary: 'C:\\wamp\\bin\\php\\php5.6.19\\php.exe'})))
+    .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
+    .pipe(connect.reload())
+});
 
 
 // Copy images to production
@@ -117,4 +117,4 @@ return gulp.src('src/*')
         .pipe(gutil.noop());
 
 }); 
-gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'ftp', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'compass', 'move', 'connect']);

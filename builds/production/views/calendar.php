@@ -1,23 +1,8 @@
-<div class="calendar">
-    <table class="calendar">
-        <thead>
-            <td></td>
-            <td></td>
-            <td></td>
-        </thead>
-        <tbody>
-            <tr class="daysHeader">
-                <td>Sun</td>
-                <td>Mon</td>
-                <td>Tue</td>
-                <td>Wed</td>
-                <td>Thu</td>
-                <td>Fri</td>
-                <td>Sat</td>
-            </tr>
+<body onload="pageLoaded()" style="background-color:#fff">
+<span id="calendarTitle">Farmdale Nazarene</span>
 
-        </tbody>
-    </table>
-</div>
-
-<div>
+<noscript><p></p>
+Your browser does not appear to support JavaScript, but this page needs to use JavaScript to display correctly.
+You can visit the HTML-only version of this page at:
+<a href="https://calendar.google.com/calendar/htmlembed?height=600&amp;amp;wkst=1&amp;amp;bgcolor=%23FFFFFF&amp;amp;ctz=America%2FNew_York">https://calendar.google.com/calendar/htmlembed?height=600&amp;amp;wkst=1&amp;amp;bgcolor=%23FFFFFF&amp;amp;ctz=America%2FNew_York</a></noscript>
+<div id="container" style="width:100%" class="locale-en "></div>

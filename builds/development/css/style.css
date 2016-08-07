@@ -859,13 +859,14 @@ header .container #nav .navbar ul li a.active {
   -moz-filter: blur(12px);
   -ms-filter: blur(12px);
   -o-filter: blur(12px);
+  -ms-filter: blur(12px);
   filter: blur(12px);
   transform: scale(1) translateY(20px);
 }
 .container .hero .mission-statement h2, .container .hero .mission-statement h3, .container .hero .mission-statement h4, .container .hero .mission-statement p, .container .hero .mission-statement ul li {
   position: relative;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
 }
 .container .hero .mission-statement h1 {
   color: #E4E4E4;
@@ -1356,6 +1357,9 @@ header .container #nav .navbar ul li a.active {
   display: inline-block;
   width: 30vw;
   margin: 1vw;
+}
+.container #events .News-Events-Con .update-columns .update-column a {
+  width: 100%;
 }
 @media (max-width: 960px) {
   .container #events .News-Events-Con .update-columns .update-column {
