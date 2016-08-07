@@ -117,9 +117,9 @@
 				
 					<div id="twitter-news"><a class="twitter-timeline"
   href="https://twitter.com/farmdaleNaz">
-Tweets by @farmdaleNaz
+
 </a></div>
-<div class="fb-page" data-href="https://www.facebook.com/farmdalenazarene" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/farmdalenazarene" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/farmdalenazarene">Farmdale Church of the Nazarene</a></blockquote></div>
+<div class="fb-page" data-href="https://www.facebook.com/farmdalenazarene" data-tabs="timeline,messages" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/farmdalenazarene" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/farmdalenazarene"></a></blockquote></div>
 <?php
 	$request = new FacebookRequest(
 		$session,
