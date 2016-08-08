@@ -104,12 +104,19 @@
 	            }
 
 	            .social-column{
+					margin: auto;
+					
 	                .update-header{
 	                    background-color: $darkpink;
 	                    opacity: 0.8;
 	                }
 	                .update-column-content {
-	                    a{
+	                    .fb_iframe_widget{
+							width: 100%;
+							// margin:auto;
+							padding: 0px 7%;
+						} 
+						a{
 	                        color: $pink;
 	                        span, p {
 	                            color: $dark;

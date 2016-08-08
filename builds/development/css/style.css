@@ -1358,9 +1358,6 @@ header .container #nav .navbar ul li a.active {
   width: 30vw;
   margin: 1vw;
 }
-.container #events .News-Events-Con .update-columns .update-column a {
-  width: 100%;
-}
 @media (max-width: 960px) {
   .container #events .News-Events-Con .update-columns .update-column {
     width: 40vw;
@@ -1403,6 +1400,9 @@ header .container #nav .navbar ul li a.active {
   position: relative;
   color: #121212;
 }
+.container #events .News-Events-Con .update-columns .update-column .update-column-content a {
+  width: 100%;
+}
 .container #events .News-Events-Con .update-columns .news-column .update-header {
   background-color: #ffa325;
   opacity: 0.8;
@@ -1431,9 +1431,16 @@ header .container #nav .navbar ul li a.active {
   display: block;
   padding-bottom: 10px;
 }
+.container #events .News-Events-Con .update-columns .social-column {
+  margin: auto;
+}
 .container #events .News-Events-Con .update-columns .social-column .update-header {
   background-color: #ffa325;
   opacity: 0.8;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .fb_iframe_widget {
+  width: 100%;
+  padding: 0px 7%;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-column-content a {
   color: #ff325d;
@@ -1771,4 +1778,58 @@ footer .legal {
 #container .calendar-container #footer1 .subscribe-image {
   display: none;
   visibility: hidden;
+}
+
+#containernew {
+  position: relative;
+  width: 100%;
+  top: 135px;
+  height: 90vh;
+}
+#containernew table {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+}
+#containernew table tbody tr {
+  align-content: center;
+}
+#containernew table tbody tr .title {
+  color: #ffa325;
+  font-size: 1.5em;
+  align-content: center;
+  text-align: center;
+  font-weight: bold;
+}
+#containernew table tbody tr .day {
+  background-color: #ffa325;
+  color: #121212;
+}
+#containernew table tbody tr td {
+  background-color: #121212;
+  align-content: center;
+  text-align: center;
+  width: calc(100%/7);
+  height: 50px;
+  border-color: #E4E4E4;
+  border: 4px;
+}
+#containernew table tbody tr .arrow {
+  background-color: #121212;
+}
+#containernew table tbody tr .arrow i {
+  color: #ffa325;
+}
+#containernew table tbody tr .lastMonth,
+#containernew table tbody tr .nextMonth {
+  background-color: #E4E4E4;
+  color: #ff325d;
+}
+#containernew table tbody tr .today {
+  border-radius: 45%;
+  background-color: #1098eb;
+  color: #E4E4E4;
+}
+#containernew table tbody tr .event a {
+  color: #E4E4E4;
 }
