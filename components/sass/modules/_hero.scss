@@ -37,6 +37,7 @@
 				-moz-filter: blur(12px);
 				-ms-filter: blur(12px);
 				-o-filter: blur(12px);
+				-ms-filter: blur(12px);
 				filter: blur(12px);
 				transform: scale(1) translateY(20px);
 			}//before
@@ -44,7 +45,7 @@
 			h2, h3, h4, p, ul li{
 				position: relative;
 				text-align: center;
-				z-index: 1;
+				z-index: 10;
 			}
 			h1 {
 				color: $light;
@@ -53,6 +54,7 @@
 
 				&:after{
 					display: none;
+
 				}
 
 				@media(max-width: $medium) {

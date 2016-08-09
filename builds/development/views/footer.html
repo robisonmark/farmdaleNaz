@@ -107,21 +107,22 @@
 				infowindow.open(map, marker);
 			});
 		}
-	</script>
-	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
-    <script>
-        $(document).ready(function() {
-            $('.belieflink').on('click', function(){
-                $(this).siblings().removeClass('isactive');
-                $(this).addClass('isactive');
-                id = $(this).attr('id');
-                idnum = id.split('-',2);
-                content = '#content-'+idnum[1];
-                currentActive = '#' + $('.is-active').attr('id');
-                $(currentActive).removeClass('is-active');
-                $(content).addClass('is-active');
-            });
-        });
-    </script> 
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk7lq66DIFHITWaGn6bfvCxOBXFZf6ajw&callback=initMap"
+		async defer></script>
+            <script>
+                $(document).ready(function() {
+                    $('.belieflink').on('click', function(){
+                        $(this).siblings().removeClass('isactive');
+                        $(this).addClass('isactive');
+                        id = $(this).attr('id');
+                        idnum = id.split('-',2);
+                        content = '#content-'+idnum[1];
+                        currentActive = '#' + $('.is-active').attr('id');
+                        $(currentActive).removeClass('is-active');
+                        $(content).addClass('is-active');
+                    });
+                });
+            </script> 
     </body>
  </html>
