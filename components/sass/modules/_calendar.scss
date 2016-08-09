@@ -14,9 +14,13 @@ white-space:normal !important;
 				.nav-table{
 					.date-nav-buttons{
 						width: 100%;
-						.navBack,
+						.navBack{
+							position: absolute;
+							top: 20%;
+							left: 5%;
+						}
 						.navForward{
-							background-image: none;
+							//background-image: none;
 						}
 						.navBack{
 							display: inline-block;
@@ -32,6 +36,14 @@ white-space:normal !important;
 						.ui-rtsr-unselected{
 							padding: 10px 15px;
 							background-color: rgba(255,163,37, 0.6);
+						}
+						#currentDate1 {
+						color: #121212;
+						/* text-align: center; */
+						position: absolute;
+						right: 425px;
+						font-size: 25px;
+						top: 17px;
 						}
 					}
 				}

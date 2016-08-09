@@ -37,9 +37,9 @@
 			</div> -->
 			<div class="update-column events-column">
 				<div class="update-header">Coming Up 
-					<a href="/events-full.php" class="right" alt='google-cal'>
+					<!-- <a href="/events-full.php" class="right" alt='google-cal'>
 						<div class="btn-white">Full Calendar</div>
-					</a>
+					</a> -->
 				</div>
 				<div class="update-column-content">
 					
@@ -81,7 +81,7 @@
   data-width="450"
   data-show-faces="true">
   
-</div>
+</div>				<div id="facebook"><ul></ul></div>
 					<div id="twitter-news"><ul></ul></div>
 				</div>
 			</div>

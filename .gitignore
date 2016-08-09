@@ -2,3 +2,7 @@ npm-debug.log
 node_modules/*
 .sass-cache/*
 gulpfile.js
+vendor
+composer.lock
+composer.json
+google-cal-js
