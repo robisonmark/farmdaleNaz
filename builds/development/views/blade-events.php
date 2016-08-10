@@ -42,7 +42,7 @@
 					</a>
 				</div>
 				<div class="update-column-content">
-					<?php  include '/var/www/google-api-php-client/src/Google/autoload.php'; $client = new Google_Client(); $client->setApplicationName("First Care CPR"); $client->setDeveloperKey("AIzaSyBs_-QQWSTiC_Ep0VkyyQ-z_Nw3cD2mpWA"); $service = new Google_Service_Calendar($client); $calendarId = 'farmdalenaz@gmail.com'; $optParams = array( 'maxResults' => 10, 'orderBy' => 'startTime', 'singleEvents' => TRUE, 'timeMin' => date('c'), ); $results = $service->events->listEvents($calendarId, $optParams); if (count($results->getItems()) == 0) { echo "<p> No Upcoming Events found. </p>"; } else { foreach ($results->getItems() as $event) { $start = $event->start->dateTime; if (empty($start)) { $start = $event->start->date; } $startdate = new DateTime($start); $enddate = new DateTime($event->end->dateTime); $dateString = $startdate->format('M d, Y'); $link = $event->getHtmlLink(); if(strlen($event->getDescription()) > 100) { $shortDesc = substr($event->getDescription(),0,100); } else { $shortDesc = $event->getDescription(); } echo "<a href= ".$link."><span>".$dateString."</span><strong>".$event->getSummary()."<p>".$shortDesc."</p></a>"; } } ?>					
+<!--  -->
 					<!--<a href="https://www.csp.edu/event/minnesota-private-college-week/">
 						<span>June 20, 2016</span>
 						<strong>Minnesota Private College Week</strong>
@@ -65,17 +65,62 @@
 					</a>-->
 				</div>
 			</div>
-			<div class="update-column social-column">
-				<div class="update-header">Social</div>
+			<div class="update-column social-column"
+>				<div class="update-header">Social</div>
 				<div class="update-column-content">
 				
 					<div id="twitter-news"><a class="twitter-timeline"
   href="https://twitter.com/farmdaleNaz">
 
 </a></div>
-<div class="fb-page" data-href="https://www.facebook.com/farmdalenazarene" data-tabs="timeline,messages" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false"><blockquote cite="https://www.facebook.com/farmdalenazarene" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/farmdalenazarene"></a></blockquote></div>
-<?php
- $request = new FacebookRequest( $session, 'GET', '/farmdaleNaz/feed' ); $response = $request->execute(); $graphObject = $response->getGraphObject(); ?>
+
+
+					 <?php 
+
+					 require_once __DIR__ . '/FacebookSDK/src/Facebook/autoload.php';
+						 
+						$fbData = array(
+						    'consumer_key' => '899573700188778',
+						    'consumer_secret' => '58ac3af2917c71027795c0dd7f966ddc',
+						    'default_graph_version' => 'v2.7'
+						);
+						 
+						$fb = new Facebook\Facebook($fbData);
+						 
+						$helper = $fb->getRedirectLoginHelper();
+						try {
+						  $accessToken = $helper->getAccessToken();
+						 
+						  // this token will be valid for next 2 hours
+						 
+						} catch(Facebook\Exceptions\FacebookResponseException $e) {
+						  // When Graph returns an error
+						  echo 'Graph returned an error: ' . $e->getMessage();
+						  exit;
+						} catch(Facebook\Exceptions\FacebookSDKException $e) {
+						  // When validation fails or other local issues
+						  echo 'Facebook SDK returned an error: ' . $e->getMessage();
+						  exit;
+						}
+						// $page_id = '385515538258712';
+						// $accessToken = new Facebook\Authentication\AccessToken('{example-access-token}', $expires);
+						// $access_token = 'EAACEdEose0cBAA173OA5oCkA3iDShbntvcymGHn1zDUZCFvrZAxf6V3ppGkFOQOpcu1LolfryxROVwRwVi0EaO9wrvWruWnNYIt6eEZBSD6u9NXp9qILWC5LAnns1smnmUcyWgX9ZAC0NDDkL8j65w0paE2BJwHXjmH98zJTlAZDZD';
+						// //Get the JSON
+						// $json_object = file_get_contents('https://graph.facebook.com/' . $page_id . '/posts?access_token=' . $access_token);
+						// //Interpret data
+						// $fbdata = json_decode($json_object);
+						// // foreach ($fbdata->data as $post )
+						// // 	{
+						// // 		$posts .= '<p><a href="' . $post->link . '">' . $post->story . '</a></p>';
+						// // 		$posts .= '<p><a href="' . $post->link . '">' . $post->message . '</a></p>';
+						// // 		$posts .= '<p>' . $post->description . '</p>';
+						// // 		$posts .= '<br />';
+						// // 	}
+						// 	print_r($fbdata);
+						// //Display the posts
+						
+						?>
+
 				</div>
 			</div>
 			<div style="clear:both"></div>
