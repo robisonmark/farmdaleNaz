@@ -75,51 +75,39 @@
 </a></div>
 
 
-					 <?php 
 
-					 require_once __DIR__ . '/FacebookSDK/src/Facebook/autoload.php';
-						 
-						$fbData = array(
-						    'consumer_key' => '899573700188778',
-						    'consumer_secret' => '58ac3af2917c71027795c0dd7f966ddc',
-						    'default_graph_version' => 'v2.7'
-						);
-						 
-						$fb = new Facebook\Facebook($fbData);
-						 
-						$helper = $fb->getRedirectLoginHelper();
-						try {
-						  $accessToken = $helper->getAccessToken();
-						 
-						  // this token will be valid for next 2 hours
-						 
-						} catch(Facebook\Exceptions\FacebookResponseException $e) {
-						  // When Graph returns an error
-						  echo 'Graph returned an error: ' . $e->getMessage();
-						  exit;
-						} catch(Facebook\Exceptions\FacebookSDKException $e) {
-						  // When validation fails or other local issues
-						  echo 'Facebook SDK returned an error: ' . $e->getMessage();
-						  exit;
-						}
-						// $page_id = '385515538258712';
-						// $accessToken = new Facebook\Authentication\AccessToken('{example-access-token}', $expires);
-						// $access_token = 'EAACEdEose0cBAA173OA5oCkA3iDShbntvcymGHn1zDUZCFvrZAxf6V3ppGkFOQOpcu1LolfryxROVwRwVi0EaO9wrvWruWnNYIt6eEZBSD6u9NXp9qILWC5LAnns1smnmUcyWgX9ZAC0NDDkL8j65w0paE2BJwHXjmH98zJTlAZDZD';
-						// //Get the JSON
-						// $json_object = file_get_contents('https://graph.facebook.com/' . $page_id . '/posts?access_token=' . $access_token);
-						// //Interpret data
-						// $fbdata = json_decode($json_object);
-						// // foreach ($fbdata->data as $post )
-						// // 	{
-						// // 		$posts .= '<p><a href="' . $post->link . '">' . $post->story . '</a></p>';
-						// // 		$posts .= '<p><a href="' . $post->link . '">' . $post->message . '</a></p>';
-						// // 		$posts .= '<p>' . $post->description . '</p>';
-						// // 		$posts .= '<br />';
-						// // 	}
-						// 	print_r($fbdata);
-						// //Display the posts
-						
-						?>
+
+<?php
+//Set your App ID and App Secret.
+$appID = '899573700188778';
+$appSecret = '58ac3af2917c71027795c0dd7f966ddc';
+ 
+//Create an access token using the APP ID and APP Secret.
+$accessToken = $appID . '|' . $appSecret;
+ 
+//The ID of the Facebook page in question.
+$id = 'farmdalenazarene';
+ 
+//Tie it all together to construct the URL
+$url = "https://graph.facebook.com/$id/posts?access_token=$accessToken";
+ 
+//Make the API call
+$result = file_get_contents($url);
+ 
+//Decode the JSON result.
+$fbdata = json_decode($result, false);
+print_r($fbdata);
+ 
+foreach ($fbdata['data'] as $key=>$val )
+{
+?>
+    <li>
+    <p> <?php echo $val['message'] ?> </p>
+         <p> <?php echo $val['created_time'] ?> </p>
+    </li>
+<?php
+}
+?>
 
 				</div>
 			</div>
@@ -129,3 +117,5 @@
 </div>
 
 </div>
+
+http://johnsvensson.com/2013/12/16/website-facebook-feed-take-2-a-more-robust-way/

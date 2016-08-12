@@ -50,12 +50,39 @@
 				border: none;
 				outline: none;
 				transition: 0.4s;
+				i{
+					position: absolute;
+					right: 1%;
+					top: 30%;
+					font-size: 30px;
+					transition: 0.25s;
+					&:before{
+						color: @jackson-aqua;
+					}
+					&.fa-minus{
+						display: none;
+						visibility: hidden;
+						transition: 0.25s;
+					}
+				}
 			}
-
-			/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-			button.accordion.active, button.accordion:hover {
+			button.accordion:hover {
 				background-color: rgba(42,42,42,0.4);
 			}
+			button.accordion.active {
+				border: 0px;
+				.fa-plus{
+					display: none;
+					visibility: hidden;
+				}
+				.fa-minus{
+					display: inline-block;
+					visibility: visible;
+				}
+			}
+		}
+
+			/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 
 			div.panel {
 				padding: 0 18px;
