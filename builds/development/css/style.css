@@ -862,6 +862,7 @@ header .container #nav .navbar ul li a.active {
   -ms-filter: blur(12px);
   filter: blur(12px);
   transform: scale(1) translateY(20px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='12');
 }
 .container .hero .mission-statement h2, .container .hero .mission-statement h3, .container .hero .mission-statement h4, .container .hero .mission-statement p, .container .hero .mission-statement ul li {
   position: relative;
@@ -1049,6 +1050,7 @@ header .container #nav .navbar ul li a.active {
   background-position: center;
   min-height: 100vh;
   position: relative;
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
 .new #new .con-new {
   max-width: 45vw;
@@ -1058,7 +1060,6 @@ header .container #nav .navbar ul li a.active {
   top: 150px;
   border-radius: 5px;
   margin-bottom: 130px;
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 }
 .new #new .con-new:before, .new #new .con-new:after {
   content: '';
@@ -1099,10 +1100,36 @@ header .container #nav .navbar ul li a.active {
   outline: none;
   transition: 0.4s;
 }
-.new #new .con-new button.accordion.active, .new #new .con-new button.accordion:hover {
+.new #new .con-new button.accordion i {
+  position: absolute;
+  right: 1%;
+  top: 30%;
+  font-size: 30px;
+  transition: 0.25s;
+}
+.new #new .con-new button.accordion i:before {
+  color: #ff325d;
+}
+.new #new .con-new button.accordion i.fa-minus {
+  display: none;
+  visibility: hidden;
+  transition: 0.25s;
+}
+.new #new .con-new button.accordion:hover {
   background-color: rgba(42, 42, 42, 0.4);
 }
-.new #new .con-new div.panel {
+.new #new .con-new button.accordion.active {
+  border: 0px;
+}
+.new #new .con-new button.accordion.active .fa-plus {
+  display: none;
+  visibility: hidden;
+}
+.new #new .con-new button.accordion.active .fa-minus {
+  display: inline-block;
+  visibility: visible;
+}
+.new #new div.panel {
   padding: 0 18px;
   background-color: rgba(255, 255, 255, 0.8);
   max-height: 0;
@@ -1111,19 +1138,19 @@ header .container #nav .navbar ul li a.active {
   opacity: 0;
   color: #121212;
 }
-.new #new .con-new div.panel.show {
+.new #new div.panel.show {
   opacity: 1;
   max-height: 500px;
   /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
 }
-.new #new .con-new div.panel.show:before, .new #new .con-new div.panel.show:after {
+.new #new div.panel.show:before, .new #new div.panel.show:after {
   content: '';
   display: table;
 }
-.new #new .con-new div.panel.show:after {
+.new #new div.panel.show:after {
   clear: both;
 }
-.new #new .con-new a .btn_light {
+.new #new a .btn_light {
   width: 220px;
   max-width: 220px;
   padding: 15px 20px;

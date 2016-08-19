@@ -89,25 +89,27 @@ $accessToken = $appID . '|' . $appSecret;
 $id = 'farmdalenazarene';
  
 //Tie it all together to construct the URL
-$url = "https://graph.facebook.com/$id/posts?access_token=$accessToken";
+$url = "https://graph.facebook.com/$id/?fields=posts{attachments}&access_token=$accessToken";
  
 //Make the API call
-$result = file_get_contents($url);
+$result = @file_get_contents($url);
  
 //Decode the JSON result.
-$fbdata = json_decode($result, false);
-print_r($fbdata);
- 
-foreach ($fbdata['data'] as $key=>$val )
-{
-?>
-    <li>
-    <p> <?php echo $val['message'] ?> </p>
-         <p> <?php echo $val['created_time'] ?> </p>
-    </li>
-<?php
-}
-?>
+$fbdata = json_decode($result, true);
+
+// print_r($fbdata);
+
+
+
+    foreach($fbdata['posts']['data'] as $post){
+    	foreach($post->attachments->data as $feed){
+    		echo($feed->media->image->src);
+    	}
+    }
+      
+  ?>
+
+
 
 				</div>
 			</div>
@@ -117,5 +119,24 @@ foreach ($fbdata['data'] as $key=>$val )
 </div>
 
 </div>
-
+<!-- https://graph.facebook.com/fql?q=SELECT+message,attachment+FROM+stream+WHERE+source_id=farmdalenazarene&access_token=899573700188778|58ac3af2917c71027795c0dd7f966ddc
 http://johnsvensson.com/2013/12/16/website-facebook-feed-take-2-a-more-robust-way/
+
+
+// the way it should be written - figure out how to pull the facebook sdk so that it can pull the request
+
+$request = new FacebookRequest(
+  $session,
+  'GET',
+  '/farmdalenazarene/',
+  array(
+    'fields' => 'posts{attachments}',
+    'access_token' => '899573700188778|58ac3af2917c71027795c0dd7f966ddc'
+  )
+);
+
+$response = $request->execute();
+$graphObject = $response->getGraphObject();
+/* handle the result */
+
+-->

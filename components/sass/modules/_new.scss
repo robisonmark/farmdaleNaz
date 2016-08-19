@@ -57,7 +57,7 @@
 					font-size: 30px;
 					transition: 0.25s;
 					&:before{
-						color: @jackson-aqua;
+						color: $pink;
 					}
 					&.fa-minus{
 						display: none;
@@ -109,7 +109,7 @@
 			}
 		}
 	}
-}
+
 // #new {
 // 	background-image: url('../images/Photo-Banner/easter1.jpg');
 // 	background-size: cover;
