@@ -89,7 +89,7 @@ $accessToken = $appID . '|' . $appSecret;
 $id = 'farmdalenazarene';
  
 //Tie it all together to construct the URL
-$url = "https://graph.facebook.com/$id/?fields=posts{attachments}&access_token=$accessToken";
+$url = "https://graph.facebook.com/$id/?fields=name,picture,posts{attachments},tagged&access_token=$accessToken";
  
 //Make the API call
 $result = @file_get_contents($url);
@@ -97,14 +97,22 @@ $result = @file_get_contents($url);
 //Decode the JSON result.
 $fbdata = json_decode($result, true);
 
-// print_r($fbdata);
+ // print_r($fbdata['posts']['data'][0][0]['description']);
 
 
 
     foreach($fbdata['posts']['data'] as $post){
-    	foreach($post->attachments->data as $feed){
-    		echo($feed->media->image->src);
-    	}
+    	 foreach($post['attachments']['data'] as $feed)
+    		?><ul>
+    			<li style="margin: 30px 0;">
+    			<?php if(isset($feed['media']['image']['src'])) ?>
+    				<img style="width: 200px; height: 200px; display: inline-block;"src="<?php echo($feed['media']['image']['src']); ?>">
+    				<?php if(isset($feed['description'])) ?>
+    					<p style="width: 60%; display: inline-block; padding: 0 25px;"><?php echo($feed['description']); ?></p>
+
+    			</li>
+    		</ul>
+<?php
     }
       
   ?>
