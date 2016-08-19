@@ -72,7 +72,7 @@
 					<div id="twitter-news"><a class="twitter-timeline"
   href="https://twitter.com/farmdaleNaz">
 
-</a></div>
+</a>
 
 
 
@@ -97,27 +97,34 @@ $result = @file_get_contents($url);
 //Decode the JSON result.
 $fbdata = json_decode($result, true);
 
- // print_r($fbdata['posts']['data'][0][0]['description']);
+ print_r( $fbdata['picture']['data']['url']);
 
-
-
+?>
+<ul>
+<?php
     foreach($fbdata['posts']['data'] as $post){
-    	 foreach($post['attachments']['data'] as $feed)
-    		?><ul>
+    	 foreach($post['attachments']['data'] as $feed){
+    		?>
     			<li style="margin: 30px 0;">
     			<?php if(isset($feed['media']['image']['src'])) ?>
-    				<img style="width: 200px; height: 200px; display: inline-block;"src="<?php echo($feed['media']['image']['src']); ?>">
-    				<?php if(isset($feed['description'])) ?>
-    					<p style="width: 60%; display: inline-block; padding: 0 25px;"><?php echo($feed['description']); ?></p>
-
+    				<div style="width: 200px; height: 200px; vertical-align: top; display: inline-block; background-image: url('<?php echo($feed['media']['image']['src'])?>');"></div>
+    			<?php if(isset($feed['description'])) ?>
+    					<div class="message" style="width: 55%; display: inline-block; padding: 0 0px;">
+							<img style="vertical-align: top; display: inline-block;" src="https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/1526737_385516424925290_1922518348_n.jpg?oh=9d1662225e83300f99a5584a063b8155&oe=584DEF3F" />
+    						<h4 style="vertical-align: top; display: inline-block;">Farmdale Nazarene</h4>
+    						<p style="display:block;"><?php echo($feed['description']); ?></p>
+    					</div>
     			</li>
-    		</ul>
+    	
+
+
 <?php
     }
-      
+   }   
   ?>
 
-
+	</ul>
+	</div>
 
 				</div>
 			</div>

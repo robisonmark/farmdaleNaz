@@ -1420,8 +1420,6 @@ header .container #nav .navbar ul li a.active {
   width: 100%;
   box-sizing: border-box;
   overflow-y: scroll;
-  overflow-y: hidden;
-  overflow-x: hidden;
   text-align: left;
   padding: 30px;
   position: relative;
