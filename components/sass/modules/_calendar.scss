@@ -182,7 +182,7 @@ white-space:normal !important;
 
 				}
 				td{
-					background-color: $dark;
+					color: $dark;
 					align-content: center;
 					width: calc(100%/7);
 					height: 50px;
@@ -192,8 +192,20 @@ white-space:normal !important;
 						text-align: right;
 						vertical-align: top;
 						padding: 5px;
+						border-top: 2px solid rgba(255,163,37, 0.6);
+						//border-radius: 5px;
 						&.event{
-							text-align: center;
+							a{
+								text-align: center;
+								color: $dark;
+								outline: 0;
+								font-size: 14px;
+							}
+						}
+						&.today{
+							border-top: 4px solid $accent;
+						//	border-radius: 5px;
+							color: $dark;
 						}
 					}
 				}
@@ -213,12 +225,10 @@ white-space:normal !important;
 				{
 						background-color: $light;
 						color: $pink;
+						border-top: 2px solid $pink;
+						border-radius: 5px;
 				}
-				.today{
-					border-radius: 45%;
-					background-color: $accent;
-					color: $light;
-				}
+			
 				.event{
 					a{
 						color: $light;

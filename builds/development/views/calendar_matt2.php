@@ -102,7 +102,7 @@
                         
                         while(($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime']))) 
                         {
-                            echo ' event">'.($i-$monthBeginDayOfWeek + 1).'<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a></td>";
+                          echo ' event ' .$events[$j]->getColorID() . '">'.($i-$monthBeginDayOfWeek + 1).'<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a></td>";
                             $j++;
                         }
                     }

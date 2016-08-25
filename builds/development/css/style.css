@@ -1874,7 +1874,7 @@ footer .legal {
   color: #121212;
 }
 #containernew table tbody tr td {
-  background-color: #121212;
+  color: #121212;
   align-content: center;
   width: calc(100%/7);
   height: 50px;
@@ -1885,9 +1885,17 @@ footer .legal {
   text-align: right;
   vertical-align: top;
   padding: 5px;
+  border-top: 2px solid rgba(255, 163, 37, 0.6);
 }
-#containernew table tbody tr td.currentMonth.event {
+#containernew table tbody tr td.currentMonth.event a {
   text-align: center;
+  color: #121212;
+  outline: 0;
+  font-size: 14px;
+}
+#containernew table tbody tr td.currentMonth.today {
+  border-top: 4px solid #1098eb;
+  color: #121212;
 }
 #containernew table tbody tr .arrow i {
   color: #ffa325;
@@ -1896,11 +1904,8 @@ footer .legal {
 #containernew table tbody tr .nextMonth {
   background-color: #E4E4E4;
   color: #ff325d;
-}
-#containernew table tbody tr .today {
-  border-radius: 45%;
-  background-color: #1098eb;
-  color: #E4E4E4;
+  border-top: 2px solid #ff325d;
+  border-radius: 5px;
 }
 #containernew table tbody tr .event a {
   color: #E4E4E4;
