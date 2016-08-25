@@ -109,6 +109,30 @@
 	                    opacity: 0.8;
 	                }
 	                .update-column-content {
+	                	.social-photo{
+	                		width: 200px; 
+	                		height: auto; 
+	                		vertical-align: top; 
+	                		display: inline-block;
+	                		background-size: contain; 
+	                		background-repeat: no-repeat;
+	                		.message{
+	                			width: 55%; 
+	                			display: inline-block; 
+	                			padding: 0 0px;
+	                			.profile-pic{
+	                				vertical-align: top; 
+	                				display: inline-block;
+	                			}
+	                			.posted-by{
+	                				vertical-align: top; 
+	                				display: inline-block;
+	                			}
+	                			.time-ago{
+	                				display:inline-block;
+	                			}
+	                		}
+	                	}
 	                    .fb_iframe_widget{
 							width: 100%;
 							// margin:auto;

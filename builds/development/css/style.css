@@ -1463,6 +1463,30 @@ header .container #nav .navbar ul li a.active {
   background-color: #ffa325;
   opacity: 0.8;
 }
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo {
+  width: 200px;
+  height: auto;
+  vertical-align: top;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message {
+  width: 55%;
+  display: inline-block;
+  padding: 0 0px;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .profile-pic {
+  vertical-align: top;
+  display: inline-block;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .posted-by {
+  vertical-align: top;
+  display: inline-block;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .time-ago {
+  display: inline-block;
+}
 .container #events .News-Events-Con .update-columns .social-column .update-column-content .fb_iframe_widget {
   width: 100%;
   padding: 0px 7%;
@@ -1814,26 +1838,36 @@ footer .legal {
   visibility: hidden;
 }
 
+.dayDetail {
+  white-space: normal !important;
+}
+
 #containernew {
   position: relative;
   width: 100%;
   top: 135px;
   height: 90vh;
+  background-color: #E4E4E4;
 }
 #containernew table {
   width: 80%;
-  height: 80%;
   margin: auto;
+  border-collapse: separate;
+  border-spacing: 10px;
 }
 #containernew table tbody tr {
   align-content: center;
 }
 #containernew table tbody tr .title {
-  color: #ffa325;
+  background-color: #E4E4E4;
+  color: #121212;
   font-size: 1.5em;
   align-content: center;
   text-align: center;
   font-weight: bold;
+}
+#containernew table tbody tr .title.arrow {
+  font-size: 1em;
 }
 #containernew table tbody tr .day {
   background-color: #ffa325;
@@ -1842,14 +1876,18 @@ footer .legal {
 #containernew table tbody tr td {
   background-color: #121212;
   align-content: center;
-  text-align: center;
   width: calc(100%/7);
   height: 50px;
   border-color: #E4E4E4;
   border: 4px;
 }
-#containernew table tbody tr .arrow {
-  background-color: #121212;
+#containernew table tbody tr td.currentMonth {
+  text-align: right;
+  vertical-align: top;
+  padding: 5px;
+}
+#containernew table tbody tr td.currentMonth.event {
+  text-align: center;
 }
 #containernew table tbody tr .arrow i {
   color: #ffa325;

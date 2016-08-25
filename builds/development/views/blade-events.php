@@ -89,7 +89,7 @@ $accessToken = $appID . '|' . $appSecret;
 $id = 'farmdalenazarene';
  
 //Tie it all together to construct the URL
-$url = "https://graph.facebook.com/$id/?fields=name,picture,posts{attachments},tagged&access_token=$accessToken";
+$url = "https://graph.facebook.com/$id/?fields=name,picture,posts.limit(10){attachments,created_time},tagged&access_token=$accessToken";
  
 //Make the API call
 $result = @file_get_contents($url);
@@ -97,21 +97,68 @@ $result = @file_get_contents($url);
 //Decode the JSON result.
 $fbdata = json_decode($result, true);
 
- print_r( $fbdata['picture']['data']['url']);
-
 ?>
 <ul>
-<?php
-    foreach($fbdata['posts']['data'] as $post){
-    	 foreach($post['attachments']['data'] as $feed){
+
+		
+    						
+    
+     <?php foreach($fbdata['posts']['data'] as $post){?>
+
+    	
+    						
+    	
+    	<?php foreach($post['attachments']['data'] as $feed){
     		?>
     			<li style="margin: 30px 0;">
     			<?php if(isset($feed['media']['image']['src'])){ ?>
-    				<div style="width: 200px; height: 200px; vertical-align: top; display: inline-block; background-image: url('<?php echo($feed['media']['image']['src'])?>'); background-size: contain; background-repeat: no-repeat;"></div>
+    				<div class="social-photo" style=" background-image: url('<?php echo($feed['media']['image']['src'])?>');"></div>
 	    			<?php if(isset($feed['description'])) {?>
-    					<div class="message" style="width: 55%; display: inline-block; padding: 0 0px;">
-							<img style="vertical-align: top; display: inline-block;" src="https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/1526737_385516424925290_1922518348_n.jpg?oh=9d1662225e83300f99a5584a063b8155&oe=584DEF3F" />
-    						<h4 style="vertical-align: top; display: inline-block;">Farmdale Nazarene</h4>
+    					<div class="message">
+							<img class="profile-pic" src="https://scontent.xx.fbcdn.net/v/t1.0-1/c0.0.50.50/p50x50/1526737_385516424925290_1922518348_n.jpg?oh=9d1662225e83300f99a5584a063b8155&oe=584DEF3F" />
+    						<h4 class="posted-by">Farmdale Nazarene</h4>
+    						<p class="time-ago"><?php 
+
+    						$dateCreated =  new DateTime($post['created_time']);
+    						$dateNow = new DateTime();
+
+    						$dteDiff  = $dateCreated->diff($dateNow)->format('%d days ago'); 
+    						// if($dteDiff >= 7){
+    						// 	echo $dteDiff->format('%m');
+    						// }
+    						print_r($dteDiff); 
+
+    			// 			function RelativeTime( $dateCreated ){
+							// 	if( !is_numeric( $dateCreated ) ){
+							// 		$dateCreated = strtotime( $dateCreated );
+							// 		if( !is_numeric( $dateCreated ) ){
+							// 			return "";
+							// 		}
+							// 	}
+							 
+							// 	$difference = time() - $dateCreated;
+							//         // Customize in your own language.
+							// 	$periods = array( "sec", "min", "hour", "day", "week", "month", "years", "decade" );
+							// 	$lengths = array( "60","60","24","7","4.35","12","10");
+							 
+							// 	if ($difference > 0) { // this was in the past
+							// 		$ending = "ago";
+							// 	}else { // this was in the future
+							// 		$difference = -$difference;
+							// 		$ending = "to go";
+							// 	}
+							// 	for( $j=0; $difference>=$lengths[$j] and $j < 7; $j++ )
+							// 		$difference /= $lengths[$j];
+							// 	$difference = round($difference);
+							// 	if( $difference != 1 ){
+							//                 // Also change this if needed for an other language
+							// 		$periods[$j].= "s";
+							// 	}
+							// 	$text = "$difference $periods[$j] $ending";
+							// 	return $text;
+							// }
+
+    						?></p>
     						<p style="display:block;"><?php echo($feed['description']); ?></p>
     					</div>
     					<?php }  elseif (!isset($feed['description'])){ ?>
@@ -128,7 +175,8 @@ $fbdata = json_decode($result, true);
 
 <?php
     }
-   }   
+   }  
+
   ?>
 
 	</ul>

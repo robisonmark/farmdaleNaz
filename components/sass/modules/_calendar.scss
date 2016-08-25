@@ -137,25 +137,44 @@ white-space:normal !important;
 		}
 	}	
 }
+.dayDetail{
+	white-space: normal !important;
+}
+
 #containernew{
 	position: relative;
 	width: 100%;
 	top: 135px;
 	height: 90vh;
+	background-color: $light;
+
 	table {
 		width: 80%;
-		height: 80%;
+		
 		margin: auto;
+		// &.table-tophat{
+		// 	background-color: rgba(255,163,37, 0.6);
+		// 	border-collapse: collapse;
+		// }
+		// &.table-dayname{
+			border-collapse: separate;
+			border-spacing: 10px;
+		// }
+			
 		tbody{
 			tr{
-				align-content: center;	
+				align-content: center;
 				.title{
-						// background-color: $darkpink;
-						color: $darkpink;
+						background-color: $light;
+						color: $dark;
 						font-size: 1.5em;
 						align-content: center;
 						text-align: center;
 						font-weight: bold;
+						
+						&.arrow{
+							font-size: 1em;
+						}
 				}
 				.day{
 					background-color: $darkpink;
@@ -165,14 +184,21 @@ white-space:normal !important;
 				td{
 					background-color: $dark;
 					align-content: center;
-					text-align: center;
 					width: calc(100%/7);
 					height: 50px;
 					border-color: $light;
 					border: 4px;
+					&.currentMonth{
+						text-align: right;
+						vertical-align: top;
+						padding: 5px;
+						&.event{
+							text-align: center;
+						}
+					}
 				}
 				.arrow{
-					background-color: $dark;
+					//background-color: $light;
 					i{
 						color: $darkpink;
 						// background-color: $accent;
@@ -198,7 +224,6 @@ white-space:normal !important;
 						color: $light;
 					}
 				}
-
 			}
 		}	
 	}

@@ -1,5 +1,5 @@
 <?php         
-        include  '/var/www/google-api-php-client/src/Google/autoload.php';
+        include  '../../google-api-php-client/src/Google/autoload.php';
 
         $monthNames = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec');
         
@@ -27,21 +27,21 @@
 ?>
 <div class="container">
 <div id="containernew">
-        <table>
-        <tr>
-        <td colspan="1" class="title arrow" align="left">  <a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $prev_month . "&year=" . $prev_year; ?>"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a></td>
-        <td colspan="5" class="title"><strong><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></strong></td>
-        <td colspan="1" class="title arrow" align="right"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $next_month . "&year=" . $next_year; ?>"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a></td>
-        </tr>
-        <tr>
-        <td class="day title"><strong>S</strong></td>
-        <td class="day title"><strong>M</strong></td>
-        <td class="day title"><strong>T</strong></td>
-        <td class="day title"><strong>W</strong></td>
-        <td class="day title"><strong>T</strong></td>
-        <td class="day title"><strong>F</strong></td>
-        <td class="day title"><strong>S</strong></td>
-        </tr>
+        <table class="table-tophat">
+            <tr >
+                <td colspan="1" class="title arrow" align="left">  <a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $prev_month . "&year=" . $prev_year; ?>"><i class="fa fa-arrow-circle-left fa-3x" aria-hidden="true"></i></a></td>
+                <td colspan="5" class="title"><strong><?php echo $monthNames[$cMonth-1].' '.$cYear; ?></strong></td>
+                <td colspan="1" class="title arrow" align="right"><a href="<?php echo $_SERVER["PHP_SELF"] . "?month=". $next_month . "&year=" . $next_year; ?>"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a></td>
+            </tr>
+            <tr class="table-day">
+                <td class="day title"><strong>Sun</strong></td>
+                <td class="day title"><strong>Mon</strong></td>
+                <td class="day title"><strong>Tue</strong></td>
+                <td class="day title"><strong>Wed</strong></td>
+                <td class="day title"><strong>Thu</strong></td>
+                <td class="day title"><strong>Fri</strong></td>
+                <td class="day title"><strong>Sat</strong></td>
+            </tr>
 <?php
         date_default_timezone_set('America/Kentucky/Louisville');
         $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
@@ -76,10 +76,10 @@
         
         $j = 0;
         for($i = 0; $i < (($daysInMonth + $monthBeginDayOfWeek) + (7-($daysInMonth + $monthBeginDayOfWeek) % 7)); $i++) 
-        {   
+        { 
             if($i % 7 == 0)
             {
-                echo "<tr>";
+                echo "<table><tr>";
             }
             if($i < $monthBeginDayOfWeek)
             {    
@@ -117,22 +117,12 @@
             }
             if($i % 7 == 6)
             {
-                echo "</tr>";
+                echo "</tr></table>";
             }
             // echo $i;
         }
 ?>
 </table></div>
-
-        <div class="dayDetail"></div>			
 </div>
 </div>
 </div>
-<div class="clearfix"></div>
-<script>
-    $("td").click(function(){
-        // $("dayDetail").show();
-        $("dayDetail").append("Here");
-        alert("here");
-    }); 
-</script>
