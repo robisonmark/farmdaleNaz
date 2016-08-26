@@ -142,12 +142,10 @@ white-space:normal !important;
 }
 
 #containernew{
-	position: relative;
 	width: 100%;
-	top: 135px;
-	height: 90vh;
+	padding-top: 135px;
 	background-color: $light;
-
+	padding-bottom: 30px;
 	table {
 		width: 80%;
 		
@@ -193,7 +191,9 @@ white-space:normal !important;
 						vertical-align: top;
 						padding: 5px;
 						border-top: 2px solid rgba(255,163,37, 0.6);
-						//border-radius: 5px;
+						border-right: 2px solid  rgba(18,18,18, 0.2);
+						border-radius: 0 5px 5px 0;
+						height: 125px;
 						&.event{
 							a{
 								text-align: center;
@@ -203,7 +203,8 @@ white-space:normal !important;
 							}
 						}
 						&.today{
-							border-top: 4px solid $accent;
+							border-top: 6px solid $accent;
+							border-right: 2px solid $accent;
 						//	border-radius: 5px;
 							color: $dark;
 						}

@@ -1843,11 +1843,10 @@ footer .legal {
 }
 
 #containernew {
-  position: relative;
   width: 100%;
-  top: 135px;
-  height: 90vh;
+  padding-top: 135px;
   background-color: #E4E4E4;
+  padding-bottom: 30px;
 }
 #containernew table {
   width: 80%;
@@ -1886,6 +1885,9 @@ footer .legal {
   vertical-align: top;
   padding: 5px;
   border-top: 2px solid rgba(255, 163, 37, 0.6);
+  border-right: 2px solid rgba(18, 18, 18, 0.2);
+  border-radius: 0 5px 5px 0;
+  height: 125px;
 }
 #containernew table tbody tr td.currentMonth.event a {
   text-align: center;
@@ -1894,7 +1896,8 @@ footer .legal {
   font-size: 14px;
 }
 #containernew table tbody tr td.currentMonth.today {
-  border-top: 4px solid #1098eb;
+  border-top: 6px solid #1098eb;
+  border-right: 2px solid #1098eb;
   color: #121212;
 }
 #containernew table tbody tr .arrow i {
