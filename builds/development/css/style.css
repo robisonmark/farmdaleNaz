@@ -1889,8 +1889,12 @@ footer .legal {
   border-radius: 0 5px 5px 0;
   height: 125px;
 }
-#containernew table tbody tr td.currentMonth.event a {
-  text-align: center;
+#containernew table tbody tr td.currentMonth.event .time {
+  text-align: left;
+  color: #ff3d52;
+  font-size: 14px;
+}
+#containernew table tbody tr td.currentMonth.event .time a {
   color: #121212;
   outline: 0;
   font-size: 14px;

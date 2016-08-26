@@ -45,7 +45,7 @@
 <?php
         date_default_timezone_set('America/Kentucky/Louisville');
         $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
-        $startday = $thismonth['wday'];
+      //  $startday = $thismonth['wday'];
         $monthNum = date("m", time());
         $daysInMonth = date("t", $timestamp);
         $today = date('j', time());
@@ -102,7 +102,7 @@
                         
                         while(($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime']))) 
                         {
-                          echo ' event ' .$events[$j]->getColorID() . '">'.($i-$monthBeginDayOfWeek + 1).'<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a></td>";
+                          echo ' event ' .$events[$j]->getColorID() . '">'.($i-$monthBeginDayOfWeek + 1) . '<div class="time">' . date('g:i a', strtotime($events[$j]['start']['dateTime'])) . '<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a> </div></td>";
                             $j++;
                         }
                     }
@@ -126,3 +126,24 @@
 </div>
 </div>
 </div>
+
+<script>
+    $(".event").click(function(){
+        
+        if ((".dayDetail p").length) {
+            $(".dayDetail p").remove();
+        }
+        var eventId = $(this).attr('id');
+        
+        var events = <?php echo json_encode($events); ?>;
+    var time = <?php echo json_encode($events[0]['start']['dateTime']); ?>;
+        alert(time);
+        var summary = events[eventId].summary;
+        var location = events[eventId].location;
+        var event = events[eventId]['start']['dateTime'];
+        $(".dayDetail").append('<p>'+ summary +'</p>');
+        $(".dayDetail").append('<p>'+ location +'</p>');
+    $(".dayDetail").append('<p>' + event + '</p>');
+        
+    }); 
+</script>

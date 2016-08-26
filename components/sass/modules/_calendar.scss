@@ -195,11 +195,15 @@ white-space:normal !important;
 						border-radius: 0 5px 5px 0;
 						height: 125px;
 						&.event{
-							a{
-								text-align: center;
-								color: $dark;
-								outline: 0;
+							.time{
+								text-align: left;
+								color: #ff3d52;
 								font-size: 14px;
+								a{
+									color: $dark;
+									outline: 0;
+									font-size: 14px;
+								}
 							}
 						}
 						&.today{
