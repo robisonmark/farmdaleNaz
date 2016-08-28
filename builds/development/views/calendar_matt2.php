@@ -1,5 +1,5 @@
 <?php         
-        include  '../../google-api-php-client/src/Google/autoload.php';
+        include  '/var/www/google-api-php-client/src/Google/autoload.php';
 
         $monthNames = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec');
         
@@ -99,12 +99,13 @@
                     
                     if (($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime'])) && is_null($events[$j]['start']['dateTime']) == FALSE )
                     {
-                        
+                        echo ' event" id ="'.$j.'">'.($i-$monthBeginDayOfWeek + 1);
                         while(($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime']))) 
                         {
-                          echo ' event ' .$events[$j]->getColorID() . '">'.($i-$monthBeginDayOfWeek + 1) . '<div class="time">' . date('g:i a', strtotime($events[$j]['start']['dateTime'])) . '<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a> </div></td>";
+                          echo '<br/><div class="time">' . date('g:i a', strtotime($events[$j]['start']['dateTime'])) . '<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a> </div>";
                             $j++;
                         }
+                        echo "</td>";
                     }
                     else {
                         echo '">'.($i-$monthBeginDayOfWeek + 1)."</td>";
@@ -123,6 +124,8 @@
         }
 ?>
 </table></div>
+<div class="dayDetail">
+</div>
 </div>
 </div>
 </div>
@@ -136,14 +139,13 @@
         var eventId = $(this).attr('id');
         
         var events = <?php echo json_encode($events); ?>;
-    var time = <?php echo json_encode($events[0]['start']['dateTime']); ?>;
-        alert(time);
         var summary = events[eventId].summary;
         var location = events[eventId].location;
-        var event = events[eventId]['start']['dateTime'];
+        // var event = events[eventId]['start']['dateTime'];
         $(".dayDetail").append('<p>'+ summary +'</p>');
-        $(".dayDetail").append('<p>'+ location +'</p>');
-    $(".dayDetail").append('<p>' + event + '</p>');
-        
+        if (location != null) {
+            $(".dayDetail").append('<p>'+ location +'</p>');
+        }
+    // $(".dayDetail").append('<p>' + event + '</p>');
     }); 
 </script>
