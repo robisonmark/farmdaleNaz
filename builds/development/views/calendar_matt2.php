@@ -1,5 +1,5 @@
 <?php         
-        include  '/var/www/google-api-php-client/src/Google/autoload.php';
+        include  '../google-api-php-client/src/Google/autoload.php';
 
         $monthNames = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec');
         
@@ -45,7 +45,7 @@
 <?php
         date_default_timezone_set('America/Kentucky/Louisville');
         $timestamp = mktime(0,0,0,$cMonth,1,$cYear);
-      //  $startday = $thismonth['wday'];
+      
         $monthNum = date("m", time());
         $daysInMonth = date("t", $timestamp);
         $today = date('j', time());
@@ -73,7 +73,8 @@
         $results = $service->events->listEvents($calendarId, $optParams);
 
         $events = $results->getItems();
-        
+        $eventarray = array();
+
         $j = 0;
         for($i = 0; $i < (($daysInMonth + $monthBeginDayOfWeek) + (7-($daysInMonth + $monthBeginDayOfWeek) % 7)); $i++) 
         { 
@@ -99,11 +100,13 @@
                     
                     if (($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime'])) && is_null($events[$j]['start']['dateTime']) == FALSE )
                     {
-                        echo ' event" id ="'.$j.'">'.($i-$monthBeginDayOfWeek + 1);
+                        echo ' event" id ="'.($i-$monthBeginDayOfWeek + 1).'">'.($i-$monthBeginDayOfWeek + 1);
                         while(($i-$monthBeginDayOfWeek + 1) == date('j',strtotime($events[$j]['start']['dateTime']))) 
                         {
                           echo '<br/><div class="time">' . date('g:i a', strtotime($events[$j]['start']['dateTime'])) . '<a href="'.$events[$j]->getHtmlLink().'">'.$events[$j]->getSummary()."</a> </div>";
-                            $j++;
+                          $dayarray = array("day" =>  date('j', strtotime($events[$j]['start']['dateTime'])), "time"=> date('g:i a', strtotime($events[$j]['start']['dateTime'])), "summary"=> $events[$j]->getSummary(), "location" => $events[$j]->getLocation(), "Description" => $events[$j]->getDescription());
+                          array_push($eventarray, $dayarray);
+                          $j++;
                         }
                         echo "</td>";
                     }
@@ -120,7 +123,6 @@
             {
                 echo "</tr></table>";
             }
-            // echo $i;
         }
 ?>
 </table></div>
@@ -138,14 +140,17 @@
         }
         var eventId = $(this).attr('id');
         
-        var events = <?php echo json_encode($events); ?>;
-        var summary = events[eventId].summary;
-        var location = events[eventId].location;
-        // var event = events[eventId]['start']['dateTime'];
-        $(".dayDetail").append('<p>'+ summary +'</p>');
-        if (location != null) {
-            $(".dayDetail").append('<p>'+ location +'</p>');
+        var events = <?php echo json_encode($eventarray) ?>;
+        console.log(events);
+
+        for (var i = 0; i < events.length; i++) {
+            if (events[i].day == eventId) {
+                $(".dayDetail").append('<p>'+ events[i].summary +'</p>');
+                if (events[i].location != null) {
+                   $(".dayDetail").append('<p>'+ events[i].location +'</p>');
+                }
+                $(".dayDetail").append('<p> Start Time: '+ events[i].time +'</p>');
+            }
         }
-    // $(".dayDetail").append('<p>' + event + '</p>');
     }); 
 </script>
