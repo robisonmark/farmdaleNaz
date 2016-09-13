@@ -126,8 +126,10 @@
         }
 ?>
 </table></div>
-<div class="dayDetail">
-</div>
+    <div class="dayCon">
+        <div class="dayDetail">
+        </div>
+    </div>
 </div>
 </div>
 </div>
@@ -145,11 +147,11 @@
 
         for (var i = 0; i < events.length; i++) {
             if (events[i].day == eventId) {
-                $(".dayDetail").append('<p>'+ events[i].summary +'</p>');
+                $(".dayDetail").append('<p class="event-heading">'+ events[i].summary +'</p>');
                 if (events[i].location != null) {
                    $(".dayDetail").append('<p>'+ events[i].location +'</p>');
                 }
-                $(".dayDetail").append('<p> Start Time: '+ events[i].time +'</p>');
+                $(".dayDetail").append('<p class="time">'+ events[i].time +'</p>');
             }
         }
     }); 

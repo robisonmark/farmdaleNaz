@@ -15,6 +15,27 @@
 		});
 	</script><script>
 		function initMap() {
+			var styleArray = [
+					{
+						featureType: "all",
+						stylers: [
+							{ saturation: -40 }
+						]
+					},{
+						featureType: "road.arterial",
+						elementType: "geometry",
+						stylers: [
+							{ hue: "#ffffff" },
+							{ saturation: 50 }
+						]
+					},{
+						featureType: "poi.business",
+						elementType: "labels",
+						stylers: [
+							{ visibility: "off" }
+						]
+					}
+				];
 			var mapDiv = document.getElementById('map');
 			var map = new google.maps.Map(mapDiv, {
 				center: {lat: 38.1358216, lng: -85.6394093},
@@ -22,8 +43,9 @@
 				disableDefaultUI: true,
 				zoomControl: true,
 				scaleControl: false,
-				draggable: true,
+				draggable: false,
 				scrollwheel: false,
+				styles: styleArray,
 			});
 
 			var image = './images/Farmdale_Map_Marker.png';

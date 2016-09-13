@@ -137,8 +137,26 @@ white-space:normal !important;
 		}
 	}	
 }
-.dayDetail{
-	white-space: normal !important;
+.dayCon{
+	background-color: #e4e4e4;
+	color: #121212;
+	padding: 15px 0;
+	.dayDetail{
+		white-space: normal !important;
+		width: 80%;
+		margin: auto;
+		font-size: 18px;
+		border-top: 2px solid #1098eb;
+		.event-heading{
+			font-size: 30px;
+			font-weight: 800;
+			font-family: "Source Sans Pro", sans-serif;
+			padding: 15px 0;
+		}
+		.time{
+			color: #ff3d52;
+		}
+	}
 }
 
 #containernew{

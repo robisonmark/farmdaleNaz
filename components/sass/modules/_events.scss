@@ -25,7 +25,11 @@
 	                margin: 1vw;
 
 	                @media(max-width: $medium){
-	                	width:40vw;
+	                	width: 40vw;
+	                	min-width: 320px;
+	                }
+	                 @media(max-width: $phone){
+	                	width: 80vw;
 	                	min-width: 320px;
 	                }
 	                .update-header {
@@ -35,15 +39,13 @@
 	                    font-size: 2rem;
 	                    font-weight: bold;
 	                    text-align: left;
-						@media(max-width: $medium){
-		                	height: 114px;
-		                }
+	                    height: 86px;
 						a{
 							position: relative;
+							top: -4px;
 						
 							 @media(max-width: $medium){
 		                		float: none;
-		                		height: 114px;
 			                }
 			            }
 	                }
@@ -67,6 +69,13 @@
 	                .update-header {
 	                    background-color: $darkpink;
 	                    opacity: 0.8;
+	                    color: #fff;
+	                    text-transform: uppercase;
+	                    padding: 25px;
+	                    font-size: 2rem;
+	                    font-weight: bold;
+	                    text-align: left;
+	                    height: 86px;
 	                }
 	                .update-column-content {
 	                    a{
@@ -107,32 +116,61 @@
 	                .update-header{
 	                    background-color: $darkpink;
 	                    opacity: 0.8;
+	                    color: #fff;
+	                    text-transform: uppercase;
+	                    padding: 25px;
+	                    font-size: 2rem;
+	                    font-weight: bold;
+	                    text-align: left;
+	                    height: 86px;
 	                }
 	                .update-column-content {
-	                	.social-photo{
-	                		width: 200px; 
-	                		height: auto; 
-	                		vertical-align: top; 
-	                		display: inline-block;
-	                		background-size: contain; 
-	                		background-repeat: no-repeat;
-	                		.message{
-	                			width: 55%; 
-	                			display: inline-block; 
-	                			padding: 0 0px;
-	                			.profile-pic{
-	                				vertical-align: top; 
-	                				display: inline-block;
-	                			}
+	                	.view-on-facebook{
+	                		width: 40%;
+							clear: none;
+							max-width: 100%;
+							float: left;
+							display: block;
+							position: relative;
+							margin: 0;
+		                	.social-photo{
+		                		width: 100%; 
+		                		height: auto;
+		                		min-height: 100px; 
+		                		vertical-align: top; 
+		                		display: inline-block;
+		                		background-size: contain; 
+		                		background-repeat: no-repeat;
+		                	}
+		                }
+                		.message{
+                			width: 55%; 
+                			display: inline-block; 
+                			padding: 0 0px;
+                			margin-left: 10px;
+                			.profile-pic{
+                				vertical-align: top; 
+                				display: inline-block;
+								clear: both;
+								margin-bottom: 18px;
+                			}
+	                		.social-header{	
+								vertical-align: top;
+								display: inline-block;
+								position: absolute;
+								right: 0;
+								width: calc(53% - 50px);
 	                			.posted-by{
 	                				vertical-align: top; 
-	                				display: inline-block;
+	                				display: block;
+	                				font-size: 18px;
 	                			}
 	                			.time-ago{
 	                				display:inline-block;
+	                				font-size: 14px;
 	                			}
 	                		}
-	                	}
+                		}
 	                    .fb_iframe_widget{
 							width: 100%;
 							// margin:auto;
@@ -142,6 +180,9 @@
 	                        color: $pink;
 	                        span, p {
 	                            color: $dark;
+	                        }
+	                        &:hover{
+	                        	color: $dark;
 	                        }
 	                        .span{
 	                        	font-size: 20px;

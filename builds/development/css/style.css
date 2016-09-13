@@ -149,6 +149,9 @@ a {
   -moz-outline: 0;
   -webkit-outline: 0;
 }
+a:hover {
+  color: #ff325d;
+}
 
 .container {
   max-width: 100%;
@@ -514,8 +517,8 @@ body {
 .btn-white {
   font-size: 18px;
   border: 1.5px solid #ffffff;
-  padding: 0 15px;
-  border-radius: 5px;
+  padding: 5px 15px;
+  border-radius: 6px;
   transition: .8s;
 }
 .btn-white:hover {
@@ -1150,11 +1153,11 @@ header .container #nav .navbar ul li a.active {
 .new #new div.panel.show:after {
   clear: both;
 }
-.new #new a .btn_light {
-  width: 220px;
-  max-width: 220px;
-  padding: 15px 20px;
-  margin: 15px;
+.new #new a {
+  padding: 5px 20px;
+  outline: 0;
+  color: #ffa325;
+  font-size: 14px;
 }
 
 #ministries {
@@ -1391,6 +1394,12 @@ header .container #nav .navbar ul li a.active {
     min-width: 320px;
   }
 }
+@media (max-width: 400px) {
+  .container #events .News-Events-Con .update-columns .update-column {
+    width: 80vw;
+    min-width: 320px;
+  }
+}
 .container #events .News-Events-Con .update-columns .update-column .update-header {
   color: #fff;
   text-transform: uppercase;
@@ -1398,19 +1407,15 @@ header .container #nav .navbar ul li a.active {
   font-size: 2rem;
   font-weight: bold;
   text-align: left;
-}
-@media (max-width: 960px) {
-  .container #events .News-Events-Con .update-columns .update-column .update-header {
-    height: 114px;
-  }
+  height: 86px;
 }
 .container #events .News-Events-Con .update-columns .update-column .update-header a {
   position: relative;
+  top: -4px;
 }
 @media (max-width: 960px) {
   .container #events .News-Events-Con .update-columns .update-column .update-header a {
     float: none;
-    height: 114px;
   }
 }
 .container #events .News-Events-Con .update-columns .update-column .update-column-content {
@@ -1431,6 +1436,13 @@ header .container #nav .navbar ul li a.active {
 .container #events .News-Events-Con .update-columns .news-column .update-header {
   background-color: #ffa325;
   opacity: 0.8;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  height: 86px;
 }
 .container #events .News-Events-Con .update-columns .news-column .update-column-content a {
   color: #00B21D;
@@ -1462,30 +1474,59 @@ header .container #nav .navbar ul li a.active {
 .container #events .News-Events-Con .update-columns .social-column .update-header {
   background-color: #ffa325;
   opacity: 0.8;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 25px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  height: 86px;
 }
-.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo {
-  width: 200px;
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .view-on-facebook {
+  width: 40%;
+  clear: none;
+  max-width: 100%;
+  float: left;
+  display: block;
+  position: relative;
+  margin: 0;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .view-on-facebook .social-photo {
+  width: 100%;
   height: auto;
+  min-height: 100px;
   vertical-align: top;
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
 }
-.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message {
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .message {
   width: 55%;
   display: inline-block;
   padding: 0 0px;
+  margin-left: 10px;
 }
-.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .profile-pic {
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .message .profile-pic {
   vertical-align: top;
   display: inline-block;
+  clear: both;
+  margin-bottom: 18px;
 }
-.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .posted-by {
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .message .social-header {
   vertical-align: top;
   display: inline-block;
+  position: absolute;
+  right: 0;
+  width: calc(53% - 50px);
 }
-.container #events .News-Events-Con .update-columns .social-column .update-column-content .social-photo .message .time-ago {
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .message .social-header .posted-by {
+  vertical-align: top;
+  display: block;
+  font-size: 18px;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content .message .social-header .time-ago {
   display: inline-block;
+  font-size: 14px;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-column-content .fb_iframe_widget {
   width: 100%;
@@ -1495,6 +1536,9 @@ header .container #nav .navbar ul li a.active {
   color: #ff325d;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-column-content a span, .container #events .News-Events-Con .update-columns .social-column .update-column-content a p {
+  color: #121212;
+}
+.container #events .News-Events-Con .update-columns .social-column .update-column-content a:hover {
   color: #121212;
 }
 .container #events .News-Events-Con .update-columns .social-column .update-column-content a .span {
@@ -1838,8 +1882,26 @@ footer .legal {
   visibility: hidden;
 }
 
-.dayDetail {
+.dayCon {
+  background-color: #e4e4e4;
+  color: #121212;
+  padding: 15px 0;
+}
+.dayCon .dayDetail {
   white-space: normal !important;
+  width: 80%;
+  margin: auto;
+  font-size: 18px;
+  border-top: 2px solid #1098eb;
+}
+.dayCon .dayDetail .event-heading {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 15px 0;
+}
+.dayCon .dayDetail .time {
+  color: #ff3d52;
 }
 
 #containernew {
