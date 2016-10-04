@@ -73,12 +73,18 @@ footer{
 		.col.half.one{
 			padding: 25px;
 			text-align: left;
+			@media(max-width: $phone){
+				width: 100% !important;
+			}
 			.sunday{
 				padding: 15px 0;
 			}
 			.foot_add, .foot_phone, .foot_email{
 				padding: 15px 0;
 				text-align: right;
+				@media(max-width: $phone){
+					text-align: left;
+				}
 			}
 		}
 	}

@@ -50,6 +50,12 @@
 				border: none;
 				outline: none;
 				transition: 0.4s;
+				position:relative;
+				h4{
+					font-size: 18px;
+					display: inline-block;
+					font-weight: $normal;
+				}
 				i{
 					position: absolute;
 					right: 1%;

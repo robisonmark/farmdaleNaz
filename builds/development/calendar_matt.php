@@ -1,6 +1,6 @@
 <?php 
         require_once('./includes/functions.php');
-        render('/header');
+        render('/header_2');
         render('/calendar_matt2');
         render('/footer');
 ?>					

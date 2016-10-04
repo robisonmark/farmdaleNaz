@@ -152,6 +152,7 @@
                    $(".dayDetail").append('<p>'+ events[i].location +'</p>');
                 }
                 $(".dayDetail").append('<p class="time">'+ events[i].time +'</p>');
+                $(".dayDetail").append('<p>'+ '<a href="' + events[i].getHtmlLink  + '>Learn More</a>' +'</p>');
             }
         }
     }); 

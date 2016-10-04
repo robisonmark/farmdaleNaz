@@ -19,6 +19,7 @@
 					transform: inherit;
 					right: 0;
 					left: initial;
+					padding: 30px 10px;
 				}
 				li{
 					padding: 15px 0;
@@ -130,6 +131,11 @@
 					// height: 52vh;
 					// margin: -80px 0 0 0;
 				}
+			}
+		}
+		.col{
+			@media(max-width: 767px){
+				width: 100% !important;
 			}
 		}
 	}

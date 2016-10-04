@@ -8,8 +8,9 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html'),
     minifyPHP = require('gulp-php-minify'),
     ftp = require('gulp-ftp'),
-    concat = require('gulp-concat');
-    path = require('path');
+    concat = require('gulp-concat'),
+    path = require('path'),
+    imageop = require('gulp-image-optimization');
 
 var env,
     jsSources,
@@ -96,12 +97,19 @@ gulp.task('minify:php', function() {
     .pipe(gulpif(env === 'production', gulp.dest(outputDir)))
     .pipe(connect.reload())
 });
-
+ 
+// gulp.task('images', function(cb) {
+//     gulp.src(['builds/development/images/**/*.*','builds/development/images/**/*.jpg','builds/development/images/**/*.gif','builds/development/images/**/*.jpeg']).pipe(imageop({
+//         optimizationLevel: 5,
+//         progressive: true,
+//         interlaced: true
+//     })).pipe(gulp.dest(outputDir + 'optimized/**/*.*')).on('end', cb).on('error', cb);
+// });
 
 // Copy images to production
 gulp.task('move', function() {
   gulp.src('builds/development/images/**/*.*')
-  .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
+ .pipe(gulpif(env === 'production', gulp.dest(outputDir+'images')))
 });
 
 gulp.task('ftp', function(){
